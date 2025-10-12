@@ -11,12 +11,12 @@ export const metadata: Metadata = {
 export default function About() {
   const company = {
     name: '株式会社Ascend Logic',
-    founded: '2020年4月',
-    capital: '5億円',
-    employees: '120名',
-    ceo: '山田 太郎',
-    address: '〒106-0032 東京都港区六本木6-10-1 六本木ヒルズ森タワー15F',
-    branches: ['大阪支社', '福岡支社', 'シンガポールオフィス'],
+    founded: '2025年10月',
+    capital: '50万円',
+    employees: '10名（業務委託含む）',
+    ceo: '早乙女 琉真',
+    address: '〒198-0031 東京都青梅市師岡町1-125-14',
+    branches: [''],
     business: [
       'AIソリューション開発',
       'プロセス自動化',
@@ -114,80 +114,53 @@ export default function About() {
 
           <div className="mb-20">
             <h2 className="text-3xl font-bold mb-10 text-center">会社情報</h2>
-            <Card>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <table className="w-full">
-                    <tbody>
-                      <tr className="border-b border-gray-200">
-                        <th className="py-3 text-left text-gray-600 align-top">会社名</th>
-                        <td className="py-3">{company.name}</td>
-                      </tr>
-                      <tr className="border-b border-gray-200">
-                        <th className="py-3 text-left text-gray-600 align-top">設立</th>
-                        <td className="py-3">{company.founded}</td>
-                      </tr>
-                      <tr className="border-b border-gray-200">
-                        <th className="py-3 text-left text-gray-600 align-top">資本金</th>
-                        <td className="py-3">{company.capital}</td>
-                      </tr>
-                      <tr className="border-b border-gray-200">
-                        <th className="py-3 text-left text-gray-600 align-top">従業員数</th>
-                        <td className="py-3">{company.employees}</td>
-                      </tr>
-                      <tr className="border-b border-gray-200">
-                        <th className="py-3 text-left text-gray-600 align-top">代表者</th>
-                        <td className="py-3">{company.ceo}</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div>
-                  <table className="w-full">
-                    <tbody>
-                      <tr className="border-b border-gray-200">
-                        <th className="py-3 text-left text-gray-600 align-top">本社所在地</th>
-                        <td className="py-3">{company.address}</td>
-                      </tr>
-                      <tr className="border-b border-gray-200">
-                        <th className="py-3 text-left text-gray-600 align-top">事業所</th>
-                        <td className="py-3">{company.branches.join('、')}</td>
-                      </tr>
-                      <tr className="border-b border-gray-200">
-                        <th className="py-3 text-left text-gray-600 align-top">事業内容</th>
-                        <td className="py-3">
-                          <ul className="list-disc list-inside">
-                            {company.business.map((item, index) => (
-                              <li key={index}>{item}</li>
-                            ))}
-                          </ul>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
+            <Card className="max-w-3xl mx-auto">
+              <table className="w-full">
+                <tbody>
+                  <tr className="border-b border-gray-200">
+                    <th className="py-3 text-left text-gray-600 align-top w-1/3">会社名</th>
+                    <td className="py-3">{company.name}</td>
+                  </tr>
+                  <tr className="border-b border-gray-200">
+                    <th className="py-3 text-left text-gray-600 align-top">設立</th>
+                    <td className="py-3">{company.founded}</td>
+                  </tr>
+                  {/* <tr className="border-b border-gray-200">
+                    <th className="py-3 text-left text-gray-600 align-top">資本金</th>
+                    <td className="py-3">{company.capital}</td>
+                  </tr> */}
+                  <tr className="border-b border-gray-200">
+                    <th className="py-3 text-left text-gray-600 align-top">従業員数</th>
+                    <td className="py-3">{company.employees}</td>
+                  </tr>
+                  <tr className="border-b border-gray-200">
+                    <th className="py-3 text-left text-gray-600 align-top">代表者</th>
+                    <td className="py-3">{company.ceo}</td>
+                  </tr>
+                  <tr className="border-b border-gray-200">
+                    <th className="py-3 text-left text-gray-600 align-top">本社所在地</th>
+                    <td className="py-3">{company.address}</td>
+                  </tr>
+                  {/* <tr className="border-b border-gray-200">
+                    <th className="py-3 text-left text-gray-600 align-top">事業所</th>
+                    <td className="py-3">{company.branches.join('、')}</td>
+                  </tr> */}
+                  <tr className="border-b border-gray-200">
+                    <th className="py-3 text-left text-gray-600 align-top">事業内容</th>
+                    <td className="py-3">
+                      <ul className="list-disc list-inside">
+                        {company.business.map((item, index) => (
+                          <li key={index}>{item}</li>
+                        ))}
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </Card>
           </div>
 
-          <div className="mb-20">
-            <h2 className="text-3xl font-bold mb-10 text-center">経営陣紹介</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {members.map((member) => (
-                <Card key={member.id}>
-                  <div className="h-64 relative mb-4 bg-gray-200 flex items-center justify-center">
-                    {/* 画像がない場合のプレースホルダー */}
-                    <span className="text-gray-400">{member.position}</span>
-                  </div>
-                  <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                  <p className="text-indigo-600 mb-3">{member.position}</p>
-                  <p className="text-gray-600">{member.profile}</p>
-                </Card>
-              ))}
-            </div>
-          </div>
-
-          <div>
+          {/* <div>
             <h2 className="text-3xl font-bold mb-10 text-center">受賞歴</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {awards.map((award) => (
@@ -199,7 +172,7 @@ export default function About() {
                 </Card>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </Section>
     </>

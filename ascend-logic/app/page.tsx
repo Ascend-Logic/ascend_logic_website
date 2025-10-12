@@ -49,7 +49,7 @@ export default function Home() {
           </p>
           <div className="flex justify-center gap-4">
             <Button href="/request-documents" variant="white">資料請求</Button>
-            <Button href="/contact" variant="outline">お問い合わせ</Button>
+            {/* <Button href="/request-documents" variant="outline">お問い合わせ</Button> */}
           </div>
         </div>
       </Section>

@@ -46,11 +46,11 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-lg mb-4">お問い合わせ</h4>
             <ul className="space-y-2">
-              <li>
+              {/* <li>
                 <Link href="/contact" className="text-gray-300 hover:text-white">
                   お問い合わせフォーム
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/request-documents" className="text-gray-300 hover:text-white">
                   資料請求
@@ -62,9 +62,8 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-lg mb-4">所在地</h4>
             <address className="text-gray-300 not-italic">
-              〒106-0032<br />
-              東京都港区六本木6-10-1<br />
-              六本木ヒルズ森タワー15F
+              〒198-0031<br />
+              東京都青梅市師岡町1-125-14<br />
             </address>
           </div>
         </div>

@@ -290,7 +290,7 @@ export default function Services() {
           <div className="md:w-1/2 mt-8 md:mt-0">
             <div className="aspect-video bg-gray-100 rounded-lg shadow-lg overflow-hidden relative">
               <Image
-                src="/images/data-analytics.jpg"
+                src="/images/ai-development.jpg"
                 alt="データ分析・予測"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -344,7 +344,7 @@ export default function Services() {
           <div className="md:w-1/2 mt-8 md:mt-0">
             <div className="aspect-video bg-gray-100 rounded-lg shadow-lg overflow-hidden relative">
               <Image
-                src="/images/ai-consulting.jpg"
+                src="/images/ai_consulting.jpg"
                 alt="AI導入コンサルティング"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -387,7 +387,7 @@ export default function Services() {
             専門のコンサルタントが貴社の状況をヒアリングし、最適なソリューションをご提案いたします。
           </p>
           <div className="flex justify-center gap-4">
-            <Button href="/contact">お問い合わせ</Button>
+            {/* <Button href="/contact">お問い合わせ</Button> */}
             <Button href="/request-documents" variant="outline">資料請求</Button>
           </div>
         </div>

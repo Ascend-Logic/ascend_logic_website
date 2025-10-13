@@ -388,7 +388,7 @@ export default function Services() {
           </p>
           <div className="flex justify-center gap-4">
             {/* <Button href="/contact">お問い合わせ</Button> */}
-            <Button href="/request-documents" variant="outline">資料請求</Button>
+            <Button href="/request-documents" variant="outline">お問い合わせ</Button>
           </div>
         </div>
       </Section>

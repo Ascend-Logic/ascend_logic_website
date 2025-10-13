@@ -33,7 +33,7 @@ export default function Header() {
               会社概要
             </Link>
             <Link href="/request-documents" className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700">
-              資料請求
+              お問い合わせ
             </Link>
           </nav>
 
@@ -86,7 +86,7 @@ export default function Header() {
                 会社概要
               </Link>
               <Link href="/request-documents" className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 inline-block">
-                資料請求
+                お問い合わせ
               </Link>
             </nav>
           </div>

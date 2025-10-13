@@ -13,10 +13,10 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <Hero 
+      <Hero
         title="AI時代の<br />ビジネス変革"
         subtitle="最先端のAIテクノロジーで、あなたのビジネスを次のレベルへ"
-        ctaText="資料請求はこちら"
+        ctaText="お問い合わせはこちら"
         ctaLink="/request-documents"
       />
 
@@ -45,10 +45,10 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-6">AIの力で、ビジネスの可能性を広げましょう</h2>
           <p className="mb-10 max-w-2xl mx-auto">
             Ascend Logicは、最先端のAIテクノロジーを活用して、お客様のビジネス課題を解決します。
-            まずはお気軽に資料請求や問い合わせからご相談ください。
+            まずはお気軽にお問い合わせください。
           </p>
           <div className="flex justify-center gap-4">
-            <Button href="/request-documents" variant="white">資料請求</Button>
+            <Button href="/request-documents" variant="white">お問い合わせ</Button>
             {/* <Button href="/request-documents" variant="outline">お問い合わせ</Button> */}
           </div>
         </div>

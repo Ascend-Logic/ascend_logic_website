@@ -53,7 +53,7 @@ export default function Footer() {
               </li> */}
               <li>
                 <Link href="/request-documents" className="text-gray-300 hover:text-white">
-                  資料請求
+                  お問い合わせ
                 </Link>
               </li>
             </ul>

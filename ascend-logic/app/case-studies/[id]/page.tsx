@@ -297,7 +297,7 @@ export default function CaseStudyDetail({ params }: CaseStudyDetailProps) {
             専門コンサルタントが貴社の課題をヒアリングし、最適なソリューションをご提案いたします。
           </p>
           <div className="flex justify-center gap-4">
-            <Button href="/request-documents" variant="outline">資料請求</Button>
+            <Button href="/request-documents" variant="outline">お問い合わせ</Button>
           </div>
         </div>
       </Section>

@@ -32,7 +32,7 @@ export async function POST(req: NextRequest) {
 
     // メール本文の作成
     const mailContent = `
-資料請求フォームから新しい問い合わせがありました。
+お問い合わせフォームから新しい問い合わせがありました。
 
 【お客様情報】
 会社名: ${company}
@@ -56,7 +56,7 @@ ${message || 'なし'}
     const adminMailOptions = {
       from: process.env.EMAIL_USER,
       to: 'rsaotome@ascendlogicai.com',
-      subject: `[資料請求] ${company} - ${name}様からの問い合わせ`,
+      subject: `[お問い合わせ] ${company} - ${name}様からの問い合わせ`,
       text: mailContent,
     };
 
@@ -64,12 +64,12 @@ ${message || 'なし'}
     const customerMailContent = `
 ${name} 様
 
-この度は、Ascend Logicへの資料請求をいただき、誠にありがとうございます。
+この度は、Ascend Logicへお問い合わせいただき、誠にありがとうございます。
 
-お申し込みを確かに承りました。
-ご請求いただいた資料は、1営業日以内にお送りさせていただきます。
+お問い合わせ内容を確かに承りました。
+担当者より1営業日以内にご連絡させていただきます。
 
-【お申し込み内容】
+【お問い合わせ内容】
 会社名: ${company}
 お名前: ${name}
 ご興味のある分野: ${interestsList || 'なし'}
@@ -89,7 +89,7 @@ Website: https://ascendlogicai.com
     const customerMailOptions = {
       from: process.env.EMAIL_USER,
       to: email,
-      subject: '【Ascend Logic】資料請求を承りました',
+      subject: '【Ascend Logic】お問い合わせを承りました',
       text: customerMailContent,
     };
 
@@ -98,7 +98,7 @@ Website: https://ascendlogicai.com
     await transporter.sendMail(customerMailOptions);
 
     return NextResponse.json(
-      { message: '資料請求を受け付けました' },
+      { message: 'お問い合わせを受け付けました' },
       { status: 200 }
     );
   } catch (error) {
@@ -107,7 +107,7 @@ Website: https://ascendlogicai.com
     // エラーでも成功レスポンスを返す（ユーザーには正常に見せる）
     // 実際のエラーはサーバーログで確認
     return NextResponse.json(
-      { message: '資料請求を受け付けました' },
+      { message: 'お問い合わせを受け付けました' },
       { status: 200 }
     );
   }

@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '資料請求',
-  description: 'Ascend Logicのサービス資料をご請求いただけます。AI導入に関する最新情報や事例をお届けします。',
+  title: 'お問い合わせ',
+  description: 'Ascend Logicへのお問い合わせはこちらから。AI導入に関するご相談を承ります。',
 };
 
 export default function RequestDocumentsLayout({

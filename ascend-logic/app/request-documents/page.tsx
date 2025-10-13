@@ -126,9 +126,9 @@ export default function RequestDocuments() {
     <>
       <Section className="py-20 bg-indigo-900 text-white">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold mb-6">資料請求</h1>
+          <h1 className="text-4xl font-bold mb-6">お問い合わせ</h1>
           <p className="text-xl max-w-3xl">
-            Ascend Logicのサービス資料をご請求いただけます。
+            Ascend Logicへのお問い合わせはこちらから。
             ご興味のある分野をお選びいただき、ご入力ください。
           </p>
         </div>
@@ -165,7 +165,7 @@ export default function RequestDocuments() {
         <div className="container mx-auto px-4 max-w-3xl">
           {!submitted ? (
             <Card>
-              <h2 className="text-2xl font-bold mb-6">資料請求フォーム</h2>
+              <h2 className="text-2xl font-bold mb-6">お問い合わせフォーム</h2>
               {error && (
                 <div className="bg-red-50 text-red-700 p-4 rounded-md mb-6">
                   {error}
@@ -309,7 +309,7 @@ export default function RequestDocuments() {
 
                 <div className="text-center">
                   <Button type="submit" disabled={submitting}>
-                    {submitting ? '送信中...' : '資料を請求する'}
+                    {submitting ? '送信中...' : '送信する'}
                   </Button>
                 </div>
               </form>
@@ -317,13 +317,13 @@ export default function RequestDocuments() {
           ) : (
             <Card className="text-center py-10">
               <div className="text-5xl mb-6 text-green-500">✓</div>
-              <h2 className="text-2xl font-bold mb-4">資料請求ありがとうございます</h2>
+              <h2 className="text-2xl font-bold mb-4">お問い合わせありがとうございます</h2>
               <p className="text-lg mb-6">
-                ご入力いただいたメールアドレス宛に資料をお送りいたします。
-                通常1営業日以内にお送りいたしますので、少々お待ちください。
+                お問い合わせ内容を承りました。
+                担当者より1営業日以内にご連絡させていただきますので、少々お待ちください。
               </p>
               <p className="mb-10">
-                ご不明点やご質問がございましたら、お気軽にお問い合わせください。
+                お急ぎの場合は、お電話でもお問い合わせいただけます。
               </p>
               <Button href="/">トップページに戻る</Button>
             </Card>
@@ -333,28 +333,28 @@ export default function RequestDocuments() {
 
       <Section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-3xl font-bold mb-10 text-center">資料請求に関するよくあるご質問</h2>
+          <h2 className="text-3xl font-bold mb-10 text-center">お問い合わせに関するよくあるご質問</h2>
           <div className="space-y-6">
             <Card>
-              <h3 className="text-xl font-bold mb-2">どのような資料が届きますか？</h3>
+              <h3 className="text-xl font-bold mb-2">どのような内容でも問い合わせできますか？</h3>
               <p>
-                ご選択いただいた分野に関するサービス概要、導入事例、費用感、導入フロー、
-                よくあるご質問などをまとめた資料をPDF形式でお送りいたします。
+                はい。サービスに関するご質問、導入のご相談、お見積りのご依頼など、
+                どのような内容でもお気軽にお問い合わせください。
               </p>
             </Card>
             <Card>
-              <h3 className="text-xl font-bold mb-2">資料はいつ届きますか？</h3>
+              <h3 className="text-xl font-bold mb-2">回答までどのくらいかかりますか？</h3>
               <p>
-                通常1営業日以内にお送りいたします。土日祝日をまたぐ場合は、
+                通常1営業日以内にご連絡させていただきます。土日祝日をまたぐ場合は、
                 翌営業日の対応となりますのでご了承ください。
               </p>
             </Card>
             <Card>
-              <h3 className="text-xl font-bold mb-2">資料請求後の流れを教えてください</h3>
+              <h3 className="text-xl font-bold mb-2">お問い合わせ後の流れを教えてください</h3>
               <p>
-                資料送付後、弊社コンサルタントよりフォローのご連絡をさせていただく場合がございます。
-                具体的なご相談やお見積りをご希望の場合は、その際にお申し付けください。
-                もちろん、資料請求のみでも問題ございません。
+                お問い合わせ内容を確認後、弊社コンサルタントよりご連絡させていただきます。
+                具体的なご相談やお見積りをご希望の場合は、詳細をヒアリングさせていただき、
+                最適なソリューションをご提案いたします。
               </p>
             </Card>
           </div>

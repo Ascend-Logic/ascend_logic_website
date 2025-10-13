@@ -3,15 +3,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import Section from '../../../components/ui/Section';
-import { Card } from '../../../components/ui/Card';
+// import { Card } from '../../../components/ui/Card';
 import { Button } from '../../../components/ui/Button';
 import { CaseStudy } from '../../../types';
 
 // ページコンポーネントのpropsの型定義
 interface CaseStudyDetailProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 // 詳細データの型定義
@@ -174,7 +174,8 @@ function getCaseStudyById(id: number): DetailedCaseStudy | undefined {
 
 // 動的メタデータ生成
 export async function generateMetadata({ params }: CaseStudyDetailProps): Promise<Metadata> {
-  const caseStudy = getCaseStudyById(parseInt(params.id));
+  const resolvedParams = await params;
+  const caseStudy = getCaseStudyById(parseInt(resolvedParams.id));
 
   if (!caseStudy) {
     return {
@@ -188,8 +189,9 @@ export async function generateMetadata({ params }: CaseStudyDetailProps): Promis
   };
 }
 
-export default function CaseStudyDetail({ params }: CaseStudyDetailProps) {
-  const caseStudy = getCaseStudyById(parseInt(params.id));
+export default async function CaseStudyDetail({ params }: CaseStudyDetailProps) {
+  const resolvedParams = await params;
+  const caseStudy = getCaseStudyById(parseInt(resolvedParams.id));
 
   if (!caseStudy) {
     notFound();

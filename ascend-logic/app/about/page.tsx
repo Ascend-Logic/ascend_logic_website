@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Section from '../../components/ui/Section';
 import { Card } from '../../components/ui/Card';
-import { TeamMember, Award } from '../../types';
+// import { TeamMember, Award } from '../../types';
 
 export const metadata: Metadata = {
   title: '会社概要',
@@ -25,50 +25,50 @@ export default function About() {
     ],
   };
 
-  const members: TeamMember[] = [
-    {
-      id: 1,
-      name: '山田 太郎',
-      position: '代表取締役CEO',
-      profile: '大手IT企業でのAI研究開発責任者を経て2020年に当社を創業。スタンフォード大学コンピュータサイエンス博士。',
-      imagePath: '/images/ceo.jpg',
-    },
-    {
-      id: 2,
-      name: '佐藤 花子',
-      position: 'CTO',
-      profile: '世界的テクノロジー企業で機械学習エンジニアとして10年の経験を持つ。東京大学工学部卒業、MIT人工知能研究所修了。',
-      imagePath: '/images/cto.jpg',
-    },
-    {
-      id: 3,
-      name: '鈴木 一郎',
-      position: 'COO',
-      profile: '大手コンサルティングファームでデジタルトランスフォーメーション部門を率いた経験を持つ。慶應義塾大学経済学部卒業。',
-      imagePath: '/images/coo.jpg',
-    },
-  ];
+  // const members: TeamMember[] = [
+  //   {
+  //     id: 1,
+  //     name: '山田 太郎',
+  //     position: '代表取締役CEO',
+  //     profile: '大手IT企業でのAI研究開発責任者を経て2020年に当社を創業。スタンフォード大学コンピュータサイエンス博士。',
+  //     imagePath: '/images/ceo.jpg',
+  //   },
+  //   {
+  //     id: 2,
+  //     name: '佐藤 花子',
+  //     position: 'CTO',
+  //     profile: '世界的テクノロジー企業で機械学習エンジニアとして10年の経験を持つ。東京大学工学部卒業、MIT人工知能研究所修了。',
+  //     imagePath: '/images/cto.jpg',
+  //   },
+  //   {
+  //     id: 3,
+  //     name: '鈴木 一郎',
+  //     position: 'COO',
+  //     profile: '大手コンサルティングファームでデジタルトランスフォーメーション部門を率いた経験を持つ。慶應義塾大学経済学部卒業。',
+  //     imagePath: '/images/coo.jpg',
+  //   },
+  // ];
 
-  const awards: Award[] = [
-    {
-      id: 1,
-      title: '日本AI技術大賞2024',
-      organization: '一般社団法人日本AI協会',
-      year: '2024年',
-    },
-    {
-      id: 2,
-      title: 'イノベーティブカンパニー100',
-      organization: '経済産業省',
-      year: '2023年',
-    },
-    {
-      id: 3,
-      title: 'テクノロジーファストグロース50',
-      organization: '日経ビジネス',
-      year: '2023年',
-    },
-  ];
+  // const awards: Award[] = [
+  //   {
+  //     id: 1,
+  //     title: '日本AI技術大賞2024',
+  //     organization: '一般社団法人日本AI協会',
+  //     year: '2024年',
+  //   },
+  //   {
+  //     id: 2,
+  //     title: 'イノベーティブカンパニー100',
+  //     organization: '経済産業省',
+  //     year: '2023年',
+  //   },
+  //   {
+  //     id: 3,
+  //     title: 'テクノロジーファストグロース50',
+  //     organization: '日経ビジネス',
+  //     year: '2023年',
+  //   },
+  // ];
 
   return (
     <>

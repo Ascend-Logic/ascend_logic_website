@@ -1,4 +1,4 @@
-import { Inter, Noto_Sans_JP } from 'next/font/google';
+import { Noto_Sans_JP } from 'next/font/google';
 import { GeistSans } from 'geist/font/sans';
 import './globals.css';
 import Header from '../components/layout/Header';

@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@types/nodemailer": "^7.0.2",
+    "geist": "^1.5.1",
     "next": "15.3.1",
     "nodemailer": "^7.0.6",
     "react": "^19.0.0",

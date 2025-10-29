@@ -15,7 +15,7 @@ export default function About() {
     capital: '50万円',
     employees: '10名（業務委託含む）',
     ceo: '早乙女 琉真',
-    address: '〒198-0031 東京都青梅市師岡町1-125-14（※設立登記後に正式決定）',
+    address: '（※設立登記後に正式決定）',
     branches: [''],
     business: [
       'AIソリューション開発',
@@ -133,10 +133,10 @@ export default function About() {
                     <th className="py-3 text-left text-gray-600 align-top">従業員数</th>
                     <td className="py-3">{company.employees}</td>
                   </tr> */}
-                  <tr className="border-b border-gray-200">
+                  {/* <tr className="border-b border-gray-200">
                     <th className="py-3 text-left text-gray-600 align-top">代表者</th>
                     <td className="py-3">{company.ceo}</td>
-                  </tr>
+                  </tr> */}
                   <tr className="border-b border-gray-200">
                     <th className="py-3 text-left text-gray-600 align-top">本社所在地</th>
                     <td className="py-3">{company.address}</td>

@@ -168,7 +168,7 @@ export default function PrivacyPolicy() {
               </p>
               <div className="bg-gray-50 p-6 rounded-lg">
                 <p className="text-gray-700 font-semibold mb-2">株式会社Ascend Logic</p>
-                <p className="text-gray-700 mb-1">個人情報保護管理者: 代表取締役 早乙女 琉真</p>
+                {/* <p className="text-gray-700 mb-1">個人情報保護管理者: 代表取締役 早乙女 琉真</p> */}
                 <p className="text-gray-700 mb-1">所在地: 〒198-0031 東京都青梅市師岡町1-125-14</p>
                 <p className="text-gray-700 mb-1">メールアドレス: rsaotome@ascendlogicai.com</p>
               </div>

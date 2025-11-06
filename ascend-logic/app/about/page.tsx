@@ -121,10 +121,10 @@ export default function About() {
                     <th className="py-3 text-left text-gray-600 align-top w-1/3">会社名</th>
                     <td className="py-3">{company.name}</td>
                   </tr>
-                  <tr className="border-b border-gray-200">
+                  {/* <tr className="border-b border-gray-200">
                     <th className="py-3 text-left text-gray-600 align-top">設立</th>
                     <td className="py-3">{company.founded}</td>
-                  </tr>
+                  </tr> */}
                   {/* <tr className="border-b border-gray-200">
                     <th className="py-3 text-left text-gray-600 align-top">資本金</th>
                     <td className="py-3">{company.capital}</td>

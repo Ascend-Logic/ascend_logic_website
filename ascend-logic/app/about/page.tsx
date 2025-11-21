@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 
 export default function About() {
   const company = {
-    name: '株式会社Ascend Logic（設立準備中）',
-    founded: '2025年11月予定',
+    name: '株式会社Ascend Logic',
+    founded: '2025年12月予定',
     capital: '50万円',
     employees: '10名（業務委託含む）',
     ceo: '早乙女 琉真',
@@ -121,10 +121,10 @@ export default function About() {
                     <th className="py-3 text-left text-gray-600 align-top w-1/3">会社名</th>
                     <td className="py-3">{company.name}</td>
                   </tr>
-                  {/* <tr className="border-b border-gray-200">
+                  <tr className="border-b border-gray-200">
                     <th className="py-3 text-left text-gray-600 align-top">設立</th>
                     <td className="py-3">{company.founded}</td>
-                  </tr> */}
+                  </tr>
                   {/* <tr className="border-b border-gray-200">
                     <th className="py-3 text-left text-gray-600 align-top">資本金</th>
                     <td className="py-3">{company.capital}</td>
@@ -133,10 +133,10 @@ export default function About() {
                     <th className="py-3 text-left text-gray-600 align-top">従業員数</th>
                     <td className="py-3">{company.employees}</td>
                   </tr> */}
-                  {/* <tr className="border-b border-gray-200">
+                  <tr className="border-b border-gray-200">
                     <th className="py-3 text-left text-gray-600 align-top">代表者</th>
                     <td className="py-3">{company.ceo}</td>
-                  </tr> */}
+                  </tr>
                   <tr className="border-b border-gray-200">
                     <th className="py-3 text-left text-gray-600 align-top">本社所在地</th>
                     <td className="py-3">{company.address}</td>

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function About() {
   const company = {
     name: '株式会社Ascend Logic',
-    founded: '2025年12月予定',
+    founded: '2026年1月予定',
     capital: '50万円',
     employees: '10名（業務委託含む）',
     ceo: '早乙女 琉真',

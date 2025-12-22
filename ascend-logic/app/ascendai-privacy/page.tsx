@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import Section from '../../components/ui/Section';
 
 export const metadata: Metadata = {
@@ -990,12 +991,12 @@ export default function AscendAIPrivacyPolicy() {
           <p className="text-lg mb-6 text-indigo-100">
             プライバシーポリシーに関するご質問は、お気軽にお問い合わせください
           </p>
-          <a
-            href="mailto:rsaotome@ascendlogicai.com"
+          <Link
+            href="/request-documents"
             className="inline-block bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors shadow-lg"
           >
             お問い合わせ
-          </a>
+          </Link>
         </div>
       </Section>
     </>

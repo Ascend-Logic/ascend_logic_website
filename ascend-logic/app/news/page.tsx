@@ -12,12 +12,12 @@ export const metadata: Metadata = {
 export default function News() {
   const newsItems: NewsItem[] = [
     {
-      id: 1,
-      title: '「Ascend Logic AI」正式リリースのお知らせ',
-      date: '2025年10月1日',
-      category: 'プレスリリース',
-      excerpt: '自社開発のAIプラットフォーム最新版を正式リリース。新機能として自然言語による業務フロー自動生成機能や、マルチモーダルAI分析機能を追加。',
-      url: '/news/1',
+      id: 2,
+      title: '会社設立登記完了のお知らせ',
+      date: '2025年12月26日',
+      category: 'お知らせ',
+      excerpt: '株式会社Ascend Logicは、2025年12月26日をもちまして、会社設立の登記が完了いたしました。今後ともよろしくお願い申し上げます。',
+      url: '/news/2',
     }
   ];
 

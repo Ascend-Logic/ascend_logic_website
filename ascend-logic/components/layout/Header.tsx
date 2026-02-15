@@ -10,6 +10,10 @@ export default function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="bg-white shadow-sm fixed w-full z-50">
       <div className="container mx-auto px-4">
@@ -73,19 +77,19 @@ export default function Header() {
         {isMenuOpen && (
           <div className="md:hidden py-4">
             <nav className="flex flex-col space-y-4">
-              <Link href="/services" className="text-gray-700 hover:text-indigo-600 py-2">
+              <Link href="/services" className="text-gray-700 hover:text-indigo-600 py-2" onClick={closeMenu}>
                 サービス
               </Link>
-              <Link href="/case-studies" className="text-gray-700 hover:text-indigo-600 py-2">
+              <Link href="/case-studies" className="text-gray-700 hover:text-indigo-600 py-2" onClick={closeMenu}>
                 導入事例
               </Link>
-              <Link href="/news" className="text-gray-700 hover:text-indigo-600 py-2">
+              <Link href="/news" className="text-gray-700 hover:text-indigo-600 py-2" onClick={closeMenu}>
                 お知らせ
               </Link>
-              <Link href="/about" className="text-gray-700 hover:text-indigo-600 py-2">
+              <Link href="/about" className="text-gray-700 hover:text-indigo-600 py-2" onClick={closeMenu}>
                 会社概要
               </Link>
-              <Link href="/request-documents" className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 inline-block">
+              <Link href="/request-documents" className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 inline-block" onClick={closeMenu}>
                 お問い合わせ
               </Link>
             </nav>

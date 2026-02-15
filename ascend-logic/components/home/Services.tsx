@@ -30,9 +30,9 @@ export default function Services() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
       {services.map((service) => (
-        <Card key={service.id} className="overflow-hidden">
+        <Card key={service.id} className="overflow-hidden p-0">
           {service.image ? (
-            <div className="relative h-48 w-full mb-4 -m-6 mb-4">
+            <div className="relative h-48 w-full">
               <Image
                 src={service.image}
                 alt={service.title}
@@ -42,10 +42,12 @@ export default function Services() {
               />
             </div>
           ) : (
-            <div className="text-4xl mb-4">{service.icon}</div>
+            <div className="text-4xl mb-4 p-6">{service.icon}</div>
           )}
-          <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-          <p className="text-gray-600">{service.description}</p>
+          <div className="p-6">
+            <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+            <p className="text-gray-600">{service.description}</p>
+          </div>
         </Card>
       ))}
     </div>

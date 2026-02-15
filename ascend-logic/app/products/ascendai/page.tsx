@@ -3,17 +3,17 @@ import Link from 'next/link';
 import Section from '../../../components/ui/Section';
 
 export const metadata: Metadata = {
-  title: 'RecallAI Auto Bot',
+  title: 'Ascend Agent',
   description: 'Google Calendarと連携し、AIボットを自動起動。会議の録画・文字起こし・議事録生成を完全自動化します。',
   keywords: 'AI議事録, 自動議事録作成, Google Calendar連携, ビデオ会議文字起こし, 会議自動録画, リモートワーク議事録, 議事録自動化, AI会議アシスタント',
   openGraph: {
-    title: 'RecallAI Auto Bot - AI自動議事録作成サービス',
+    title: 'Ascend Agent - AI自動議事録作成サービス',
     description: 'Google Calendarと連携し、AIボットを自動起動。会議の録画・文字起こし・議事録生成を完全自動化します。',
     type: 'website',
   },
 };
 
-export default function RecallAIProductPage() {
+export default function AscendAgentProductPage() {
   return (
     <>
       {/* ヒーローセクション */}
@@ -293,7 +293,7 @@ export default function RecallAIProductPage() {
           <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200">
             <h3 className="text-xl font-bold mb-4">Google API Services ユーザーデータポリシー遵守</h3>
             <p className="text-gray-700 mb-4">
-              RecallAI Auto Botは、Google API Services のユーザーデータポリシー（限定的な使用要件を含む）を完全に遵守しています。
+              Ascend Agentは、Google API Services のユーザーデータポリシー（限定的な使用要件を含む）を完全に遵守しています。
               お客様のGoogleアカウント情報は、サービス提供に必要な範囲でのみ使用され、第三者への共有や広告目的での使用は一切行いません。
             </p>
             <Link
@@ -355,7 +355,7 @@ export default function RecallAIProductPage() {
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-lg font-bold mb-4">RecallAI Auto Bot</h3>
+              <h3 className="text-lg font-bold mb-4">Ascend Agent</h3>
               <p className="text-gray-400 mb-4">
                 AI自動議事録作成サービス
               </p>
@@ -386,13 +386,13 @@ export default function RecallAIProductPage() {
               <h4 className="font-semibold mb-3">法的情報</h4>
               <ul className="space-y-2 text-gray-400">
                 <li>
-                  <Link href="/ascendai-privacy" className="hover:text-white">
-                    プライバシーポリシー
+                  <Link href="/terms" className="hover:text-white">
+                    利用規約
                   </Link>
                 </li>
                 <li>
-                  <Link href="/privacy-policy" className="hover:text-white">
-                    利用規約
+                  <Link href="/ascendai-privacy" className="hover:text-white">
+                    プライバシーポリシー
                   </Link>
                 </li>
               </ul>
@@ -400,7 +400,7 @@ export default function RecallAIProductPage() {
           </div>
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>© 2024 RecallAI Auto Bot. All rights reserved.</p>
+            <p>© 2024 Ascend Agent. All rights reserved.</p>
           </div>
         </div>
       </Section>

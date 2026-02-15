@@ -3,17 +3,17 @@ import Link from 'next/link';
 import Section from '../../components/ui/Section';
 
 export const metadata: Metadata = {
-  title: 'AscendAI プライバシーポリシー',
-  description: 'AscendAI（MeetingRAG）のプライバシーポリシー。Google Workspace連携、データ収集・保管、セキュリティ対策について詳しくご説明します。',
-  keywords: 'AscendAI, MeetingRAG, プライバシーポリシー, Google Workspace, Calendar API, 個人情報保護, GDPR, データセキュリティ',
+  title: 'Ascend Agent プライバシーポリシー',
+  description: 'Ascend Agentのプライバシーポリシー。Google Workspace連携、データ収集・保管、セキュリティ対策について詳しくご説明します。',
+  keywords: 'Ascend Agent, プライバシーポリシー, Google Workspace, Calendar API, 個人情報保護, GDPR, データセキュリティ',
   openGraph: {
-    title: 'AscendAI プライバシーポリシー',
-    description: 'AscendAI（MeetingRAG）における個人情報の取り扱いとデータ保護について',
+    title: 'Ascend Agent プライバシーポリシー',
+    description: 'Ascend Agentにおける個人情報の取り扱いとデータ保護について',
     type: 'website',
   },
 };
 
-export default function AscendAIPrivacyPolicy() {
+export default function AscendAgentPrivacyPolicy() {
   const lastUpdated = '2025年12月23日';
 
   return (
@@ -25,7 +25,7 @@ export default function AscendAIPrivacyPolicy() {
             プライバシーポリシー
           </h1>
           <p className="text-xl text-gray-300 mb-2">
-            AscendAI（MeetingRAG）
+            Ascend Agent
           </p>
           <p className="text-sm text-gray-400">
             最終更新日: {lastUpdated}
@@ -40,7 +40,7 @@ export default function AscendAIPrivacyPolicy() {
             {/* 前文 */}
             <div className="mb-12 pb-8 border-b">
               <p className="text-lg leading-relaxed text-gray-700">
-                株式会社Ascend Logic（以下「当社」）は、AscendAI（MeetingRAG）サービス（以下「本サービス」）をご利用いただくお客様の個人情報保護を最優先事項として位置づけています。
+                株式会社Ascend Logic（以下「当社」）は、Ascend Agentサービス（以下「本サービス」）をご利用いただくお客様の個人情報保護を最優先事項として位置づけています。
                 本プライバシーポリシーでは、本サービスにおける個人情報の収集、使用、保管、保護について詳細にご説明します。
               </p>
             </div>
@@ -68,7 +68,7 @@ export default function AscendAIPrivacyPolicy() {
                 1. 本サービスについて
               </h2>
               <p className="mb-4">
-                <strong>AscendAI（別名: MeetingRAG）</strong>は、
+                <strong>Ascend Agent</strong>は、
                 議事録管理とRAG（Retrieval-Augmented Generation）ベースのチャット機能を提供するクラウドサービスです。
               </p>
 
@@ -283,11 +283,11 @@ export default function AscendAIPrivacyPolicy() {
               <ol className="list-decimal pl-6 space-y-1 mb-4">
                 <li>Google アカウント（<a href="https://myaccount.google.com/" target="_blank" rel="noopener noreferrer" className="text-gray-900 underline">myaccount.google.com</a>）にアクセス</li>
                 <li>「セキュリティ」→「サードパーティによるアクセス」を選択</li>
-                <li>「AscendAI」を探して「アクセスを削除」をクリック</li>
+                <li>「Ascend Agent」を探して「アクセスを削除」をクリック</li>
               </ol>
 
               <h4 className="font-semibold mt-4 mb-2">方法2: 本サービス内から解除</h4>
-              <p className="mb-4">AscendAI の設定画面から「Google Workspace 連携を解除」ボタンをクリック</p>
+              <p className="mb-4">Ascend Agent の設定画面から「Google Workspace 連携を解除」ボタンをクリック</p>
 
               <p className="text-sm text-gray-600">
                 連携を解除すると、カレンダーイベントの同期が停止しますが、既に収集されたデータは削除されません。

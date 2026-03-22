@@ -6,9 +6,237 @@
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-rgb: 255, 255, 255;
+  --accent: #4f46e5;
+  --accent-light: #6366f1;
 }
 
+/* ===== Base Typography ===== */
 body {
+  font-family: var(--font-inter), var(--font-noto-sans-jp), 'Helvetica Neue', Arial, sans-serif;
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.01em;
+  line-height: 1.7;
+}
+
+/* セリフ見出し用 */
+.font-serif-display {
+  font-family: var(--font-playfair), 'Georgia', 'Times New Roman', serif;
+}
+
+/* セクションタイトル英語（セリフ） */
+.section-title-en {
+  font-family: var(--font-playfair), 'Georgia', 'Times New Roman', serif;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* ヒーロー見出し用 */
+.hero-title {
+  font-family: var(--font-playfair), var(--font-noto-sans-jp), serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
+/* ===== Fade-in Animations ===== */
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-in-up {
+  transform: translateY(30px);
+}
+
+.fade-in-down {
+  transform: translateY(-30px);
+}
+
+.fade-in-left {
+  transform: translateX(-30px);
+}
+
+.fade-in-right {
+  transform: translateX(30px);
+}
+
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0) translateX(0);
+}
+
+/* ===== Nav Link Underline Animation ===== */
+.nav-link {
+  position: relative;
+  padding-bottom: 2px;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ===== Header ===== */
+.header-scrolled {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Hero ===== */
+.hero-gradient {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.35) 100%);
+}
+
+.hero-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-dot.active {
+  background: var(--accent);
+  width: 28px;
+  border-radius: 8px;
+}
+
+/* ===== Card Hover ===== */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Grid Card (border style) ===== */
+.grid-card {
+  padding: 40px 30px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  margin: -0.5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  position: relative;
+}
+
+.grid-card:hover {
+  background: #f9fafb;
+}
+
+.grid-card .grid-card-arrow {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #999;
+  transition: color 0.3s ease;
+}
+
+.grid-card:hover .grid-card-arrow {
+  color: var(--accent);
+}
+
+/* ===== Topic Card ===== */
+.topic-card {
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.topic-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Button Arrow Animation ===== */
+.btn-arrow .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.btn-arrow:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* ===== Pill Button ===== */
+.pill-btn {
+  padding: 12px 32px;
+  border: 1.5px solid #333;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #333;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.pill-btn:hover {
+  background: #333;
+  color: #fff;
+}
+
+.pill-btn .arrow {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.pill-btn:hover .arrow {
+  transform: translateX(3px);
+}
+
+/* ===== Mobile Menu Animation ===== */
+.mobile-menu-enter {
+  animation: slideDown 0.3s ease forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Image zoom on hover ===== */
+.img-zoom {
+  transition: transform 0.5s ease;
+}
+
+.img-zoom:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Smooth scroll ===== */
+html {
+  scroll-behavior: smooth;
 }

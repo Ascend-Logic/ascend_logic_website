@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">Ascend Logic</h3>
+            <h3 className="font-serif-display text-xl font-bold mb-4">Ascend Logic</h3>
             <p className="text-gray-300">
               最先端のAIソリューションを提供し、企業のデジタルトランスフォーメーションを加速します。
             </p>

@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Hero from '../components/home/Hero';
 import Services from '../components/home/Services';
 import CaseStudyPreview from '../components/home/CaseStudyPreview';
@@ -38,6 +39,58 @@ export default function Home() {
           </FadeIn>
         </div>
       </Section>
+
+      {/* Ascend Agent — Product Highlight */}
+      <section className="relative py-24 bg-black text-white overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(79,70,229,0.15),transparent_70%)]" />
+        <div className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-10">
+          <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+            {/* Left: Icon + Text */}
+            <FadeIn direction="left" className="flex-1">
+              <p className="section-title-en text-sm text-white/40 tracking-[0.2em] mb-4">Our Product</p>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-4">
+                すべての社員に、<br />もう一人のAIアシスタントを。
+              </h2>
+              <p className="text-white/60 text-sm md:text-base leading-relaxed mb-8 max-w-lg">
+                会議に同席し、記録し、学習し、いつでも答える。
+                Ascend Agentは、カレンダー連携による自動録画・AI議事録生成・ナレッジ横断検索を一つにしたAIアシスタントです。
+              </p>
+
+              {/* Service icons */}
+              <div className="flex items-center gap-3 mb-8">
+                {[
+                  { src: '/images/zoom-icon.png', alt: 'Zoom' },
+                  { src: '/images/meet-icon.png', alt: 'Google Meet' },
+                  { src: '/images/teams-icon.png', alt: 'Teams' },
+                  { src: '/images/slack-icon.png', alt: 'Slack' },
+                  { src: '/images/google-calendar-icon.png', alt: 'Calendar' },
+                ].map((s, i) => (
+                  <div key={i} className="w-9 h-9 md:w-10 md:h-10 rounded-lg bg-white/10 backdrop-blur-sm border border-white/10 flex items-center justify-center p-1.5">
+                    <Image src={s.src} alt={s.alt} width={28} height={28} className="w-full h-full object-contain" />
+                  </div>
+                ))}
+              </div>
+
+              <Link href="/products/ascendai" className="pill-btn !border-white/30 !text-white hover:!bg-white hover:!text-black">
+                詳しく見る <span className="arrow">&rarr;</span>
+              </Link>
+            </FadeIn>
+
+            {/* Right: Chat UI Preview */}
+            <FadeIn direction="right" className="flex-1 w-full">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+                <Image
+                  src="/images/ascend-agent-chat-ui.png"
+                  alt="Ascend Agent RAGチャット画面"
+                  width={1440}
+                  height={900}
+                  className="w-full h-auto"
+                />
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
 
       {/* About (サステナビリティ風セクション) */}
       <Section className="py-20 bg-gray-50">

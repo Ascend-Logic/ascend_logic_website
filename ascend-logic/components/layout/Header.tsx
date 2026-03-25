@@ -40,6 +40,9 @@ export default function Header() {
             <Link href="/services" className="nav-link text-gray-700 hover:text-indigo-600 text-sm font-medium">
               サービス
             </Link>
+            <Link href="/products/ascendai" className="nav-link text-gray-700 hover:text-indigo-600 text-sm font-medium">
+              プロダクト
+            </Link>
             <Link href="/case-studies" className="nav-link text-gray-700 hover:text-indigo-600 text-sm font-medium">
               導入事例
             </Link>
@@ -83,6 +86,9 @@ export default function Header() {
             <nav className="flex flex-col space-y-1">
               <Link href="/services" className="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 py-3 px-4 rounded-lg transition-colors" onClick={closeMenu}>
                 サービス
+              </Link>
+              <Link href="/products/ascendai" className="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 py-3 px-4 rounded-lg transition-colors" onClick={closeMenu}>
+                プロダクト
               </Link>
               <Link href="/case-studies" className="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 py-3 px-4 rounded-lg transition-colors" onClick={closeMenu}>
                 導入事例

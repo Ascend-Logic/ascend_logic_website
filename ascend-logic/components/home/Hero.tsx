@@ -1,106 +1,75 @@
-"use client";
-
-import { useEffect, useState, useCallback } from 'react';
-
-interface Slide {
-  tag: string;
-  title: string;
-  subtitle: string;
-}
+import Link from 'next/link';
 
 export default function Hero() {
-  const [activeSlide, setActiveSlide] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-  const [isTransitioning, setIsTransitioning] = useState(false);
-
-  const slides: Slide[] = [
-    {
-      tag: 'AI Solutions',
-      title: 'AI時代の\nビジネス変革',
-      subtitle: '最先端のAIテクノロジーで、あなたのビジネスを次のレベルへ',
-    },
-    {
-      tag: 'Case Study',
-      title: 'AIで業務効率を\n飛躍的に向上',
-      subtitle: '議事録作成・ナレッジ検索・データ分析をAIが自動化',
-    },
-    {
-      tag: 'About Us',
-      title: 'テクノロジーで\n社会に価値を届ける',
-      subtitle: 'Ascend Logicは、AIの力で企業の課題解決に取り組みます',
-    },
-  ];
-
-  const goToSlide = useCallback((index: number) => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setActiveSlide(index);
-      setTimeout(() => {
-        setIsTransitioning(false);
-      }, 50);
-    }, 400);
-  }, [isTransitioning]);
-
-  // Auto-rotate
-  useEffect(() => {
-    if (isPaused) return;
-    const timer = setInterval(() => {
-      goToSlide((activeSlide + 1) % slides.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [isPaused, activeSlide, slides.length, goToSlide]);
-
-  const current = slides[activeSlide];
-
   return (
-    <section className="relative min-h-[420px] md:min-h-[580px] flex items-center justify-center overflow-hidden">
-      {/* 背景 */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460]" />
-
-      {/* テキストコンテンツ（中央配置） */}
-      <div className="relative z-10 text-center px-6 w-full max-w-3xl mx-auto">
-        <span
-          className={`inline-block text-[11px] bg-white/15 text-white/80 px-4 py-1.5 rounded tracking-[0.2em] mb-6 font-medium uppercase font-serif-display transition-all duration-400 ${
-            isTransitioning ? 'opacity-0 translate-y-3' : 'opacity-100 translate-y-0'
-          }`}
-        >
-          {current.tag}
-        </span>
-
-        <h1
-          className={`hero-title text-4xl md:text-6xl lg:text-7xl text-white whitespace-pre-line transition-all duration-400 ${
-            isTransitioning ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'
-          }`}
-        >
-          {current.title}
-        </h1>
-
-        <p
-          className={`text-sm md:text-base text-white/50 mt-5 md:mt-8 max-w-xl mx-auto tracking-wide transition-all duration-400 delay-75 ${
-            isTransitioning ? 'opacity-0 translate-y-3' : 'opacity-100 translate-y-0'
-          }`}
-        >
-          {current.subtitle}
-        </p>
+    <section className="relative min-h-[640px] md:min-h-[760px] flex items-center overflow-hidden bg-[#07070d]">
+      {/* Animated mesh gradient blobs */}
+      <div className="absolute inset-0 overflow-hidden" aria-hidden>
+        <div className="hero-blob hero-blob-1" />
+        <div className="hero-blob hero-blob-2" />
+        <div className="hero-blob hero-blob-3" />
       </div>
 
-      {/* ドットインジケーター（下部中央） */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex items-center gap-4">
-        <button
-          onClick={() => setIsPaused(!isPaused)}
-          className="text-white/50 hover:text-white text-sm cursor-pointer transition-colors"
-          aria-label={isPaused ? '再生' : '一時停止'}
-        >
-          {isPaused ? '▶' : '❚❚'}
-        </button>
-        {slides.map((_, i) => (
-          <span
-            key={i}
-            className={`hero-dot ${i === activeSlide ? 'active' : ''}`}
-            onClick={() => goToSlide(i)}
-          />
-        ))}
+      {/* Subtle grid overlay */}
+      <div
+        className="absolute inset-0 opacity-[0.14] [background-image:linear-gradient(rgba(255,255,255,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.07)_1px,transparent_1px)] [background-size:56px_56px]"
+        aria-hidden
+      />
+
+      {/* Bottom vignette to blend into next section */}
+      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-[#07070d]" aria-hidden />
+
+      {/* Content */}
+      <div className="relative z-10 w-full max-w-[1200px] mx-auto px-6 md:px-10 py-24 md:py-32">
+        <div className="max-w-3xl">
+          {/* Eyebrow */}
+          {/* <div className="inline-flex items-center gap-2.5 mb-8 px-3.5 py-1.5 rounded-full border border-white/15 bg-white/[0.04] backdrop-blur-md">
+            <span className="relative flex w-1.5 h-1.5">
+              <span className="absolute inline-flex w-full h-full rounded-full bg-emerald-400 opacity-75 animate-ping" />
+              <span className="relative inline-flex w-1.5 h-1.5 rounded-full bg-emerald-400" />
+            </span>
+            <span className="section-title-en text-[11px] tracking-[0.22em] uppercase text-white/75 font-medium">
+              AI Solutions
+            </span>
+          </div> */}
+
+          {/* Headline */}
+          <h1 className="hero-title text-white text-3xl md:text-5xl lg:text-6xl !leading-[1.3] !tracking-[0.02em]">
+            ロジックで、
+            <br />
+            ビジネスを次の高みへ。
+          </h1>
+
+          {/* Sub */}
+          <p className="mt-7 md:mt-9 text-base md:text-lg text-white/60 max-w-xl leading-[1.9] tracking-wide">
+            AI時代のビジネス変革を、ロジックで設計する。<br className="hidden md:block" />
+            最先端のテクノロジーで、貴社のビジネスを次のステージへ。
+          </p>
+
+          {/* CTA */}
+          <div className="mt-10 md:mt-12 flex flex-wrap items-center gap-3 md:gap-4">
+            <Link
+              href="/services"
+              className="group inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black text-[13px] font-semibold tracking-wide hover:bg-white/90 transition-colors"
+            >
+              サービスを見る
+              <span className="transition-transform group-hover:translate-x-0.5">→</span>
+            </Link>
+            <Link
+              href="/request-documents"
+              className="group inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/25 text-white text-[13px] font-semibold tracking-wide hover:bg-white/10 transition-colors"
+            >
+              お問い合わせ
+              <span className="transition-transform group-hover:translate-x-0.5">›</span>
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 hidden md:flex flex-col items-center gap-2 text-white/40">
+        <span className="section-title-en text-[10px] tracking-[0.3em] uppercase">Scroll</span>
+        <span className="block w-px h-8 bg-gradient-to-b from-white/40 to-transparent" />
       </div>
     </section>
   );

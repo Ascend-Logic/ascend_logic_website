@@ -269,7 +269,7 @@ export default function TermsPage() {
         <div className="relative z-10 text-center px-6">
           <FadeIn>
             <p className="text-white/60 text-sm mb-6">ご不明な点がございましたら、お気軽にお問い合わせください。</p>
-            <Link href="/request-documents" className="pill-btn">
+            <Link href="/request-documents" className="pill-btn !border-white/30 !text-white hover:!bg-white/10">
               お問い合わせ
             </Link>
           </FadeIn>

@@ -120,7 +120,7 @@ export default function About() {
             <p className="text-white/60 text-sm md:text-base max-w-2xl mx-auto mb-10 leading-relaxed">
               AIの導入やビジネスの課題解決について、お気軽にご相談ください。
             </p>
-            <Link href="/request-documents" className="pill-btn">
+            <Link href="/request-documents" className="pill-btn !border-white/30 !text-white hover:!bg-white/10">
               お問い合わせ
             </Link>
           </FadeIn>

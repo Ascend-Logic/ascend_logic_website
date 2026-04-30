@@ -151,7 +151,7 @@ export default function CaseStudies() {
               事例に関する詳細や、お客様のビジネス課題に対する具体的なソリューション案をご希望の方は、
               お気軽にお問い合わせください。
             </p>
-            <Link href="/request-documents" className="pill-btn">
+            <Link href="/request-documents" className="pill-btn !border-white/30 !text-white hover:!bg-white/10">
               お問い合わせ
             </Link>
           </FadeIn>

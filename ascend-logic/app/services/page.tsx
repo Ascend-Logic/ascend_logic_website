@@ -130,7 +130,7 @@ export default function Services() {
               どのようなビジネス課題でも、まずはお気軽にご相談ください。
               専門のコンサルタントが貴社の状況をヒアリングし、最適なソリューションをご提案いたします。
             </p>
-            <Link href="/request-documents" className="pill-btn">
+            <Link href="/request-documents" className="pill-btn !border-white/30 !text-white hover:!bg-white/10">
               お問い合わせ
             </Link>
           </FadeIn>

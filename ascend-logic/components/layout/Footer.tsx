@@ -1,6 +1,15 @@
+"use client";
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Footer() {
+  const pathname = usePathname();
+  const isAscendAiProduct = pathname?.startsWith('/products/ascendai') ?? false;
+  const privacyPolicyHref = isAscendAiProduct
+    ? '/ascendai-privacy'
+    : '/privacy-policy';
+
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
@@ -68,12 +77,26 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between">
-          <p className="text-gray-400">© 2025 Ascend Logic Inc. All rights reserved.</p>
-          <div className="flex space-x-4 mt-4 md:mt-0">
-            <Link href="/privacy-policy" className="text-gray-400 hover:text-white">
-              プライバシーポリシー
-            </Link>
+        <div className="border-t border-gray-700 mt-8 pt-8">
+          {isAscendAiProduct && (
+            <div className="mb-6 pb-6 border-b border-gray-800">
+              <h4 className="text-sm font-bold text-gray-200 mb-2">使用AIサービス</h4>
+              <p className="text-gray-400 text-xs leading-relaxed mb-2">
+                本サービスは以下のAIサービスを利用しています。
+              </p>
+              <ul className="text-gray-400 text-xs space-y-1 list-disc list-inside marker:text-gray-500">
+                <li>Google Vertex AI Gemini</li>
+                <li>Google Vertex AI Search</li>
+              </ul>
+            </div>
+          )}
+          <div className="flex flex-col md:flex-row justify-between">
+            <p className="text-gray-400">© 2025 Ascend Logic Inc. All rights reserved.</p>
+            <div className="flex space-x-4 mt-4 md:mt-0">
+              <Link href={privacyPolicyHref} className="text-gray-400 hover:text-white">
+                プライバシーポリシー
+              </Link>
+            </div>
           </div>
         </div>
       </div>

@@ -3,113 +3,85 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
+const navItems = [
+  { jp: 'サービス', en: 'Services', href: '/services' },
+  { jp: 'プロダクト', en: 'Product', href: '/products/ascendai' },
+  { jp: '導入事例', en: 'Cases', href: '/case-studies' },
+  { jp: '会社情報', en: 'Company', href: '/about' },
+  { jp: 'ニュース', en: 'News', href: '/news' },
+];
+
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
+  const close = () => setOpen(false);
 
   return (
-    <header
-      className={`bg-white/97 backdrop-blur-md fixed w-full z-50 border-b border-gray-100 transition-shadow duration-300 ${
-        isScrolled ? 'header-scrolled' : ''
-      }`}
-    >
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center h-16">
-          <Link href="/" className="flex items-center" onClick={closeMenu}>
-            <span className="font-serif-display text-xl font-bold text-indigo-900 tracking-tight">Ascend Logic</span>
+    <header className={`al-nav ${scrolled ? 'is-scrolled' : ''}`}>
+      <div className="al-container al-nav__inner">
+        <Link href="/" className="logo" onClick={close}>
+          <span className="logo-mark" aria-hidden="true"></span>
+          <span>Ascend&nbsp;Logic</span>
+        </Link>
+
+        <nav className="al-nav__links">
+          {navItems.map((it) => (
+            <Link key={it.href} href={it.href} className="al-nav__link">
+              {it.jp}
+            </Link>
+          ))}
+        </nav>
+
+        <div className="al-nav__cta">
+          <Link href="/request-documents" className="btn btn-ghost">
+            <span>お問い合わせ</span>
           </Link>
-
-          {/* デスクトップナビゲーション */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/services" className="nav-link text-gray-700 hover:text-indigo-600 text-sm font-medium">
-              サービス
-            </Link>
-            <Link href="/products/ascendai" className="nav-link text-gray-700 hover:text-indigo-600 text-sm font-medium">
-              プロダクト
-            </Link>
-            <Link href="/case-studies" className="nav-link text-gray-700 hover:text-indigo-600 text-sm font-medium">
-              導入事例
-            </Link>
-            <Link href="/news" className="nav-link text-gray-700 hover:text-indigo-600 text-sm font-medium">
-              お知らせ
-            </Link>
-            <Link href="/about" className="nav-link text-gray-700 hover:text-indigo-600 text-sm font-medium">
-              会社概要
-            </Link>
-            <Link
-              href="/request-documents"
-              className="bg-indigo-600 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-indigo-700 transition-colors"
-            >
-              お問い合わせ
-            </Link>
-          </nav>
-
-          {/* モバイルメニューボタン */}
+          <Link href="/products/ascendai" className="btn btn-primary">
+            <span>Ascend Agent</span>
+            <span className="arr">→</span>
+          </Link>
           <button
-            className="md:hidden w-9 h-9 rounded-full border border-gray-200 flex flex-col items-center justify-center gap-1 hover:bg-gray-50 transition-colors"
-            onClick={toggleMenu}
+            type="button"
+            className="al-nav__mobile-btn"
+            onClick={() => setOpen((v) => !v)}
             aria-label="メニュー"
+            aria-expanded={open}
           >
-            {isMenuOpen ? (
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            ) : (
-              <>
-                <span className="block w-3.5 h-px bg-gray-700"></span>
-                <span className="block w-3.5 h-px bg-gray-700"></span>
-                <span className="block w-3.5 h-px bg-gray-700"></span>
-              </>
-            )}
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
         </div>
-
-        {/* モバイルナビゲーション */}
-        {isMenuOpen && (
-          <div className="md:hidden py-4 mobile-menu-enter">
-            <nav className="flex flex-col space-y-1">
-              <Link href="/services" className="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 py-3 px-4 rounded-lg transition-colors" onClick={closeMenu}>
-                サービス
-              </Link>
-              <Link href="/products/ascendai" className="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 py-3 px-4 rounded-lg transition-colors" onClick={closeMenu}>
-                プロダクト
-              </Link>
-              <Link href="/case-studies" className="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 py-3 px-4 rounded-lg transition-colors" onClick={closeMenu}>
-                導入事例
-              </Link>
-              <Link href="/news" className="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 py-3 px-4 rounded-lg transition-colors" onClick={closeMenu}>
-                お知らせ
-              </Link>
-              <Link href="/about" className="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 py-3 px-4 rounded-lg transition-colors" onClick={closeMenu}>
-                会社概要
-              </Link>
-              <Link
-                href="/request-documents"
-                className="bg-indigo-600 text-white px-4 py-3 rounded-lg hover:bg-indigo-700 text-center transition-colors mt-2"
-                onClick={closeMenu}
-              >
-                お問い合わせ
-              </Link>
-            </nav>
-          </div>
-        )}
       </div>
+
+      {open && (
+        <div className="al-container" style={{ display: 'block' }}>
+          <div className="al-nav__mobile" style={{ display: 'block' }}>
+            {navItems.map((it) => (
+              <Link key={it.href} href={it.href} className="al-nav__mobile-link" onClick={close}>
+                <span>{it.jp}</span>
+                <span className="mono tiny muted">{it.en}</span>
+              </Link>
+            ))}
+            <div className="al-nav__mobile-cta">
+              <Link href="/request-documents" className="btn btn-ghost" onClick={close}>
+                <span>お問い合わせ</span>
+              </Link>
+              <Link href="/products/ascendai" className="btn btn-primary" onClick={close}>
+                <span>Ascend Agent</span>
+                <span className="arr">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 }

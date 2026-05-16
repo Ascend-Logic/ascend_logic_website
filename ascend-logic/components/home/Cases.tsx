@@ -3,14 +3,13 @@ import CaseVisual from './CaseVisual';
 
 type Kind = 'construction' | 'it' | 'infra' | 'insurance' | 'healthcare' | 'government' | 'property';
 
-const cases: { ind: string; en: string; tag: string; note: string; viz: Kind }[] = [
-  { ind: '建設・不動産', en: 'Construction & Real Estate', tag: 'RAGナレッジ検索', note: '現場ノウハウを横断検索', viz: 'construction' },
-  { ind: 'IT・通信', en: 'IT & Telecom', tag: 'AI議事録', note: '全社会議をナレッジ化', viz: 'it' },
-  { ind: '公共インフラ', en: 'Public Infrastructure', tag: '可視化カメラ FW', note: 'マンホール内 IoT 開発', viz: 'infra' },
-  { ind: '保険・金融', en: 'Insurance & Finance', tag: '車種自動識別AI', note: '事故車両の自動分類', viz: 'insurance' },
-  { ind: 'ヘルスケア', en: 'Healthcare', tag: 'カウンセリングAI', note: 'オンライン相談の補助', viz: 'healthcare' },
-  { ind: '政府・公共機関', en: 'Government', tag: '大使館ポータル', note: '多言語ポータル基盤', viz: 'government' },
-  { ind: '不動産・管理', en: 'Property Management', tag: 'AI-OCR 自動転記', note: '紙帳票の構造化', viz: 'property' },
+const cases: { id: number; ind: string; en: string; tag: string; note: string; viz: Kind }[] = [
+  { id: 1, ind: '建設・不動産', en: 'Construction & Real Estate', tag: 'RAGナレッジ検索', note: '図面・技術文書を横断検索', viz: 'construction' },
+  { id: 2, ind: 'IT・通信', en: 'IT & Telecom', tag: 'AI議事録システム', note: '会議の自動文字起こし・タスク管理', viz: 'it' },
+  { id: 4, ind: '保険・金融', en: 'Insurance & Finance', tag: '車種自動識別AI', note: '損害査定業務の高速化', viz: 'insurance' },
+  { id: 5, ind: 'ヘルスケア', en: 'Healthcare', tag: 'カウンセリングAI', note: '音声・表情でメンタル支援', viz: 'healthcare' },
+  { id: 6, ind: '政府・公共機関', en: 'Government', tag: '大使館ポータル', note: '多言語デジタル窓口', viz: 'government' },
+  { id: 7, ind: '不動産・管理', en: 'Property Management', tag: 'AI-OCR 自動転記', note: '紙帳票をExcelへ自動転記', viz: 'property' },
 ];
 
 export default function Cases() {
@@ -26,7 +25,6 @@ export default function Cases() {
             </h2>
           </div>
           <p className="lede sec-head__lede">
-            7+ 業種でのAI導入実績。<br />
             技術の専門性と、現場定着への伴走支援が私たちの強みです。
           </p>
         </div>

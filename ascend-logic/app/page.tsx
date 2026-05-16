@@ -25,7 +25,7 @@ export default function Home() {
       <Reveal><Cases /></Reveal>
       <Reveal><Company /></Reveal>
       <Reveal><News /></Reveal>
-      <Reveal><Careers /></Reveal>
+      {/* <Reveal><Careers /></Reveal> */}
       <Reveal><Contact /></Reveal>
     </>
   );

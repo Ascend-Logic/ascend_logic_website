@@ -381,9 +381,10 @@ section { position: relative; }
 .hero-type__title .block { display: block; }
 .hero-type__hl em {
   font-style: normal;
-  background: linear-gradient(120deg, var(--accent) 0%, color-mix(in oklab, var(--accent) 60%, #fff) 100%);
+  background-image: linear-gradient(120deg, var(--accent) 0%, color-mix(in oklab, var(--accent) 60%, #fff) 100%);
   -webkit-background-clip: text;
   background-clip: text;
+  -webkit-text-fill-color: transparent;
   color: transparent;
   position: relative;
 }

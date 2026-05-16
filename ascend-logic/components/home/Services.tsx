@@ -70,9 +70,9 @@ function ServiceViz({ kind }: { kind: VizKind }) {
           <div className="flow-arrow">→</div>
           <div className="flow-node">ERP</div>
         </div>
-        <div className="viz-flow-sub">
+        {/* <div className="viz-flow-sub">
           <span className="mono tiny muted">{'// 反復処理 → 0 hr / week'}</span>
-        </div>
+        </div> */}
       </div>
     );
   }

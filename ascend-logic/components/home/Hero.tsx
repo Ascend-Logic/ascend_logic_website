@@ -5,14 +5,6 @@ export default function Hero() {
     <section className="hero" id="top">
       <div className="hero-mesh" aria-hidden="true"></div>
       <div className="al-container hero-type__inner">
-        <div className="hero-type__eyebrow">
-          {/* <span className="tag">
-            <span className="tag-dot"></span>
-            <span>EST. 2025 — TOKYO</span>
-          </span>
-          <span className="mono hero-type__meta">A.L / 001</span> */}
-        </div>
-
         <h1 className="h-display hero-type__title">
           <span className="block">AIの力で、すべての</span>
           <span className="block">企業と個人の</span>
@@ -33,18 +25,6 @@ export default function Hero() {
             </Link>
           </div>
         </div>
-
-        <div className="hero-type__big en" aria-hidden="true">
-          ASCEND
-          <br />
-          LOGIC
-        </div>
-
-        {/* <div className="hero-type__footnote">
-          <div><span className="mono muted tiny">ISO &nbsp;/&nbsp; SOC&nbsp;2 ready</span></div>
-          <div><span className="mono muted tiny">7+ industries deployed</span></div>
-          <div><span className="mono muted tiny">JP &nbsp;·&nbsp; EN &nbsp;·&nbsp; ZH</span></div>
-        </div> */}
       </div>
     </section>
   )

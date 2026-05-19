@@ -6,7 +6,6 @@ import Agent from '../components/home/Agent'
 import Cases from '../components/home/Cases'
 import Company from '../components/home/Company'
 import News from '../components/home/News'
-import Careers from '../components/home/Careers'
 import Contact from '../components/home/Contact'
 import Reveal from '../components/ui/Reveal'
 
@@ -37,7 +36,6 @@ export default function Home() {
       <Reveal>
         <News />
       </Reveal>
-      {/* <Reveal><Careers /></Reveal> */}
       <Reveal>
         <Contact />
       </Reveal>

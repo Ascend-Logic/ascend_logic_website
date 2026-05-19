@@ -106,7 +106,7 @@ export default function RequestDocuments() {
           {!submitted ? (
             <FadeIn>
               <div className="bg-white border border-gray-200 rounded-lg p-8 md:p-10">
-                <h2 className="section-title-en text-sm text-gray-400 tracking-widest mb-2">Form</h2>
+                <h2 className="font-en tracking-wide font-semibold text-sm text-gray-400 tracking-widest mb-2">Form</h2>
                 <p className="text-xl font-bold mb-8">お問い合わせフォーム</p>
 
                 {error && <div className="bg-red-50 text-red-700 p-4 rounded-lg mb-6 text-sm">{error}</div>}
@@ -230,7 +230,7 @@ export default function RequestDocuments() {
         <div className="max-w-[900px] mx-auto px-6 md:px-10">
           <FadeIn>
             <div className="text-center mb-14">
-              <h2 className="section-title-en text-sm text-gray-400 tracking-widest mb-2">FAQ</h2>
+              <h2 className="font-en tracking-wide font-semibold text-sm text-gray-400 tracking-widest mb-2">FAQ</h2>
               <p className="text-xl font-bold">よくあるご質問</p>
             </div>
           </FadeIn>

@@ -37,9 +37,9 @@ export default function Careers() {
         <ul className="careers-list">
           {careers.map((c) => (
             <li key={c.role} className="careers-row">
-              <span className="mono careers-team">{c.team}</span>
+              <span className="font-mono tracking-wide careers-team">{c.team}</span>
               <span className="careers-role focus-line">{c.role}</span>
-              <span className="careers-loc muted tiny">{c.loc}</span>
+              <span className="careers-loc text-muted-foreground text-sm">{c.loc}</span>
               <span className="careers-type tag">{c.type}</span>
               <span className="careers-arr">→</span>
             </li>

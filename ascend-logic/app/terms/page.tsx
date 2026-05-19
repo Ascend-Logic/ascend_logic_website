@@ -150,7 +150,7 @@ export default function TermsPage() {
       <section id="privacy-policy" className="py-20 bg-gray-50 border-t border-gray-200">
         <div className="max-w-[900px] mx-auto px-6 md:px-10">
           <FadeIn>
-            <h2 className="section-title-en text-sm text-gray-400 tracking-widest mb-2">Privacy Policy</h2>
+            <h2 className="font-en tracking-wide font-semibold text-sm text-gray-400 tracking-widest mb-2">Privacy Policy</h2>
             <p className="text-2xl font-bold mb-2">Ascend Agent プライバシーポリシー</p>
             <p className="text-sm text-gray-400 mb-12">最終更新日: 2026年2月15日</p>
           </FadeIn>

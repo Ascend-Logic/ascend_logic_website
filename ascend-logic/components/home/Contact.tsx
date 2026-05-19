@@ -11,7 +11,7 @@ export default function Contact() {
           ></div>
           <div className="grid grid-cols-[1.4fr_1fr] gap-[60px] p-20 max-[880px]:grid-cols-1 max-[880px]:px-8 max-[880px]:py-12 max-[880px]:gap-10">
             <div>
-              <span className="font-mono text-xs font-medium tracking-eyebrow uppercase text-white/70 inline-flex items-center gap-2 before:content-[''] before:w-[18px] before:h-px before:bg-current before:inline-block">
+              <span className="font-mono tracking-wide text-xs font-medium tracking-eyebrow uppercase text-white/70 inline-flex items-center gap-2 before:content-[''] before:w-[18px] before:h-px before:bg-current before:inline-block">
                 CONTACT &nbsp;/&nbsp; 09
               </span>
               <h2 className="font-bold leading-[1.14] tracking-tight text-[clamp(36px,4.4vw,60px)] mt-4 mb-6">

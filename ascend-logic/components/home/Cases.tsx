@@ -73,7 +73,7 @@ export default function Cases() {
         <div className="cases-grid">
           {cases.map((c, i) => (
             <article key={c.en} className="case-card">
-              <div className="case-card__no mono">CASE / {String(i + 1).padStart(2, '0')}</div>
+              <div className="case-card__no font-mono tracking-wide">CASE / {String(i + 1).padStart(2, '0')}</div>
               <div className="case-card__viz">
                 <CaseVisual kind={c.viz} />
               </div>
@@ -96,7 +96,7 @@ export default function Cases() {
             <div className="bignum">+</div>
             <div>
               <div className="case-card__h">あなたの業界も。</div>
-              <p className="muted tiny">
+              <p className="text-muted-foreground text-sm">
                 業種・課題に応じてご提案。
                 <br />
                 まずは無料相談から。

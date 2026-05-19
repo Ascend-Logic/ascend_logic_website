@@ -7,7 +7,7 @@ export default function News() {
       <div className="relative w-full max-w-[1280px] mx-auto px-8 max-[720px]:px-5">
         <div className="grid grid-cols-[1.2fr_1fr] gap-[60px] items-end mb-16 max-[880px]:grid-cols-1 max-[880px]:gap-6">
           <div>
-            <span className="font-mono text-xs font-medium tracking-eyebrow uppercase text-primary inline-flex items-center gap-2 before:content-[''] before:w-[18px] before:h-px before:bg-current before:inline-block">
+            <span className="font-mono tracking-wide text-xs font-medium tracking-eyebrow uppercase text-primary inline-flex items-center gap-2 before:content-[''] before:w-[18px] before:h-px before:bg-current before:inline-block">
               NEWS &nbsp;/&nbsp; 07
             </span>
             <h2 className="font-bold text-section leading-[1.25] tracking-tight m-0 mt-4">ニュース / ブログ</h2>
@@ -28,7 +28,7 @@ export default function News() {
             const Inner = (
               <>
                 <span className="font-mono tracking-wide text-xs text-muted-foreground tracking-wider">{n.date}</span>
-                <span className="inline-flex items-center gap-1.5 font-mono text-[10px] tracking-wider uppercase px-2.5 py-[5px] border border-border-strong rounded-full text-foreground-soft bg-background justify-self-start max-[720px]:hidden">
+                <span className="inline-flex items-center gap-1.5 font-mono tracking-wide text-[10px] tracking-wider uppercase px-2.5 py-[5px] border border-border-strong rounded-full text-foreground-soft bg-background justify-self-start max-[720px]:hidden">
                   {n.category}
                 </span>
                 <span className="text-base text-foreground font-medium">{n.title}</span>

@@ -263,8 +263,8 @@ export default function AscendAgentProductPage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(79,70,229,0.15),transparent_70%)]" />
         <div className="relative z-10 max-w-[1100px] mx-auto px-6 md:px-10 pt-32 pb-24 md:pt-40 md:pb-32 text-center">
           <FadeIn>
-            <p className="section-title-en text-sm text-white/40 tracking-[0.2em] mb-6">YOUR AI ASSISTANT</p>
-            <h1 className="hero-title text-3xl md:text-5xl lg:text-[3.4rem] leading-tight mb-6">
+            <p className="font-en tracking-wide font-semibold text-sm text-white/40 tracking-[0.2em] mb-6">YOUR AI ASSISTANT</p>
+            <h1 className="font-jp font-bold tracking-wide leading-tight text-3xl md:text-5xl lg:text-[3.4rem] leading-tight mb-6">
               すべての社員に、
               <br className="hidden md:block" />
               もう一人のAIアシスタントを。
@@ -285,7 +285,7 @@ export default function AscendAgentProductPage() {
       <section className="py-20 bg-gray-50 overflow-hidden">
         <div className="max-w-[1100px] mx-auto px-6 md:px-10">
           <FadeIn>
-            <p className="section-title-en text-sm text-gray-400 tracking-[0.2em] text-center mb-2">Integration</p>
+            <p className="font-en tracking-wide font-semibold text-sm text-gray-400 tracking-[0.2em] text-center mb-2">Integration</p>
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">あらゆるツールの情報が、AIに集まる</h2>
             <p className="text-gray-500 text-sm text-center mb-16 max-w-xl mx-auto">
               日常で使うコミュニケーションツールと自動連携。
@@ -363,7 +363,7 @@ export default function AscendAgentProductPage() {
       <section className="py-24 bg-white">
         <div className="max-w-[1100px] mx-auto px-6 md:px-10">
           <FadeIn>
-            <p className="section-title-en text-sm text-gray-400 tracking-[0.2em] text-center mb-2">Before &amp; After</p>
+            <p className="font-en tracking-wide font-semibold text-sm text-gray-400 tracking-[0.2em] text-center mb-2">Before &amp; After</p>
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">もし、あなた専属のAIアシスタントがいたら？</h2>
             <p className="text-gray-500 text-sm text-center mb-16 max-w-xl mx-auto">Ascend Agentがいる働き方は、今までの「当たり前」を変えます。</p>
           </FadeIn>
@@ -418,7 +418,7 @@ export default function AscendAgentProductPage() {
       <section className="py-24 bg-gray-50">
         <div className="max-w-[1100px] mx-auto px-6 md:px-10">
           <FadeIn>
-            <p className="section-title-en text-sm text-gray-400 tracking-[0.2em] text-center mb-2">Capabilities</p>
+            <p className="font-en tracking-wide font-semibold text-sm text-gray-400 tracking-[0.2em] text-center mb-2">Capabilities</p>
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-20">あなたのAIアシスタントができること</h2>
           </FadeIn>
 
@@ -429,7 +429,7 @@ export default function AscendAgentProductPage() {
                   <div className="flex items-center gap-4 mb-5">
                     <div className="w-14 h-14 rounded-full bg-black text-white flex items-center justify-center flex-shrink-0">{a.icon}</div>
                     <div>
-                      <p className="section-title-en text-xs text-gray-400 tracking-[0.15em]">{a.subtitle}</p>
+                      <p className="font-en tracking-wide font-semibold text-xs text-gray-400 tracking-[0.15em]">{a.subtitle}</p>
                       <h3 className="text-xl font-bold">{a.title}</h3>
                     </div>
                   </div>
@@ -445,7 +445,7 @@ export default function AscendAgentProductPage() {
       <section className="py-24 bg-white">
         <div className="max-w-[1100px] mx-auto px-6 md:px-10">
           <FadeIn>
-            <p className="section-title-en text-sm text-gray-400 tracking-[0.2em] text-center mb-2">AI Chat</p>
+            <p className="font-en tracking-wide font-semibold text-sm text-gray-400 tracking-[0.2em] text-center mb-2">AI Chat</p>
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">AIアシスタントに聞く &#8212; いつでも、なんでも</h2>
             <p className="text-gray-500 text-sm text-center mb-16 max-w-2xl mx-auto">
               過去の会議内容や蓄積されたドキュメントに対して自然な言葉で質問するだけ。
@@ -490,7 +490,7 @@ export default function AscendAgentProductPage() {
       <section className="py-24 bg-white">
         <div className="max-w-[1100px] mx-auto px-6 md:px-10">
           <FadeIn>
-            <p className="section-title-en text-sm text-gray-400 tracking-[0.2em] text-center mb-2">Two Modes</p>
+            <p className="font-en tracking-wide font-semibold text-sm text-gray-400 tracking-[0.2em] text-center mb-2">Two Modes</p>
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">AIの「同席」方法</h2>
             <p className="text-gray-500 text-sm text-center mb-16 max-w-xl mx-auto">あらゆる会議形態に対応する、2つの録画方式を用意しています。</p>
           </FadeIn>
@@ -523,7 +523,7 @@ export default function AscendAgentProductPage() {
       <section className="py-24 bg-black text-white overflow-hidden">
         <div className="max-w-[1100px] mx-auto px-6 md:px-10">
           <FadeIn>
-            <p className="section-title-en text-sm text-white/40 tracking-[0.2em] text-center mb-2">Automated Pipeline</p>
+            <p className="font-en tracking-wide font-semibold text-sm text-white/40 tracking-[0.2em] text-center mb-2">Automated Pipeline</p>
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">完全自動 &#8212; セットアップ後は手間ゼロ</h2>
             <p className="text-white/50 text-sm text-center mb-16 max-w-2xl mx-auto">
               カレンダーに会議が入った瞬間から、録画・文字起こし・議事録生成・ナレッジ蓄積まで、ユーザーの操作は一切不要です。
@@ -535,7 +535,7 @@ export default function AscendAgentProductPage() {
               <FadeIn key={i} delay={i * 100}>
                 <div className="text-center">
                   <div className="w-14 h-14 rounded-full border-2 border-white/20 text-white flex items-center justify-center mx-auto mb-4">
-                    <span className="section-title-en text-lg font-bold">{p.step}</span>
+                    <span className="font-en tracking-wide font-semibold text-lg font-bold">{p.step}</span>
                   </div>
                   <h3 className="text-base font-bold mb-2">{p.title}</h3>
                   <p className="text-white/50 text-xs leading-relaxed">{p.description}</p>
@@ -550,7 +550,7 @@ export default function AscendAgentProductPage() {
       <section className="py-24 bg-white">
         <div className="max-w-[1100px] mx-auto px-6 md:px-10">
           <FadeIn>
-            <p className="section-title-en text-sm text-gray-400 tracking-[0.2em] text-center mb-2">Impact</p>
+            <p className="font-en tracking-wide font-semibold text-sm text-gray-400 tracking-[0.2em] text-center mb-2">Impact</p>
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-16">AIアシスタントがもたらす変化</h2>
           </FadeIn>
 
@@ -558,7 +558,7 @@ export default function AscendAgentProductPage() {
             {impacts.map((item, i) => (
               <FadeIn key={i} delay={i * 120}>
                 <div className="text-center p-8">
-                  <p className="section-title-en text-5xl md:text-6xl font-bold text-black mb-3">{item.value}</p>
+                  <p className="font-en tracking-wide font-semibold text-5xl md:text-6xl font-bold text-black mb-3">{item.value}</p>
                   <p className="text-base font-bold mb-2">{item.label}</p>
                   <p className="text-gray-500 text-sm leading-relaxed">{item.description}</p>
                 </div>
@@ -572,7 +572,7 @@ export default function AscendAgentProductPage() {
       <section className="py-24 bg-gray-50">
         <div className="max-w-[1100px] mx-auto px-6 md:px-10">
           <FadeIn>
-            <p className="section-title-en text-sm text-gray-400 tracking-[0.2em] text-center mb-2">Security</p>
+            <p className="font-en tracking-wide font-semibold text-sm text-gray-400 tracking-[0.2em] text-center mb-2">Security</p>
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-16">エンタープライズ品質のセキュリティ</h2>
           </FadeIn>
 
@@ -679,7 +679,7 @@ export default function AscendAgentProductPage() {
       <section className="py-24 bg-white">
         <div className="max-w-[1100px] mx-auto px-6 md:px-10">
           <FadeIn>
-            <p className="section-title-en text-sm text-gray-400 tracking-[0.2em] text-center mb-2">Flow</p>
+            <p className="font-en tracking-wide font-semibold text-sm text-gray-400 tracking-[0.2em] text-center mb-2">Flow</p>
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-16">ご利用開始までの流れ</h2>
           </FadeIn>
 
@@ -689,7 +689,7 @@ export default function AscendAgentProductPage() {
                 <div className="text-center">
                   <div className="relative inline-flex items-center justify-center w-28 h-28 rounded-full bg-gray-100 mb-6">
                     <div className="text-gray-600">{s.icon}</div>
-                    <div className="absolute -top-2 -right-2 w-9 h-9 rounded-full bg-black text-white flex items-center justify-center text-sm font-bold section-title-en">{s.number}</div>
+                    <div className="absolute -top-2 -right-2 w-9 h-9 rounded-full bg-black text-white flex items-center justify-center text-sm font-bold font-en tracking-wide font-semibold">{s.number}</div>
                   </div>
                   <h3 className="text-base font-bold mb-2">{s.title}</h3>
                   <p className="text-gray-500 text-xs leading-relaxed">{s.description}</p>
@@ -712,7 +712,7 @@ export default function AscendAgentProductPage() {
       <section className="py-24 bg-gray-50">
         <div className="max-w-[800px] mx-auto px-6 md:px-10">
           <FadeIn>
-            <p className="section-title-en text-sm text-gray-400 tracking-[0.2em] text-center mb-2">FAQ</p>
+            <p className="font-en tracking-wide font-semibold text-sm text-gray-400 tracking-[0.2em] text-center mb-2">FAQ</p>
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-16">よくあるご質問</h2>
           </FadeIn>
 
@@ -721,7 +721,7 @@ export default function AscendAgentProductPage() {
               <FadeIn key={i} delay={i * 80}>
                 <div className="bg-white rounded-lg p-6 hover:shadow-md transition-shadow">
                   <div className="flex items-start gap-4">
-                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-50 text-indigo-600 flex items-center justify-center text-sm font-bold section-title-en">Q</span>
+                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-50 text-indigo-600 flex items-center justify-center text-sm font-bold font-en tracking-wide font-semibold">Q</span>
                     <div>
                       <h3 className="font-bold text-base mb-3">{faq.q}</h3>
                       <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
@@ -739,7 +739,7 @@ export default function AscendAgentProductPage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(79,70,229,0.1),transparent_70%)]" />
         <div className="relative z-10 max-w-[1100px] mx-auto px-6 md:px-10 text-center">
           <FadeIn>
-            <p className="section-title-en text-sm text-white/40 tracking-[0.2em] mb-4">Contact Us</p>
+            <p className="font-en tracking-wide font-semibold text-sm text-white/40 tracking-[0.2em] mb-4">Contact Us</p>
             <h2 className="text-2xl md:text-3xl font-bold mb-4">すべての社員に、もう一人の力を。</h2>
             <p className="text-white/50 text-sm md:text-base max-w-2xl mx-auto mb-10 leading-relaxed">
               Ascend Agent &#8212; あなた専属のAIアシスタント。

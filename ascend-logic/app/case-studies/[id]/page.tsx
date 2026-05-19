@@ -209,13 +209,13 @@ export default async function CaseStudyDetail({ params }: CaseStudyDetailProps) 
               </FadeIn>
 
               <FadeIn>
-                <h2 className="section-title-en text-sm text-gray-400 tracking-widest mb-2">Challenge</h2>
+                <h2 className="font-en tracking-wide font-semibold text-sm text-gray-400 tracking-widest mb-2">Challenge</h2>
                 <h3 className="text-xl font-bold mb-4">課題</h3>
                 <p className="text-gray-600 leading-relaxed mb-12">{caseStudy.challenge || `${caseStudy.company}様は、業務の非効率性と増大するコストという課題に直面していました。`}</p>
               </FadeIn>
 
               <FadeIn>
-                <h2 className="section-title-en text-sm text-gray-400 tracking-widest mb-2">Approach</h2>
+                <h2 className="font-en tracking-wide font-semibold text-sm text-gray-400 tracking-widest mb-2">Approach</h2>
                 <h3 className="text-xl font-bold mb-4">アプローチ</h3>
                 <p className="text-gray-600 leading-relaxed mb-12">{caseStudy.approach || `Ascend Logicは、最新のAI技術を活用した${caseStudy.solution}ソリューションを提案・導入しました。`}</p>
               </FadeIn>
@@ -225,18 +225,18 @@ export default async function CaseStudyDetail({ params }: CaseStudyDetailProps) 
               <FadeIn>
                 <div className="sticky top-24 bg-gray-50 rounded-lg p-6 space-y-6">
                   <div>
-                    <h4 className="text-xs text-gray-400 tracking-wider uppercase mb-2 section-title-en">Solution</h4>
+                    <h4 className="text-xs text-gray-400 tracking-wider uppercase mb-2 font-en tracking-wide font-semibold">Solution</h4>
                     <p className="font-medium">{caseStudy.solution}</p>
                   </div>
                   {caseStudy.duration && (
                     <div>
-                      <h4 className="text-xs text-gray-400 tracking-wider uppercase mb-2 section-title-en">Duration</h4>
+                      <h4 className="text-xs text-gray-400 tracking-wider uppercase mb-2 font-en tracking-wide font-semibold">Duration</h4>
                       <p className="font-medium">{caseStudy.duration}</p>
                     </div>
                   )}
                   {caseStudy.technologies && (
                     <div>
-                      <h4 className="text-xs text-gray-400 tracking-wider uppercase mb-2 section-title-en">Technologies</h4>
+                      <h4 className="text-xs text-gray-400 tracking-wider uppercase mb-2 font-en tracking-wide font-semibold">Technologies</h4>
                       <div className="flex flex-wrap gap-2">
                         {caseStudy.technologies.map((tech, index) => (
                           <span key={index} className="text-xs bg-white border border-gray-200 px-3 py-1 rounded">
@@ -261,7 +261,7 @@ export default async function CaseStudyDetail({ params }: CaseStudyDetailProps) 
         <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460]" />
         <div className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-10 text-center">
           <FadeIn>
-            <h2 className="section-title-en text-2xl md:text-3xl text-white mb-4">Contact Us</h2>
+            <h2 className="font-en tracking-wide font-semibold text-2xl md:text-3xl text-white mb-4">Contact Us</h2>
             <p className="text-white/60 text-sm md:text-base max-w-2xl mx-auto mb-10 leading-relaxed">AIを活用した業務改善・自動化について、お気軽にご相談ください。</p>
             <Link href="/request-documents" className="pill-btn !border-white/30 !text-white hover:!bg-white/10">
               お問い合わせ

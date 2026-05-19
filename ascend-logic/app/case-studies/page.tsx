@@ -136,7 +136,7 @@ export default function CaseStudies() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460]" />
         <div className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-10 text-center">
           <FadeIn>
-            <h2 className="section-title-en text-2xl md:text-3xl text-white mb-4">Contact Us</h2>
+            <h2 className="font-en tracking-wide font-semibold text-2xl md:text-3xl text-white mb-4">Contact Us</h2>
             <p className="text-white/60 text-sm md:text-base max-w-2xl mx-auto mb-10 leading-relaxed">
               事例に関する詳細や、お客様のビジネス課題に対する具体的なソリューション案をご希望の方は、 お気軽にお問い合わせください。
             </p>

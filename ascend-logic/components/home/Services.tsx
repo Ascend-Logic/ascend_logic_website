@@ -78,11 +78,11 @@ function ServiceViz({ kind }: { kind: VizKind }) {
       <div className={wrap}>
         <div className="flex items-center gap-2 flex-wrap justify-center">
           <div className={`${nodeBase} bg-background border-border text-foreground-soft`}>CSV</div>
-          <div className="text-muted-foreground font-mono">→</div>
+          <div className="text-muted-foreground font-mono tracking-wide">→</div>
           <div className={`${nodeBase} bg-primary border-primary text-white`}>AI抽出</div>
-          <div className="text-muted-foreground font-mono">→</div>
+          <div className="text-muted-foreground font-mono tracking-wide">→</div>
           <div className={`${nodeBase} bg-background border-border text-foreground-soft`}>RPA</div>
-          <div className="text-muted-foreground font-mono">→</div>
+          <div className="text-muted-foreground font-mono tracking-wide">→</div>
           <div className={`${nodeBase} bg-background border-border text-foreground-soft`}>ERP</div>
         </div>
       </div>
@@ -104,12 +104,12 @@ function ServiceViz({ kind }: { kind: VizKind }) {
             <path d="M0 90 L40 85 L80 82 L120 75 L160 70 L200 62" fill="none" stroke="var(--muted-foreground)" strokeWidth="1" strokeDasharray="3 3" />
           </svg>
         </div>
-        <div className="flex gap-4 text-xs text-muted-foreground mt-2 font-mono">
+        <div className="flex gap-4 text-xs text-muted-foreground mt-2 font-mono tracking-wide">
           <span>
             <span className="inline-block size-2 bg-primary rounded-full mr-1.5 align-middle"></span>予測モデル
           </span>
           <span>
-            <span className="inline-block size-2 bg-muted-foreground rounded-full mr-1.5 align-middle"></span>実績ベースライン
+            <span className="inline-block size-2 bg-text-muted-foreground-foreground rounded-full mr-1.5 align-middle"></span>実績ベースライン
           </span>
         </div>
       </div>
@@ -176,7 +176,7 @@ export default function Services() {
               }`}
             >
               <div>
-                <span className="font-mono text-sm text-muted-foreground tracking-uppercase-wide">{s.no}</span>
+                <span className="font-mono tracking-wide text-sm text-muted-foreground tracking-uppercase-wide">{s.no}</span>
               </div>
               <div>
                 <div className="flex flex-col gap-1.5 mb-4">

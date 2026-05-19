@@ -34,7 +34,7 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border-t border-l border-gray-200">
             <div className="border-r border-b border-gray-200 p-8 md:p-12">
               <FadeIn>
-                <h2 className="section-title-en text-sm text-gray-400 tracking-widest mb-3">Vision</h2>
+                <h2 className="font-en tracking-wide font-semibold text-sm text-gray-400 tracking-widest mb-3">Vision</h2>
                 <h3 className="text-2xl font-bold mb-6">ビジョン</h3>
                 <p className="text-lg text-gray-800 leading-relaxed mb-4">「AIの力で、すべての企業と個人の可能性を解き放つ」</p>
                 <p className="text-gray-600 leading-relaxed">
@@ -45,7 +45,7 @@ export default function About() {
             </div>
             <div className="border-r border-b border-gray-200 p-8 md:p-12">
               <FadeIn delay={100}>
-                <h2 className="section-title-en text-sm text-gray-400 tracking-widest mb-3">Mission</h2>
+                <h2 className="font-en tracking-wide font-semibold text-sm text-gray-400 tracking-widest mb-3">Mission</h2>
                 <h3 className="text-2xl font-bold mb-6">ミッション</h3>
                 <p className="text-lg text-gray-800 leading-relaxed mb-4">「最先端のAI技術を、誰もが活用できるものに」</p>
                 <p className="text-gray-600 leading-relaxed">
@@ -63,7 +63,7 @@ export default function About() {
         <div className="max-w-[1200px] mx-auto px-6 md:px-10">
           <FadeIn>
             <div className="text-center mb-14">
-              <h2 className="section-title-en text-sm text-gray-400 tracking-widest mb-2">Company</h2>
+              <h2 className="font-en tracking-wide font-semibold text-sm text-gray-400 tracking-widest mb-2">Company</h2>
               <p className="text-2xl font-bold">会社情報</p>
             </div>
           </FadeIn>
@@ -102,7 +102,7 @@ export default function About() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460]" />
         <div className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-10 text-center">
           <FadeIn>
-            <h2 className="section-title-en text-2xl md:text-3xl text-white mb-4">Contact Us</h2>
+            <h2 className="font-en tracking-wide font-semibold text-2xl md:text-3xl text-white mb-4">Contact Us</h2>
             <p className="text-white/60 text-sm md:text-base max-w-2xl mx-auto mb-10 leading-relaxed">AIの導入やビジネスの課題解決について、お気軽にご相談ください。</p>
             <Link href="/request-documents" className="pill-btn !border-white/30 !text-white hover:!bg-white/10">
               お問い合わせ

@@ -35,7 +35,7 @@ export default function Agent() {
       <div className="relative w-full max-w-[1280px] mx-auto px-8 max-[720px]:px-5">
         <div className="grid grid-cols-[1.3fr_1fr] gap-[60px] items-end mb-14 max-[880px]:grid-cols-1 max-[880px]:gap-5">
           <div>
-            <span className="font-mono text-xs font-medium tracking-eyebrow uppercase text-white inline-flex items-center gap-2 before:content-[''] before:w-[18px] before:h-px before:bg-current before:inline-block">
+            <span className="font-mono tracking-wide text-xs font-medium tracking-eyebrow uppercase text-white inline-flex items-center gap-2 before:content-[''] before:w-[18px] before:h-px before:bg-current before:inline-block">
               PRODUCT &nbsp;/&nbsp; 04
             </span>
             <h2 className="font-bold text-section leading-[1.25] tracking-tight m-0 mt-4 text-white">
@@ -61,7 +61,7 @@ export default function Agent() {
                 i % 3 === 0 ? 'border-l-0 pl-0' : ''
               } ${i % 3 === 2 ? 'pr-0' : ''} ${i >= features.length - 3 ? 'max-[881px]:border-b-0' : ''} max-[880px]:last:border-b-0`}
             >
-              <span className="font-mono tracking-uppercase-wide text-xs text-primary pt-1 flex-shrink-0">{f.ic}</span>
+              <span className="font-mono tracking-wide tracking-uppercase-wide text-xs text-primary pt-1 flex-shrink-0">{f.ic}</span>
               <div>
                 <div className="font-semibold text-base mb-1.5 text-white">{f.t}</div>
                 <div className="text-sm text-white/[0.62] leading-[1.7]">{f.d}</div>
@@ -76,7 +76,7 @@ export default function Agent() {
               {['Google OAuth', 'AES-256 暗号化', 'テナント完全分離', '監査ログ', 'SSO 対応'].map((chip) => (
                 <span
                   key={chip}
-                  className="inline-flex items-center gap-1.5 font-mono text-xs tracking-wider uppercase px-2.5 py-[5px] border border-white/[0.18] rounded-full text-white/85 bg-white/5"
+                  className="inline-flex items-center gap-1.5 font-mono tracking-wide text-xs tracking-wider uppercase px-2.5 py-[5px] border border-white/[0.18] rounded-full text-white/85 bg-white/5"
                 >
                   {chip}
                 </span>

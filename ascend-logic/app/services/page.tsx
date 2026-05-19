@@ -127,7 +127,7 @@ export default function Services() {
               <FadeIn>
                 <div className={`flex flex-col ${index % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-10 md:gap-16`}>
                   <div className="md:w-1/2">
-                    <span className="section-title-en text-sm text-gray-400 tracking-widest mb-3 block">{service.number}</span>
+                    <span className="font-en tracking-wide font-semibold text-sm text-gray-400 tracking-widest mb-3 block">{service.number}</span>
                     <h2 className="text-3xl md:text-4xl font-bold mb-6 whitespace-pre-line">{service.titleBreak}</h2>
                     <p className="text-gray-600 leading-relaxed">{service.description}</p>
                   </div>
@@ -145,14 +145,14 @@ export default function Services() {
           <section className="py-20 bg-gray-50 border-t border-gray-200">
             <div className="max-w-[1200px] mx-auto px-6 md:px-10">
               <FadeIn>
-                <h3 className="section-title-en text-center text-sm text-gray-400 tracking-widest mb-2">Approach</h3>
+                <h3 className="font-en tracking-wide font-semibold text-center text-sm text-gray-400 tracking-widest mb-2">Approach</h3>
                 <p className="text-center text-xl font-bold mb-14">独自のアプローチ</p>
               </FadeIn>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                 {service.features.map((feature, fIndex) => (
                   <FadeIn key={feature.id} delay={fIndex * 100}>
                     <div className="text-center">
-                      <span className="section-title-en text-3xl font-bold text-gray-200 block mb-4">{feature.id}</span>
+                      <span className="font-en tracking-wide font-semibold text-3xl font-bold text-gray-200 block mb-4">{feature.id}</span>
                       <h4 className="text-lg font-bold mb-4">{feature.title}</h4>
                       <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
                     </div>
@@ -169,7 +169,7 @@ export default function Services() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460]" />
         <div className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-10 text-center">
           <FadeIn>
-            <h2 className="section-title-en text-2xl md:text-3xl text-white mb-4">Contact Us</h2>
+            <h2 className="font-en tracking-wide font-semibold text-2xl md:text-3xl text-white mb-4">Contact Us</h2>
             <p className="text-white/60 text-sm md:text-base max-w-2xl mx-auto mb-10 leading-relaxed">
               どのようなビジネス課題でも、まずはお気軽にご相談ください。 専門のコンサルタントが貴社の状況をヒアリングし、最適なソリューションをご提案いたします。
             </p>

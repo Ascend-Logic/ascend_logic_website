@@ -44,53 +44,55 @@ const services: {
   },
 ]
 
+const monoText = 'font-mono tracking-[0.02em]'
+
 function ServiceViz({ kind }: { kind: VizKind }) {
+  const wrap = 'size-full flex flex-col gap-3 justify-center items-center'
   if (kind === 'viz-custom') {
+    const layerBase = 'px-3.5 py-2.5 border rounded-lg text-[12px] flex justify-between items-center'
     return (
-      <div className="viz">
-        <div className="viz-stack">
-          <div className="viz-layer l1">
-            <span className="mono">prompt</span>
+      <div className={wrap}>
+        <div className="flex flex-col gap-1.5 w-full max-w-[240px]">
+          <div className={`${layerBase} bg-background border-border text-foreground-soft`}>
+            <span className={`${monoText} text-[11px] tracking-[0.06em]`}>prompt</span>
           </div>
-          <div className="viz-layer l2">
-            <span className="mono">retrieval</span>
+          <div className={`${layerBase} bg-background border-border text-foreground-soft`}>
+            <span className={`${monoText} text-[11px] tracking-[0.06em]`}>retrieval</span>
           </div>
-          <div className="viz-layer l3">
-            <span className="mono">model</span>
+          <div className={`${layerBase} bg-primary border-primary text-white`}>
+            <span className={`${monoText} text-[11px] tracking-[0.06em] text-white`}>model</span>
           </div>
-          <div className="viz-layer l4">
-            <span className="mono">eval / guardrails</span>
+          <div className={`${layerBase} bg-background border-border text-foreground-soft`}>
+            <span className={`${monoText} text-[11px] tracking-[0.06em]`}>eval / guardrails</span>
           </div>
-          <div className="viz-layer l5">
-            <span className="mono">deploy</span>
+          <div className={`${layerBase} bg-background border-border text-foreground-soft`}>
+            <span className={`${monoText} text-[11px] tracking-[0.06em]`}>deploy</span>
           </div>
         </div>
       </div>
     )
   }
   if (kind === 'viz-rpa') {
+    const nodeBase = 'px-3.5 py-2 border rounded-md text-[12px] font-semibold font-mono'
     return (
-      <div className="viz">
-        <div className="viz-flow">
-          <div className="flow-node">CSV</div>
-          <div className="flow-arrow">→</div>
-          <div className="flow-node accent">AI抽出</div>
-          <div className="flow-arrow">→</div>
-          <div className="flow-node">RPA</div>
-          <div className="flow-arrow">→</div>
-          <div className="flow-node">ERP</div>
+      <div className={wrap}>
+        <div className="flex items-center gap-2 flex-wrap justify-center">
+          <div className={`${nodeBase} bg-background border-border text-foreground-soft`}>CSV</div>
+          <div className="text-muted-foreground font-mono">→</div>
+          <div className={`${nodeBase} bg-primary border-primary text-white`}>AI抽出</div>
+          <div className="text-muted-foreground font-mono">→</div>
+          <div className={`${nodeBase} bg-background border-border text-foreground-soft`}>RPA</div>
+          <div className="text-muted-foreground font-mono">→</div>
+          <div className={`${nodeBase} bg-background border-border text-foreground-soft`}>ERP</div>
         </div>
-        {/* <div className="viz-flow-sub">
-          <span className="mono tiny muted">{'// 反復処理 → 0 hr / week'}</span>
-        </div> */}
       </div>
     )
   }
   if (kind === 'viz-data') {
     return (
-      <div className="viz">
-        <div className="viz-chart">
-          <svg viewBox="0 0 200 100" preserveAspectRatio="none">
+      <div className={wrap}>
+        <div className="w-full max-w-[260px] h-[130px]">
+          <svg viewBox="0 0 200 100" preserveAspectRatio="none" className="size-full">
             <defs>
               <linearGradient id="vd" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0%" stopColor="var(--primary)" stopOpacity="0.4" />
@@ -102,79 +104,102 @@ function ServiceViz({ kind }: { kind: VizKind }) {
             <path d="M0 90 L40 85 L80 82 L120 75 L160 70 L200 62" fill="none" stroke="var(--muted-foreground)" strokeWidth="1" strokeDasharray="3 3" />
           </svg>
         </div>
-        <div className="viz-chart-legend">
+        <div className="flex gap-4 text-[11px] text-muted-foreground mt-2 font-mono">
           <span>
-            <span className="legend-dot accent"></span>予測モデル
+            <span className="inline-block size-2 bg-primary rounded-full mr-1.5 align-middle"></span>予測モデル
           </span>
           <span>
-            <span className="legend-dot"></span>実績ベースライン
+            <span className="inline-block size-2 bg-muted-foreground rounded-full mr-1.5 align-middle"></span>実績ベースライン
           </span>
         </div>
       </div>
     )
   }
   return (
-    <div className="viz">
-      <div className="viz-matrix">
-        {Array.from({ length: 9 }).map((_, i) => (
-          <div key={i} className={`mx-cell ${i === 4 ? 'mx-center' : ''} ${[1, 3, 5, 7].includes(i) ? 'mx-near' : ''}`}>
-            {i === 4 && <span className="mono">AI</span>}
-          </div>
-        ))}
+    <div className={wrap}>
+      <div className="grid grid-cols-[repeat(3,36px)] gap-1.5">
+        {Array.from({ length: 9 }).map((_, i) => {
+          const isCenter = i === 4
+          const isNear = [1, 3, 5, 7].includes(i)
+          let cellCls = 'size-9 rounded-md border'
+          if (isCenter) {
+            cellCls += ' bg-primary text-white border-primary flex items-center justify-center text-[11px] font-bold'
+          } else if (isNear) {
+            cellCls +=
+              ' bg-[color-mix(in_oklab,var(--primary)_18%,var(--muted))] border-[color-mix(in_oklab,var(--primary)_25%,var(--border))]'
+          } else {
+            cellCls += ' bg-muted border-border'
+          }
+          return (
+            <div key={i} className={cellCls}>
+              {isCenter && <span className={monoText}>AI</span>}
+            </div>
+          )
+        })}
       </div>
-      <div className="viz-matrix-labels">
-        <span className="mono tiny muted">戦略 · 組織 · 人材 · データ</span>
+      <div className="mt-2">
+        <span className={`${monoText} text-[13px] text-muted-foreground`}>戦略 · 組織 · 人材 · データ</span>
       </div>
     </div>
   )
 }
 
 export default function Services() {
+  const eyebrow =
+    "font-mono text-[11px] font-medium tracking-[0.18em] uppercase text-primary inline-flex items-center gap-2 before:content-[''] before:w-[18px] before:h-px before:bg-current before:inline-block"
+
   return (
-    <section className="al-section" id="services">
-      <div className="al-container">
-        <div className="sec-head">
+    <section id="services" className="relative py-[120px] max-[720px]:py-[72px]">
+      <div className="relative w-full max-w-[1280px] mx-auto px-8 max-[720px]:px-5">
+        <div className="grid grid-cols-[1.2fr_1fr] gap-[60px] items-end mb-16 max-[880px]:grid-cols-1 max-[880px]:gap-6">
           <div>
-            <span className="eyebrow">SERVICES &nbsp;/&nbsp; 03</span>
-            <h2 className="h-section" style={{ marginTop: 16 }}>
+            <span className={eyebrow}>SERVICES &nbsp;/&nbsp; 03</span>
+            <h2 className="font-bold text-[clamp(28px,3.6vw,48px)] leading-[1.25] tracking-[-0.01em] m-0 mt-4">
               4つの軸で、
               <br />
               AIを現場に届ける。
             </h2>
           </div>
-          <p className="lede sec-head__lede">
+          <p className="m-0 text-[18px] leading-[1.85] text-foreground-soft max-w-[44ch]">
             汎用AIで終わらせない。設計から定着まで、
             <br />
             専業チームが一貫して伴走します。
           </p>
         </div>
 
-        <div className="services-list">
-          {services.map((s) => (
-            <article key={s.no} className="service-row">
-              <div className="service-no">
-                <span className="mono">{s.no}</span>
+        <div className="flex flex-col">
+          {services.map((s, idx) => (
+            <article
+              key={s.no}
+              className={`grid grid-cols-[80px_1.2fr_1fr] gap-12 py-14 border-t border-border items-start max-[880px]:grid-cols-1 max-[880px]:gap-6 ${
+                idx === services.length - 1 ? 'border-b' : ''
+              }`}
+            >
+              <div>
+                <span className="font-mono text-[13px] text-muted-foreground tracking-[0.15em]">{s.no}</span>
               </div>
-              <div className="service-body">
-                <div className="service-titles">
-                  <div className="service-en en">{s.en}</div>
-                  <h3 className="h-card service-jp">{s.jp}</h3>
+              <div>
+                <div className="flex flex-col gap-1.5 mb-4">
+                  <div className="font-en [font-feature-settings:'ss01'_1,'cv11'_1] text-[12px] tracking-[0.1em] text-primary font-medium uppercase">
+                    {s.en}
+                  </div>
+                  <h3 className="font-semibold text-[22px] leading-[1.4] tracking-[-0.005em] m-0">{s.jp}</h3>
                 </div>
-                <p className="service-desc">{s.desc}</p>
-                <ul className="service-points">
+                <p className="text-foreground-soft m-0 mb-6 leading-[1.8] max-w-[48ch]">{s.desc}</p>
+                <ul className="list-none p-0 m-0 mb-6 flex flex-col gap-2">
                   {s.points.map((p) => (
-                    <li key={p}>
-                      <span className="bullet"></span>
+                    <li key={p} className="flex items-center gap-2.5 text-sm text-foreground-soft">
+                      <span className="size-1.5 bg-primary rounded-full flex-shrink-0"></span>
                       {p}
                     </li>
                   ))}
                 </ul>
-                <Link href="/services" className="btn-link">
+                <Link href="/services" className="group inline-flex items-center gap-1.5 font-medium text-sm text-primary">
                   <span>サービス詳細</span>
-                  <span className="arr">→</span>
+                  <span className="inline-block transition-transform duration-200 group-hover:translate-x-[3px]">→</span>
                 </Link>
               </div>
-              <div className="service-viz">
+              <div className="h-[240px] bg-surface border border-border rounded-[18px] p-6 flex items-center justify-center relative overflow-hidden max-[880px]:h-[200px]">
                 <ServiceViz kind={s.viz} />
               </div>
             </article>

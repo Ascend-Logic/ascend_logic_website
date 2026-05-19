@@ -24,6 +24,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "autoprefixer": "^10.4.21",
+    "code-inspector-plugin": "^1.5.1",
     "eslint": "^9",
     "eslint-config-next": "^15.5.9",
     "postcss": "^8.5.3",

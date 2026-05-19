@@ -2,6 +2,7 @@ import { Noto_Sans_JP, Zen_Kaku_Gothic_New, Manrope, JetBrains_Mono } from 'next
 import './globals.css';
 import Header from '../components/layout/Header';
 import Footer from '../components/layout/Footer';
+import { CodeInspector } from '../components/dev/CodeInspector';
 import { Metadata } from 'next';
 
 // Zen Kaku Gothic New - 日本語ディスプレイ（メイン）
@@ -60,6 +61,7 @@ export default function RootLayout({
           <main className="flex-grow">{children}</main>
           <Footer />
         </div>
+        <CodeInspector />
       </body>
     </html>
   );

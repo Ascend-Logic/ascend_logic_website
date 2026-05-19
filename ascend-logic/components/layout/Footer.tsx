@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Logo } from '@/components/ui/Logo'
 
-const monoTiny = 'font-mono tracking-[0.02em] text-[13px]'
+const monoTiny = 'font-mono tracking-wide text-sm'
 
 function FooterColumn({ heading, items }: { heading: string; items: { href: string; label: string }[] }) {
   return (
@@ -33,10 +33,10 @@ export default function Footer() {
       <div className="w-full max-w-[1280px] mx-auto px-8 max-[720px]:px-5">
         <div className="grid grid-cols-[1fr_2fr] gap-[60px] pb-16 max-[880px]:grid-cols-1">
           <div>
-            <Link href="/" className="inline-flex items-center gap-2.5 font-en font-bold text-base tracking-[-0.01em] text-foreground" aria-label="Ascend Logic">
+            <Link href="/" className="inline-flex items-center gap-2.5 font-en font-bold text-base tracking-tight text-foreground" aria-label="Ascend Logic">
               <Logo variant="lockup" theme="light" height={32} />
             </Link>
-            <p className="text-muted-foreground text-[13px] mt-4 max-w-[32ch]">AIの力で、すべての企業と個人の可能性を解き放つ。</p>
+            <p className="text-muted-foreground text-sm mt-4 max-w-[32ch]">AIの力で、すべての企業と個人の可能性を解き放つ。</p>
           </div>
           <div className="grid grid-cols-3 gap-8 max-[880px]:grid-cols-2">
             <FooterColumn
@@ -71,14 +71,14 @@ export default function Footer() {
         <div className="pt-8 border-t border-border flex flex-col gap-6">
           <div
             aria-hidden="true"
-            className="font-en font-extrabold text-[clamp(60px,14vw,220px)] tracking-[-0.05em] leading-[0.85] text-transparent [-webkit-text-stroke:1px_var(--border-strong)] text-center"
+            className="font-en font-extrabold text-[clamp(60px,14vw,220px)] tracking-tighter leading-[0.85] text-transparent [-webkit-text-stroke:1px_var(--border-strong)] text-center"
           >
             ASCEND LOGIC
           </div>
           {isAscendAiProduct && (
             <div className="py-2 border-t border-border">
               <div className={`${monoTiny} text-muted-foreground mb-2`}>USING AI SERVICES</div>
-              <p className="text-[13px] text-muted-foreground m-0 leading-[1.7]">
+              <p className="text-sm text-muted-foreground m-0 leading-[1.7]">
                 本サービスは以下のAIサービスを利用しています。
                 <br />
                 Google Vertex AI Gemini · Google Vertex AI Search

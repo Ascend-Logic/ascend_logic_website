@@ -13,7 +13,7 @@ const navItems = [
 ]
 
 const btnBase =
-  'inline-flex items-center gap-2.5 px-4 py-[9px] rounded-full font-semibold text-[13px] tracking-[0.01em] border border-transparent whitespace-nowrap transition-all duration-200'
+  'inline-flex items-center gap-2.5 px-4 py-[9px] rounded-full font-semibold text-sm tracking-wide border border-transparent whitespace-nowrap transition-all duration-200'
 const btnPrimary = `${btnBase} bg-foreground text-background hover:-translate-y-px`
 const btnGhost = `${btnBase} bg-transparent text-foreground border-border-strong hover:border-foreground`
 
@@ -36,7 +36,7 @@ export default function Header() {
       }`}
     >
       <div className="w-full max-w-[1280px] mx-auto px-8 max-[720px]:px-5 flex items-center justify-between h-[68px]">
-        <Link href="/" className="inline-flex items-center gap-2.5 font-en font-bold text-base tracking-[-0.01em] text-foreground" onClick={close} aria-label="Ascend Logic">
+        <Link href="/" className="inline-flex items-center gap-2.5 font-en font-bold text-base tracking-tight text-foreground" onClick={close} aria-label="Ascend Logic">
           <Logo variant="lockup" theme="light" height={32} priority />
         </Link>
 
@@ -45,7 +45,7 @@ export default function Header() {
             <Link
               key={it.href}
               href={it.href}
-              className="relative px-3.5 py-2 text-[13.5px] font-medium text-foreground-soft rounded-full transition-colors duration-200 hover:text-foreground hover:bg-muted"
+              className="relative px-3.5 py-2 text-sm font-medium text-foreground-soft rounded-full transition-colors duration-200 hover:text-foreground hover:bg-muted"
             >
               {it.jp}
             </Link>
@@ -81,11 +81,11 @@ export default function Header() {
               <Link
                 key={it.href}
                 href={it.href}
-                className="py-3.5 px-1 text-[15px] font-medium text-foreground border-b border-border flex items-center justify-between"
+                className="py-3.5 px-1 text-base font-medium text-foreground border-b border-border flex items-center justify-between"
                 onClick={close}
               >
                 <span>{it.jp}</span>
-                <span className="font-mono tracking-[0.02em] text-[13px] text-muted-foreground">{it.en}</span>
+                <span className="font-mono tracking-wide text-sm text-muted-foreground">{it.en}</span>
               </Link>
             ))}
             <div className="mt-5 flex flex-col gap-2">

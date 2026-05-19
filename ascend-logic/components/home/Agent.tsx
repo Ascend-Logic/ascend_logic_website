@@ -27,168 +27,69 @@ const features = [
 
 export default function Agent() {
   return (
-    <section className="al-section agent-sec" id="agent">
-      <div className="agent-bg" aria-hidden="true"></div>
-      <div className="al-container agent-inner">
-        <div className="agent-head">
+    <section id="agent" className="relative isolate py-[120px] max-[720px]:py-[72px] text-[#f4f5f8]">
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_20%_0%,color-mix(in_oklab,var(--primary)_30%,transparent)_0%,transparent_60%),radial-gradient(50%_50%_at_100%_100%,color-mix(in_oklab,var(--primary)_20%,transparent)_0%,transparent_70%),#08090d]"
+      ></div>
+      <div className="relative w-full max-w-[1280px] mx-auto px-8 max-[720px]:px-5">
+        <div className="grid grid-cols-[1.3fr_1fr] gap-[60px] items-end mb-14 max-[880px]:grid-cols-1 max-[880px]:gap-5">
           <div>
-            <span className="eyebrow agent-eyebrow">PRODUCT &nbsp;/&nbsp; 04</span>
-            <h2 className="h-section agent-h" style={{ marginTop: 16 }}>
-              <span className="en agent-h__en">Ascend Agent</span>
+            <span className="font-mono text-xs font-medium tracking-eyebrow uppercase text-white inline-flex items-center gap-2 before:content-[''] before:w-[18px] before:h-px before:bg-current before:inline-block">
+              PRODUCT &nbsp;/&nbsp; 04
+            </span>
+            <h2 className="font-bold text-section leading-[1.25] tracking-tight m-0 mt-4 text-white">
+              <span className="font-en [font-feature-settings:'ss01'_1,'cv11'_1] text-sm tracking-widest text-primary uppercase font-semibold mb-[18px] inline-block">
+                Ascend Agent
+              </span>
               <br />
               すべての社員に、
               <br />
               もう一人のAIアシスタントを。
             </h2>
           </div>
-          <p className="lede agent-lede">オンライン会議に自動参加し、議事録・アクション抽出・ナレッジ化まで全自動。 蓄積されたデータには、AIチャットで自然言語検索。</p>
+          <p className="m-0 text-lede leading-[1.85] text-white/[0.78] max-w-[44ch]">
+            オンライン会議に自動参加し、議事録・アクション抽出・ナレッジ化まで全自動。 蓄積されたデータには、AIチャットで自然言語検索。
+          </p>
         </div>
 
-        {/* <div className="agent-stage">
-          <div className="agent-window">
-            <div className="agent-window__bar">
-              <div className="agent-window__dots"><span></span><span></span><span></span></div>
-              <div className="agent-window__url mono">ascend-agent.app &nbsp;/&nbsp; meetings &nbsp;/&nbsp; q2-product-review</div>
-              <div><span className="agent-user">SR</span></div>
-            </div>
-            <div className="agent-window__body">
-              <aside className="agent-side">
-                <div className="agent-side-section">
-                  <div className="agent-side-h mono">MEETINGS</div>
-                  <div className="agent-side-item active">
-                    <span className="rec"></span>
-                    <span>Q2 プロダクト戦略</span>
-                  </div>
-                  <div className="agent-side-item">建設PJ ヒアリング</div>
-                  <div className="agent-side-item">保険チーム週次</div>
-                  <div className="agent-side-item">採用面接 #14</div>
-                </div>
-                <div className="agent-side-section">
-                  <div className="agent-side-h mono">KNOWLEDGE</div>
-                  <div className="agent-side-item">議事録 (412)</div>
-                  <div className="agent-side-item">アクション (89)</div>
-                  <div className="agent-side-item">ドキュメント</div>
-                </div>
-              </aside>
-              <main className="agent-main">
-                <div className="agent-main__row">
-                  <div className="agent-meet-title">
-                    <h3>Q2 プロダクト戦略レビュー</h3>
-                    <div className="mono tiny muted">2026.05.17 · 10:00 — 10:45 · Google Meet · 6 attendees</div>
-                  </div>
-                  <div className="agent-rec-pill">
-                    <span className="dot"></span>
-                    <span>RECORDING</span>
-                  </div>
-                </div>
-
-                <div className="agent-grid">
-                  <div className="agent-card agent-card--summary">
-                    <div className="agent-card__head">
-                      <span className="mono tiny muted">SUMMARY</span>
-                      <span className="agent-chip">AI生成</span>
-                    </div>
-                    <p>
-                      Q2は<mark>「Ascend Agent」の正式リリース</mark>を最優先課題とし、
-                      建設・保険の2業界を初期ターゲットに据える方針で合意。
-                      技術的にはマルチテナント基盤の強化と監査ログ実装を6月末までに完了させる。
-                    </p>
-                    <div className="agent-card__people">
-                      <span className="ppl ppl-1">SR</span>
-                      <span className="ppl ppl-2">YK</span>
-                      <span className="ppl ppl-3">HT</span>
-                      <span className="ppl ppl-4">+3</span>
-                    </div>
-                  </div>
-
-                  <div className="agent-card agent-card--actions">
-                    <div className="agent-card__head">
-                      <span className="mono tiny muted">ACTION ITEMS</span>
-                      <span className="agent-chip">4</span>
-                    </div>
-                    <ul className="agent-actions">
-                      <li><span className="ck"></span><span>マルチテナント実装 <em className="due">~6/30</em></span><span className="who">YK</span></li>
-                      <li><span className="ck"></span><span>建設業界の事例ドキュメント整理 <em className="due">~5/24</em></span><span className="who">HT</span></li>
-                      <li><span className="ck"></span><span>料金体系ドラフト <em className="due">~5/31</em></span><span className="who">SR</span></li>
-                      <li><span className="ck ck-done"></span><span><s>監査ログ要件定義</s></span><span className="who">MK</span></li>
-                    </ul>
-                  </div>
-
-                  <div className="agent-card agent-card--chat">
-                    <div className="agent-card__head">
-                      <span className="mono tiny muted">ASK ASCEND</span>
-                      <span className="agent-chip accent">AI Chat</span>
-                    </div>
-                    <div className="agent-chat">
-                      <div className="bub bub-user">監査ログの要件、前回の建設業案件でも合意した内容と一致してる？</div>
-                      <div className="bub bub-ai">
-                        <span className="bub-ai__head"><span className="mono">Ascend</span></span>
-                        はい、おおむね一致しています。建設業案件（#1142）では7年保管・WORMストレージが要件でしたが、今回の戦略レビューでも同等の要件として記録されています。
-                        <span className="bub-ai__src">出典: 議事録 #1142, #1198</span>
-                      </div>
-                      <div className="bub-input">
-                        <span className="mono muted">›</span>
-                        <span className="bub-input__ph">質問を入力…</span>
-                        <span className="kbd">⌘K</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="agent-card agent-card--transcript">
-                    <div className="agent-card__head">
-                      <span className="mono tiny muted">TRANSCRIPT</span>
-                      <span className="agent-chip">JA · auto</span>
-                    </div>
-                    <div className="agent-tr">
-                      <div className="tr-row">
-                        <span className="tr-who">早乙女</span>
-                        <span className="tr-time mono">10:02</span>
-                        <p>Q2はAscend Agentのリリースを最優先にしたいです。建設と保険の2業界を…</p>
-                      </div>
-                      <div className="tr-row">
-                        <span className="tr-who">高木</span>
-                        <span className="tr-time mono">10:04</span>
-                        <p>マルチテナント基盤、6月末までで間に合う想定でしょうか？</p>
-                      </div>
-                      <div className="tr-row tr-active">
-                        <span className="tr-who">山田</span>
-                        <span className="tr-time mono">10:05</span>
-                        <p>監査ログのほうは要件定義が終わっていて<span className="tr-cursor">|</span></p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </main>
-            </div>
-          </div>
-        </div> */}
-
-        <div className="agent-feat">
-          {features.map((f) => (
-            <div key={f.ic} className="agent-feat__item">
-              <span className="agent-feat__no mono">{f.ic}</span>
+        <div className="grid grid-cols-3 border-t border-white/[0.12] max-[880px]:grid-cols-1">
+          {features.map((f, i) => (
+            <div
+              key={f.ic}
+              className={`flex gap-4 items-start py-8 px-7 border-b border-l border-white/[0.12] max-[880px]:px-0 max-[880px]:py-6 max-[880px]:border-l-0 ${
+                i % 3 === 0 ? 'border-l-0 pl-0' : ''
+              } ${i % 3 === 2 ? 'pr-0' : ''} ${i >= features.length - 3 ? 'max-[881px]:border-b-0' : ''} max-[880px]:last:border-b-0`}
+            >
+              <span className="font-mono tracking-uppercase-wide text-xs text-primary pt-1 flex-shrink-0">{f.ic}</span>
               <div>
-                <div className="agent-feat__t">{f.t}</div>
-                <div className="agent-feat__d">{f.d}</div>
+                <div className="font-semibold text-base mb-1.5 text-white">{f.t}</div>
+                <div className="text-sm text-white/[0.62] leading-[1.7]">{f.d}</div>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="agent-footer">
-          <div className="agent-footer__l">
-            <div className="agent-footer__chips">
-              <span className="tag">Google OAuth</span>
-              <span className="tag">AES-256 暗号化</span>
-              <span className="tag">テナント完全分離</span>
-              <span className="tag">監査ログ</span>
-              <span className="tag">SSO 対応</span>
+        <div className="mt-14 pt-8 border-t border-white/[0.12] flex justify-between items-center gap-8 flex-wrap">
+          <div>
+            <div className="flex gap-2 flex-wrap mt-2">
+              {['Google OAuth', 'AES-256 暗号化', 'テナント完全分離', '監査ログ', 'SSO 対応'].map((chip) => (
+                <span
+                  key={chip}
+                  className="inline-flex items-center gap-1.5 font-mono text-xs tracking-wider uppercase px-2.5 py-[5px] border border-white/[0.18] rounded-full text-white/85 bg-white/5"
+                >
+                  {chip}
+                </span>
+              ))}
             </div>
           </div>
-          <div className="agent-footer__r">
-            <Link href="/products/ascendai" className="btn btn-primary">
+          <div>
+            <Link
+              href="/products/ascendai"
+              className="group inline-flex items-center gap-2.5 px-5 py-3 rounded-full font-semibold text-sm tracking-wide border border-transparent whitespace-nowrap bg-white text-[#0a1628] transition-all duration-200 hover:-translate-y-px"
+            >
               <span>詳しく見る</span>
-              <span className="arr">→</span>
+              <span className="inline-block transition-transform duration-200 group-hover:translate-x-[3px]">→</span>
             </Link>
           </div>
         </div>

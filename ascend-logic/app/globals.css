@@ -78,14 +78,14 @@
   --accent-glow: rgba(125, 101, 255, 0.35);
   --hairline: rgba(10, 22, 40, 0.08);
 
-  /* --font-{zen-kaku,noto-sans-jp,manrope,jetbrains-mono} は next/font が
+  /* LINE Seed JP は <head> の <link> 経由で読み込む。
+     --font-{noto-sans-jp,manrope,jetbrains-mono} は next/font が
      <html className> から注入する。フォールバックを置いて静的解析を通す。 */
-  --font-zen-kaku: 'Zen Kaku Gothic New', sans-serif;
   --font-noto-sans-jp: 'Noto Sans JP', sans-serif;
   --font-manrope: 'Manrope', sans-serif;
   --font-jetbrains-mono: 'JetBrains Mono', monospace;
 
-  --font-jp: var(--font-zen-kaku), var(--font-noto-sans-jp), system-ui, sans-serif;
+  --font-jp: 'LINE Seed JP', var(--font-noto-sans-jp), system-ui, sans-serif;
   --font-en: var(--font-manrope), 'Helvetica Neue', Arial, sans-serif;
   --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
   --font-display: var(--font-en);

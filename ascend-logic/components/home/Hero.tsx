@@ -23,7 +23,7 @@ export default function Hero() {
           <div className="flex gap-3 flex-wrap">
             <Link
               href="/services"
-              className="group inline-flex items-center gap-2.5 px-5 py-3 rounded-full font-semibold text-sm tracking-wide border border-transparent whitespace-nowrap bg-foreground text-background transition-all duration-200 hover:-translate-y-px"
+              className="group inline-flex items-center gap-2.5 px-5 py-3 rounded-full font-semibold text-sm tracking-wide border border-transparent whitespace-nowrap bg-primary text-primary-foreground transition-all duration-200 hover:bg-primary-deep hover:-translate-y-px"
             >
               <span>サービスを見る</span>
               <span className="inline-block transition-transform duration-200 group-hover:translate-x-[3px]">→</span>

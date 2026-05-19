@@ -25,23 +25,20 @@ const features = [
   { ic: '06', t: 'エンタープライズ品質', d: '監査ログ、SSO 対応、権限管理を備えた本番運用。' },
 ]
 
-export default function Agent() {
+export default function Agent({ index = 3 }: { index?: number }) {
+  const no = String(index).padStart(2, '0')
+
   return (
     <section id="agent" className="relative isolate py-[120px] max-[720px]:py-[72px] text-[#f4f5f8]">
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_20%_0%,color-mix(in_oklab,var(--primary)_30%,transparent)_0%,transparent_60%),radial-gradient(50%_50%_at_100%_100%,color-mix(in_oklab,var(--primary)_20%,transparent)_0%,transparent_70%),#08090d]"
-      ></div>
+      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-[#08090d]"></div>
       <div className="relative w-full max-w-[1280px] mx-auto px-8 max-[720px]:px-5">
         <div className="grid grid-cols-[1.3fr_1fr] gap-[60px] items-end mb-14 max-[880px]:grid-cols-1 max-[880px]:gap-5">
           <div>
-            <span className="font-mono tracking-wide text-xs font-medium tracking-eyebrow uppercase text-white inline-flex items-center gap-2 before:content-[''] before:w-[18px] before:h-px before:bg-current before:inline-block">
-              PRODUCT &nbsp;/&nbsp; 04
+            <span className="font-mono text-xs font-medium tracking-eyebrow uppercase text-white inline-flex items-center gap-2 before:content-[''] before:w-[18px] before:h-px before:bg-current before:inline-block">
+              PRODUCT &nbsp;/&nbsp; {no}
             </span>
             <h2 className="font-bold text-section leading-[1.25] tracking-tight m-0 mt-4 text-white">
-              <span className="font-en [font-feature-settings:'ss01'_1,'cv11'_1] text-sm tracking-widest text-primary uppercase font-semibold mb-[18px] inline-block">
-                Ascend Agent
-              </span>
+              <span className="font-en [font-feature-settings:'ss01'_1,'cv11'_1] text-sm tracking-widest text-primary uppercase font-semibold mb-[18px] inline-block">Ascend Agent</span>
               <br />
               すべての社員に、
               <br />
@@ -61,7 +58,7 @@ export default function Agent() {
                 i % 3 === 0 ? 'border-l-0 pl-0' : ''
               } ${i % 3 === 2 ? 'pr-0' : ''} ${i >= features.length - 3 ? 'max-[881px]:border-b-0' : ''} max-[880px]:last:border-b-0`}
             >
-              <span className="font-mono tracking-wide tracking-uppercase-wide text-xs text-primary pt-1 flex-shrink-0">{f.ic}</span>
+              <span className="font-mono tracking-uppercase-wide text-xs text-primary pt-1 flex-shrink-0">{f.ic}</span>
               <div>
                 <div className="font-semibold text-base mb-1.5 text-white">{f.t}</div>
                 <div className="text-sm text-white/[0.62] leading-[1.7]">{f.d}</div>
@@ -70,13 +67,13 @@ export default function Agent() {
           ))}
         </div>
 
-        <div className="mt-14 pt-8 border-t border-white/[0.12] flex justify-between items-center gap-8 flex-wrap">
+        <div className="mt-14 pt-8 flex justify-between items-center gap-8 flex-wrap">
           <div>
             <div className="flex gap-2 flex-wrap mt-2">
               {['Google OAuth', 'AES-256 暗号化', 'テナント完全分離', '監査ログ', 'SSO 対応'].map((chip) => (
                 <span
                   key={chip}
-                  className="inline-flex items-center gap-1.5 font-mono tracking-wide text-xs tracking-wider uppercase px-2.5 py-[5px] border border-white/[0.18] rounded-full text-white/85 bg-white/5"
+                  className="inline-flex items-center gap-1.5 font-mono text-xs tracking-wider uppercase px-2.5 py-[5px] border border-white/[0.18] rounded-full text-white/85 bg-white/5"
                 >
                   {chip}
                 </span>

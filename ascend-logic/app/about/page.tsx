@@ -34,7 +34,7 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border-t border-l border-gray-200">
             <div className="border-r border-b border-gray-200 p-8 md:p-12">
               <FadeIn>
-                <h2 className="font-en tracking-wide font-semibold text-sm text-gray-400 tracking-widest mb-3">Vision</h2>
+                <h2 className="font-en font-semibold text-sm text-gray-400 tracking-widest mb-3">Vision</h2>
                 <h3 className="text-2xl font-bold mb-6">ビジョン</h3>
                 <p className="text-lg text-gray-800 leading-relaxed mb-4">「AIの力で、すべての企業と個人の可能性を解き放つ」</p>
                 <p className="text-gray-600 leading-relaxed">
@@ -45,7 +45,7 @@ export default function About() {
             </div>
             <div className="border-r border-b border-gray-200 p-8 md:p-12">
               <FadeIn delay={100}>
-                <h2 className="font-en tracking-wide font-semibold text-sm text-gray-400 tracking-widest mb-3">Mission</h2>
+                <h2 className="font-en font-semibold text-sm text-gray-400 tracking-widest mb-3">Mission</h2>
                 <h3 className="text-2xl font-bold mb-6">ミッション</h3>
                 <p className="text-lg text-gray-800 leading-relaxed mb-4">「最先端のAI技術を、誰もが活用できるものに」</p>
                 <p className="text-gray-600 leading-relaxed">
@@ -63,7 +63,7 @@ export default function About() {
         <div className="max-w-[1200px] mx-auto px-6 md:px-10">
           <FadeIn>
             <div className="text-center mb-14">
-              <h2 className="font-en tracking-wide font-semibold text-sm text-gray-400 tracking-widest mb-2">Company</h2>
+              <h2 className="font-en font-semibold text-sm text-gray-400 tracking-widest mb-2">Company</h2>
               <p className="text-2xl font-bold">会社情報</p>
             </div>
           </FadeIn>

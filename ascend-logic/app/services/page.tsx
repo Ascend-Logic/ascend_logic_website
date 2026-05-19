@@ -127,7 +127,7 @@ export default function Services() {
               <FadeIn>
                 <div className={`flex flex-col ${index % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-10 md:gap-16`}>
                   <div className="md:w-1/2">
-                    <span className="font-en tracking-wide font-semibold text-sm text-gray-400 tracking-widest mb-3 block">{service.number}</span>
+                    <span className="font-en font-semibold text-sm text-gray-400 tracking-widest mb-3 block">{service.number}</span>
                     <h2 className="text-3xl md:text-4xl font-bold mb-6 whitespace-pre-line">{service.titleBreak}</h2>
                     <p className="text-gray-600 leading-relaxed">{service.description}</p>
                   </div>
@@ -145,7 +145,7 @@ export default function Services() {
           <section className="py-20 bg-gray-50 border-t border-gray-200">
             <div className="max-w-[1200px] mx-auto px-6 md:px-10">
               <FadeIn>
-                <h3 className="font-en tracking-wide font-semibold text-center text-sm text-gray-400 tracking-widest mb-2">Approach</h3>
+                <h3 className="font-en font-semibold text-center text-sm text-gray-400 tracking-widest mb-2">Approach</h3>
                 <p className="text-center text-xl font-bold mb-14">独自のアプローチ</p>
               </FadeIn>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-10">

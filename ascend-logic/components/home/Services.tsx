@@ -144,7 +144,8 @@ function ServiceViz({ kind }: { kind: VizKind }) {
   )
 }
 
-export default function Services() {
+export default function Services({ index = 2 }: { index?: number }) {
+  const no = String(index).padStart(2, '0')
   const eyebrow =
     "font-mono text-xs font-medium tracking-eyebrow uppercase text-primary inline-flex items-center gap-2 before:content-[''] before:w-[18px] before:h-px before:bg-current before:inline-block"
 
@@ -153,7 +154,7 @@ export default function Services() {
       <div className="relative w-full max-w-[1280px] mx-auto px-8 max-[720px]:px-5">
         <div className="grid grid-cols-[1.2fr_1fr] gap-[60px] items-end mb-16 max-[880px]:grid-cols-1 max-[880px]:gap-6">
           <div>
-            <span className={eyebrow}>SERVICES &nbsp;/&nbsp; 03</span>
+            <span className={eyebrow}>SERVICES &nbsp;/&nbsp; {no}</span>
             <h2 className="font-bold text-section leading-[1.25] tracking-tight m-0 mt-4">
               4つの軸で、
               <br />
@@ -176,7 +177,7 @@ export default function Services() {
               }`}
             >
               <div>
-                <span className="font-mono tracking-wide text-sm text-muted-foreground tracking-uppercase-wide">{s.no}</span>
+                <span className="font-mono text-sm text-muted-foreground tracking-uppercase-wide">{s.no}</span>
               </div>
               <div>
                 <div className="flex flex-col gap-1.5 mb-4">

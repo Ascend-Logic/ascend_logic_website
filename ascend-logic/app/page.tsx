@@ -14,33 +14,17 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
+  // ナンバリングはここの順序で動的に算出される (01 始まり)。
+  const sections = [Vision, Services, Agent, Company, News, Contact]
+
   return (
     <>
       <Hero />
-      <Reveal>
-        <Vision />
-      </Reveal>
-      <Reveal>
-        <Services />
-      </Reveal>
-      <Reveal>
-        <Agent />
-      </Reveal>
-      {/*<Reveal>*/}
-      {/*  <Cases />*/}
-      {/*</Reveal>*/}
-      <Reveal>
-        <Company />
-      </Reveal>
-      <Reveal>
-        <News />
-      </Reveal>
-      {/*<Reveal>*/}
-      {/*  <Careers />*/}
-      {/*</Reveal>*/}
-      <Reveal>
-        <Contact />
-      </Reveal>
+      {sections.map((Section, i) => (
+        <Reveal key={i}>
+          <Section index={i + 1} />
+        </Reveal>
+      ))}
     </>
   )
 }

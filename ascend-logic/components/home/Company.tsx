@@ -1,11 +1,12 @@
-export default function Company() {
+export default function Company({ index = 4 }: { index?: number }) {
+  const no = String(index).padStart(2, '0')
   return (
     <section id="company" className="relative py-[120px] max-[720px]:py-[72px]">
       <div className="relative w-full max-w-[1280px] mx-auto px-8 max-[720px]:px-5">
         <div className="grid grid-cols-[1.2fr_1fr] gap-[60px] items-end mb-16 max-[880px]:grid-cols-1 max-[880px]:gap-6">
           <div>
-            <span className="font-mono tracking-wide text-xs font-medium tracking-eyebrow uppercase text-primary inline-flex items-center gap-2 before:content-[''] before:w-[18px] before:h-px before:bg-current before:inline-block">
-              COMPANY &nbsp;/&nbsp; 06
+            <span className="font-mono text-xs font-medium tracking-eyebrow uppercase text-primary inline-flex items-center gap-2 before:content-[''] before:w-[18px] before:h-px before:bg-current before:inline-block">
+              COMPANY &nbsp;/&nbsp; {no}
             </span>
             <h2 className="font-bold text-section leading-[1.25] tracking-tight m-0 mt-4">会社情報</h2>
           </div>
@@ -52,7 +53,7 @@ export default function Company() {
                 { k: '取引先業種', v: '建設 · 不動産 · IT · 通信 · 公共 · 金融 · 保険 · ヘルスケア · 政府機関 ほか' },
               ].map(({ k, v }) => (
                 <div key={k} className="grid grid-cols-[200px_1fr] gap-6 py-6 border-b border-border max-[880px]:grid-cols-1 max-[880px]:gap-1.5 max-[880px]:py-4">
-                  <dt className="font-mono tracking-wide text-xs tracking-widest uppercase text-muted-foreground pt-[3px]">{k}</dt>
+                  <dt className="font-mono text-xs tracking-widest uppercase text-muted-foreground pt-[3px]">{k}</dt>
                   <dd className="m-0 text-base leading-[1.7] text-foreground">{v}</dd>
                 </div>
               ))}

@@ -14,7 +14,7 @@ const navItems = [
 
 const btnBase =
   'inline-flex items-center gap-2.5 px-4 py-[9px] rounded-full font-semibold text-sm tracking-wide border border-transparent whitespace-nowrap transition-all duration-200'
-const btnPrimary = `${btnBase} bg-foreground text-background hover:-translate-y-px`
+const btnPrimary = `${btnBase} bg-primary text-primary-foreground hover:bg-primary-deep hover:-translate-y-px`
 const btnGhost = `${btnBase} bg-transparent text-foreground border-border-strong hover:border-foreground`
 
 export default function Header() {

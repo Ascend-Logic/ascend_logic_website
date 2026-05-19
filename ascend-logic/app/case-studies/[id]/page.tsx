@@ -209,13 +209,13 @@ export default async function CaseStudyDetail({ params }: CaseStudyDetailProps) 
               </FadeIn>
 
               <FadeIn>
-                <h2 className="font-en tracking-wide font-semibold text-sm text-gray-400 tracking-widest mb-2">Challenge</h2>
+                <h2 className="font-en font-semibold text-sm text-gray-400 tracking-widest mb-2">Challenge</h2>
                 <h3 className="text-xl font-bold mb-4">課題</h3>
                 <p className="text-gray-600 leading-relaxed mb-12">{caseStudy.challenge || `${caseStudy.company}様は、業務の非効率性と増大するコストという課題に直面していました。`}</p>
               </FadeIn>
 
               <FadeIn>
-                <h2 className="font-en tracking-wide font-semibold text-sm text-gray-400 tracking-widest mb-2">Approach</h2>
+                <h2 className="font-en font-semibold text-sm text-gray-400 tracking-widest mb-2">Approach</h2>
                 <h3 className="text-xl font-bold mb-4">アプローチ</h3>
                 <p className="text-gray-600 leading-relaxed mb-12">{caseStudy.approach || `Ascend Logicは、最新のAI技術を活用した${caseStudy.solution}ソリューションを提案・導入しました。`}</p>
               </FadeIn>
@@ -225,18 +225,18 @@ export default async function CaseStudyDetail({ params }: CaseStudyDetailProps) 
               <FadeIn>
                 <div className="sticky top-24 bg-gray-50 rounded-lg p-6 space-y-6">
                   <div>
-                    <h4 className="text-xs text-gray-400 tracking-wider uppercase mb-2 font-en tracking-wide font-semibold">Solution</h4>
+                    <h4 className="text-xs text-gray-400 tracking-wider uppercase mb-2 font-en font-semibold">Solution</h4>
                     <p className="font-medium">{caseStudy.solution}</p>
                   </div>
                   {caseStudy.duration && (
                     <div>
-                      <h4 className="text-xs text-gray-400 tracking-wider uppercase mb-2 font-en tracking-wide font-semibold">Duration</h4>
+                      <h4 className="text-xs text-gray-400 tracking-wider uppercase mb-2 font-en font-semibold">Duration</h4>
                       <p className="font-medium">{caseStudy.duration}</p>
                     </div>
                   )}
                   {caseStudy.technologies && (
                     <div>
-                      <h4 className="text-xs text-gray-400 tracking-wider uppercase mb-2 font-en tracking-wide font-semibold">Technologies</h4>
+                      <h4 className="text-xs text-gray-400 tracking-wider uppercase mb-2 font-en font-semibold">Technologies</h4>
                       <div className="flex flex-wrap gap-2">
                         {caseStudy.technologies.map((tech, index) => (
                           <span key={index} className="text-xs bg-white border border-gray-200 px-3 py-1 rounded">

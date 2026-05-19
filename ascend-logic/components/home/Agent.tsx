@@ -177,7 +177,6 @@ export default function Agent() {
 
         <div className="agent-footer">
           <div className="agent-footer__l">
-            <div className="mono tiny muted">SECURITY &nbsp;·&nbsp; SOC&nbsp;2 ready</div>
             <div className="agent-footer__chips">
               <span className="tag">Google OAuth</span>
               <span className="tag">AES-256 暗号化</span>

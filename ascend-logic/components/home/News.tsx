@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { newsItems } from '../../lib/news'
+import { newsItems } from '@/lib/news'
 
 export default function News() {
   return (

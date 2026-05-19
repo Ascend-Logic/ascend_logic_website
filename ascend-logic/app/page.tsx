@@ -3,7 +3,6 @@ import Hero from '../components/home/Hero'
 import Vision from '../components/home/Vision'
 import Services from '../components/home/Services'
 import Agent from '../components/home/Agent'
-import Cases from '../components/home/Cases'
 import Company from '../components/home/Company'
 import News from '../components/home/News'
 import Contact from '../components/home/Contact'
@@ -27,15 +26,18 @@ export default function Home() {
       <Reveal>
         <Agent />
       </Reveal>
-      <Reveal>
-        <Cases />
-      </Reveal>
+      {/*<Reveal>*/}
+      {/*  <Cases />*/}
+      {/*</Reveal>*/}
       <Reveal>
         <Company />
       </Reveal>
       <Reveal>
         <News />
       </Reveal>
+      {/*<Reveal>*/}
+      {/*  <Careers />*/}
+      {/*</Reveal>*/}
       <Reveal>
         <Contact />
       </Reveal>

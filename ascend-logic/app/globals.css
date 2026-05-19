@@ -1,7 +1,45 @@
 @import 'tailwindcss';
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-deep: var(--primary-deep);
+  --color-primary-soft: var(--primary-soft);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-glow: var(--accent-glow);
+  --color-destructive: var(--destructive);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-surface: var(--surface);
+  --color-foreground-soft: var(--foreground-soft);
+  --color-foreground-faint: var(--foreground-faint);
+  --color-hairline: var(--hairline);
+
+  --font-jp: var(--font-jp);
+  --font-en: var(--font-en);
+  --font-mono: var(--font-mono);
+  --font-display: var(--font-display);
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+}
 
 /* ===== Ascend Logic — Design System =====
    shadcn 互換のセマンティックトークンをカノニカルなソースに据え、
@@ -534,145 +572,9 @@ section {
 /* =========================================================
    HERO — Typographic
    ========================================================= */
-.hero {
-  position: relative;
-  padding: 140px 0 100px;
-  overflow: hidden;
-}
-.hero-type__inner {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px 60px;
-  align-items: end;
-}
-.hero-type__eyebrow {
-  grid-column: 1 / -1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8px;
-}
-.hero-type__meta {
-  font-size: 11px;
-  color: var(--muted-foreground);
-  letter-spacing: 0.18em;
-}
-.hero-type__title {
-  grid-column: 1 / -1;
-  font-size: clamp(40px, 6.2vw, 92px);
-  max-width: 18ch;
-}
-.hero-type__title .block {
-  display: block;
-}
-.hero-type__hl em {
-  font-style: normal;
-  background-image: linear-gradient(120deg, var(--primary-deep) 0%, var(--primary-soft) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  position: relative;
-}
-.hero-type__sub {
-  grid-column: 1 / 2;
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-  max-width: 480px;
-}
-.hero-type__cta {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-.hero-type__footnote {
-  grid-column: 1 / -1;
-  margin-top: 80px;
-  padding-top: 24px;
-  border-top: 1px solid var(--border);
-  display: flex;
-  gap: 48px;
-  flex-wrap: wrap;
-}
-@media (max-width: 880px) {
-  .hero-type__inner {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-}
-
 /* =========================================================
    VISION
    ========================================================= */
-.vision-grid {
-  display: grid;
-  grid-template-columns: 360px 1fr;
-  gap: 80px;
-  align-items: start;
-}
-.vision-aside {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  position: sticky;
-  top: 96px;
-}
-.vision-aside__quote {
-  font-weight: 600;
-  font-size: clamp(28px, 3vw, 40px);
-  line-height: 1.05;
-  letter-spacing: -0.03em;
-  color: var(--foreground);
-}
-.vision-main {
-  max-width: 720px;
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-}
-.vision-pair {
-  margin-top: 16px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-  border-top: 1px solid var(--border);
-}
-.vision-pair__item {
-  padding: 28px 24px 28px 0;
-  border-bottom: 1px solid var(--border);
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.vision-pair__item + .vision-pair__item {
-  padding-left: 24px;
-  border-left: 1px solid var(--border);
-}
-.vision-pair__title {
-  font-family: var(--font-jp);
-  font-weight: 600;
-  font-size: 17px;
-  line-height: 1.55;
-}
-@media (max-width: 900px) {
-  .vision-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-  .vision-aside {
-    position: static;
-  }
-  .vision-pair {
-    grid-template-columns: 1fr;
-  }
-  .vision-pair__item + .vision-pair__item {
-    padding-left: 0;
-    border-left: 0;
-  }
-}
-
 /* =========================================================
    SECTION HEAD (shared)
    ========================================================= */
@@ -1576,128 +1478,9 @@ section {
 /* =========================================================
    COMPANY
    ========================================================= */
-.company-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 48px;
-  align-items: start;
-}
-.company-table dl {
-  margin: 0;
-  border-top: 1px solid var(--border);
-}
-.company-table dl > div {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 24px;
-  padding: 24px 0;
-  border-bottom: 1px solid var(--border);
-}
-.company-table dt {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted-foreground);
-  padding-top: 3px;
-}
-.company-table dd {
-  margin: 0;
-  font-size: 15px;
-  line-height: 1.7;
-  color: var(--foreground);
-}
-.company-side {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.company-card {
-  padding: 24px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  background: var(--surface);
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.company-card .bignum {
-  font-size: 56px;
-}
-.company-map {
-  height: 200px;
-  font-size: 11px;
-}
-@media (max-width: 880px) {
-  .company-grid {
-    grid-template-columns: 1fr;
-  }
-  .company-table dl > div {
-    grid-template-columns: 1fr;
-    gap: 6px;
-    padding: 18px 0;
-  }
-}
-
 /* =========================================================
    NEWS
    ========================================================= */
-.news-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  border-top: 1px solid var(--border);
-}
-.news-row {
-  display: grid;
-  grid-template-columns: 110px 90px 1fr 24px;
-  gap: 24px;
-  align-items: center;
-  padding: 20px 0;
-  border-bottom: 1px solid var(--border);
-  cursor: pointer;
-  transition:
-    background 0.2s ease,
-    padding 0.2s ease;
-}
-.news-row:hover {
-  background: var(--muted);
-  padding-left: 12px;
-  padding-right: 12px;
-}
-.news-date {
-  font-size: 12px;
-  color: var(--muted-foreground);
-  letter-spacing: 0.06em;
-}
-.news-cat {
-  font-size: 10px;
-  justify-self: start;
-}
-.news-title {
-  font-size: 15px;
-  color: var(--foreground);
-  font-weight: 500;
-}
-.news-arr {
-  color: var(--muted-foreground);
-  transition:
-    transform 0.2s ease,
-    color 0.2s ease;
-}
-.news-row:hover .news-arr {
-  color: var(--primary);
-  transform: translateX(4px);
-}
-@media (max-width: 720px) {
-  .news-row {
-    grid-template-columns: 90px 1fr 16px;
-  }
-  .news-cat {
-    display: none;
-  }
-}
-
 /* =========================================================
    CAREERS
    ========================================================= */
@@ -1768,91 +1551,6 @@ section {
 /* =========================================================
    CONTACT
    ========================================================= */
-.contact-sec {
-  padding: 120px 0;
-}
-.contact-card {
-  position: relative;
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-  color: white;
-  isolation: isolate;
-}
-.contact-card__bg {
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(70% 80% at 0% 0%, color-mix(in oklab, var(--primary) 60%, transparent) 0%, transparent 65%),
-    radial-gradient(60% 70% at 100% 100%, color-mix(in oklab, var(--primary) 45%, #6b8cff) 0%, transparent 60%), linear-gradient(135deg, #0a0e1a 0%, #1a1f30 100%);
-  z-index: -1;
-}
-.contact-card__bg::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-  background-size: 48px 48px;
-}
-.contact-card__inner {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 60px;
-  padding: 80px;
-}
-.contact-card .eyebrow {
-  color: rgba(255, 255, 255, 0.7);
-}
-.contact-h {
-  font-size: clamp(36px, 4.4vw, 60px);
-  margin: 16px 0 24px;
-}
-.contact-lede {
-  color: rgba(255, 255, 255, 0.78);
-  margin-bottom: 32px;
-}
-.contact-cta {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-.contact-btn-primary {
-  background: white;
-  color: var(--foreground);
-}
-.contact-btn-ghost {
-  color: white;
-  border-color: rgba(255, 255, 255, 0.3);
-}
-.contact-btn-ghost:hover {
-  border-color: white;
-}
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.16);
-  padding-top: 24px;
-}
-.contact-info > div {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-.contact-info .muted {
-  color: rgba(255, 255, 255, 0.5);
-}
-.contact-info__v {
-  font-size: 16px;
-  font-weight: 500;
-}
-@media (max-width: 880px) {
-  .contact-card__inner {
-    grid-template-columns: 1fr;
-    padding: 48px 32px;
-    gap: 40px;
-  }
-}
-
 /* =========================================================
    FOOTER
    ========================================================= */

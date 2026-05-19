@@ -2,48 +2,59 @@ import Link from 'next/link'
 
 export default function Contact() {
   return (
-    <section className="contact-sec" id="contact">
-      <div className="al-container">
-        <div className="contact-card">
-          <div className="contact-card__bg" aria-hidden="true"></div>
-          <div className="contact-card__inner">
+    <section id="contact" className="py-[120px] max-[720px]:py-[72px]">
+      <div className="relative w-full max-w-[1280px] mx-auto px-8 max-[720px]:px-5">
+        <div className="relative rounded-[26px] overflow-hidden text-white isolate">
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 -z-10 bg-[radial-gradient(70%_80%_at_0%_0%,color-mix(in_oklab,var(--primary)_60%,transparent)_0%,transparent_65%),radial-gradient(60%_70%_at_100%_100%,color-mix(in_oklab,var(--primary)_45%,#6b8cff)_0%,transparent_60%),linear-gradient(135deg,#0a0e1a_0%,#1a1f30_100%)] before:content-[''] before:absolute before:inset-0 before:bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] before:bg-[length:48px_48px]"
+          ></div>
+          <div className="grid grid-cols-[1.4fr_1fr] gap-[60px] p-20 max-[880px]:grid-cols-1 max-[880px]:px-8 max-[880px]:py-12 max-[880px]:gap-10">
             <div>
-              <span className="eyebrow">CONTACT &nbsp;/&nbsp; 09</span>
-              <h2 className="h-display contact-h">
+              <span className="font-mono text-[11px] font-medium tracking-[0.18em] uppercase text-white/70 inline-flex items-center gap-2 before:content-[''] before:w-[18px] before:h-px before:bg-current before:inline-block">
+                CONTACT &nbsp;/&nbsp; 09
+              </span>
+              <h2 className="font-bold leading-[1.14] tracking-[-0.015em] text-[clamp(36px,4.4vw,60px)] mt-4 mb-6">
                 AI活用のご相談、
                 <br />
                 承ります。
               </h2>
-              <p className="lede contact-lede">
+              <p className="text-[18px] leading-[1.85] text-white/[0.78] max-w-[60ch] mb-8">
                 業種・課題は問いません。まずは無料の60分相談で、
                 <br />
                 貴社の業務にAIをどう活かせるか、一緒に整理します。
               </p>
-              <div className="contact-cta">
-                <Link href="/request-documents" className="btn btn-primary contact-btn-primary">
+              <div className="flex gap-3 flex-wrap">
+                <Link
+                  href="/request-documents"
+                  className="group inline-flex items-center gap-2.5 px-5 py-3 rounded-full font-semibold text-sm tracking-[0.01em] border border-transparent whitespace-nowrap bg-white text-foreground transition-all duration-200 hover:-translate-y-px"
+                >
                   <span>無料相談を予約</span>
-                  <span className="arr">→</span>
+                  <span className="inline-block transition-transform duration-200 group-hover:translate-x-[3px]">→</span>
                 </Link>
-                <Link href="/request-documents" className="btn btn-ghost contact-btn-ghost">
+                <Link
+                  href="/request-documents"
+                  className="inline-flex items-center gap-2.5 px-5 py-3 rounded-full font-semibold text-sm tracking-[0.01em] border border-white/30 whitespace-nowrap bg-transparent text-white transition-all duration-200 hover:border-white"
+                >
                   <span>資料ダウンロード</span>
                 </Link>
               </div>
             </div>
             <div>
-              <div className="contact-info">
-                <div>
-                  <div className="mono tiny muted">EMAIL</div>
-                  <a href="mailto:rsaotome@ascendlogicai.com" className="contact-info__v">
+              <div className="flex flex-col gap-6 border-t border-white/[0.16] pt-6">
+                <div className="flex flex-col gap-1">
+                  <div className="font-mono tracking-[0.02em] text-[13px] text-white/50">EMAIL</div>
+                  <a href="mailto:rsaotome@ascendlogicai.com" className="text-base font-medium">
                     rsaotome@ascendlogicai.com
                   </a>
                 </div>
-                <div>
-                  <div className="mono tiny muted">OFFICE</div>
-                  <div className="contact-info__v">東京都青梅市師岡町1-125-14</div>
+                <div className="flex flex-col gap-1">
+                  <div className="font-mono tracking-[0.02em] text-[13px] text-white/50">OFFICE</div>
+                  <div className="text-base font-medium">東京都青梅市師岡町1-125-14</div>
                 </div>
-                <div>
-                  <div className="mono tiny muted">RESPONSE</div>
-                  <div className="contact-info__v">2 営業日以内に返信</div>
+                <div className="flex flex-col gap-1">
+                  <div className="font-mono tracking-[0.02em] text-[13px] text-white/50">RESPONSE</div>
+                  <div className="text-base font-medium">2 営業日以内に返信</div>
                 </div>
               </div>
             </div>

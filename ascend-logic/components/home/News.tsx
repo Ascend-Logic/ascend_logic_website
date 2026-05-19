@@ -3,39 +3,46 @@ import { newsItems } from '@/lib/news'
 
 export default function News() {
   return (
-    <section className="al-section-tight" id="news">
-      <div className="al-container">
-        <div className="sec-head">
+    <section id="news" className="relative py-[80px] max-[720px]:py-[48px]">
+      <div className="relative w-full max-w-[1280px] mx-auto px-8 max-[720px]:px-5">
+        <div className="grid grid-cols-[1.2fr_1fr] gap-[60px] items-end mb-16 max-[880px]:grid-cols-1 max-[880px]:gap-6">
           <div>
-            <span className="eyebrow">NEWS &nbsp;/&nbsp; 07</span>
-            <h2 className="h-section" style={{ marginTop: 16 }}>
-              ニュース / ブログ
-            </h2>
+            <span className="font-mono text-[11px] font-medium tracking-[0.18em] uppercase text-primary inline-flex items-center gap-2 before:content-[''] before:w-[18px] before:h-px before:bg-current before:inline-block">
+              NEWS &nbsp;/&nbsp; 07
+            </span>
+            <h2 className="font-bold text-[clamp(28px,3.6vw,48px)] leading-[1.25] tracking-[-0.01em] m-0 mt-4">ニュース / ブログ</h2>
           </div>
-          <Link href="/news" className="btn-link">
+          <Link
+            href="/news"
+            className="group inline-flex items-center gap-1.5 font-medium text-sm text-primary justify-self-end max-[880px]:justify-self-start"
+          >
             <span>すべて見る</span>
-            <span className="arr">→</span>
+            <span className="inline-block transition-transform duration-200 group-hover:translate-x-[3px]">→</span>
           </Link>
         </div>
-        <ul className="news-list">
+        <ul className="list-none p-0 m-0 border-t border-border">
           {newsItems.map((n) => {
             const isExternal = n.url.startsWith('http')
+            const rowClass =
+              'grid grid-cols-[110px_90px_1fr_24px] gap-6 items-center py-5 border-b border-border cursor-pointer transition-all duration-200 hover:bg-muted hover:px-3 group max-[720px]:grid-cols-[90px_1fr_16px]'
             const Inner = (
               <>
-                <span className="news-date mono">{n.date}</span>
-                <span className="news-cat tag">{n.category}</span>
-                <span className="news-title focus-line">{n.title}</span>
-                <span className="news-arr">{isExternal ? '↗' : '→'}</span>
+                <span className="font-mono tracking-[0.02em] text-[12px] text-muted-foreground tracking-[0.06em]">{n.date}</span>
+                <span className="inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.06em] uppercase px-2.5 py-[5px] border border-border-strong rounded-full text-foreground-soft bg-background justify-self-start max-[720px]:hidden">
+                  {n.category}
+                </span>
+                <span className="text-[15px] text-foreground font-medium">{n.title}</span>
+                <span className="text-muted-foreground transition-all duration-200 group-hover:text-primary group-hover:translate-x-1">{isExternal ? '↗' : '→'}</span>
               </>
             )
             return (
-              <li key={n.id} style={{ listStyle: 'none' }}>
+              <li key={n.id} className="list-none">
                 {isExternal ? (
-                  <a href={n.url} target="_blank" rel="noopener noreferrer" className="news-row">
+                  <a href={n.url} target="_blank" rel="noopener noreferrer" className={rowClass}>
                     {Inner}
                   </a>
                 ) : (
-                  <Link href={n.url} className="news-row">
+                  <Link href={n.url} className={rowClass}>
                     {Inner}
                   </Link>
                 )}

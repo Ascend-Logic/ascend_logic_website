@@ -74,10 +74,7 @@ export default function Cases() {
 
         <div className="grid grid-cols-4 gap-px bg-border border border-border rounded-[18px] overflow-hidden max-[980px]:grid-cols-2 max-[560px]:grid-cols-1">
           {cases.map((c, i) => (
-            <article
-              key={c.en}
-              className="bg-background p-6 flex flex-col gap-4 min-h-[320px] transition-colors duration-200 hover:bg-surface"
-            >
+            <article key={c.en} className="bg-background p-6 flex flex-col gap-4 min-h-[320px] transition-colors duration-200 hover:bg-surface">
               <div className="font-mono text-[10px] tracking-widest text-muted-foreground">CASE / {String(i + 1).padStart(2, '0')}</div>
               <div className="h-[110px] bg-muted border border-border rounded-md overflow-hidden flex items-center justify-center [&_svg]:size-full [&_svg]:block">
                 <CaseVisual kind={c.viz} />

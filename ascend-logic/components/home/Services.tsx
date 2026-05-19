@@ -109,7 +109,7 @@ function ServiceViz({ kind }: { kind: VizKind }) {
             <span className="inline-block size-2 bg-primary rounded-full mr-1.5 align-middle"></span>予測モデル
           </span>
           <span>
-            <span className="inline-block size-2 bg-text-muted-foreground-foreground rounded-full mr-1.5 align-middle"></span>実績ベースライン
+            <span className="inline-block size-2 bg-muted-foreground rounded-full mr-1.5 align-middle"></span>実績ベースライン
           </span>
         </div>
       </div>
@@ -125,8 +125,7 @@ function ServiceViz({ kind }: { kind: VizKind }) {
           if (isCenter) {
             cellCls += ' bg-primary text-white border-primary flex items-center justify-center text-xs font-bold'
           } else if (isNear) {
-            cellCls +=
-              ' bg-[color-mix(in_oklab,var(--primary)_18%,var(--muted))] border-[color-mix(in_oklab,var(--primary)_25%,var(--border))]'
+            cellCls += ' bg-[color-mix(in_oklab,var(--primary)_18%,var(--muted))] border-[color-mix(in_oklab,var(--primary)_25%,var(--border))]'
           } else {
             cellCls += ' bg-muted border-border'
           }
@@ -172,18 +171,14 @@ export default function Services({ index = 2 }: { index?: number }) {
           {services.map((s, idx) => (
             <article
               key={s.no}
-              className={`grid grid-cols-[80px_1.2fr_1fr] gap-12 py-14 border-t border-border items-start max-[880px]:grid-cols-1 max-[880px]:gap-6 ${
-                idx === services.length - 1 ? 'border-b' : ''
-              }`}
+              className={`grid grid-cols-[80px_1.2fr_1fr] gap-12 py-14 border-t border-border items-start max-[880px]:grid-cols-1 max-[880px]:gap-6 ${idx === services.length - 1 ? 'border-b' : ''}`}
             >
               <div>
                 <span className="font-mono text-sm text-muted-foreground tracking-uppercase-wide">{s.no}</span>
               </div>
               <div>
                 <div className="flex flex-col gap-1.5 mb-4">
-                  <div className="font-en [font-feature-settings:'ss01'_1,'cv11'_1] text-xs tracking-widest text-primary font-medium uppercase">
-                    {s.en}
-                  </div>
+                  <div className="font-en [font-feature-settings:'ss01'_1,'cv11'_1] text-xs tracking-widest text-primary font-medium uppercase">{s.en}</div>
                   <h3 className="font-semibold text-card leading-[1.4] tracking-tight m-0">{s.jp}</h3>
                 </div>
                 <p className="text-foreground-soft m-0 mb-6 leading-[1.8] max-w-[48ch]">{s.desc}</p>

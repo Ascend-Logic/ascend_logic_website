@@ -274,7 +274,10 @@ export default function AscendAgentProductPage() {
               <br className="hidden md:block" />
               あなたの業務を誰よりも深く理解するAIが、チームの一員になります。
             </p>
-            <Link href="/request-documents" className="group inline-flex items-center gap-2 px-8 py-3 border-[1.5px] border-[#333] rounded-[30px] text-sm font-semibold bg-transparent transition-all duration-300 text-[#333] tracking-wide hover:bg-[#333] hover:text-white !border-white/30 !text-white hover:!bg-white hover:!text-black">
+            <Link
+              href="/request-documents"
+              className="group inline-flex items-center gap-2 px-8 py-3 border-[1.5px] border-[#333] rounded-[30px] text-sm font-semibold bg-transparent transition-all duration-300 text-[#333] tracking-wide hover:bg-[#333] hover:text-white !border-white/30 !text-white hover:!bg-white hover:!text-black"
+            >
               お問い合わせ <span className="inline-block text-base transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
             </Link>
           </FadeIn>
@@ -689,7 +692,9 @@ export default function AscendAgentProductPage() {
                 <div className="text-center">
                   <div className="relative inline-flex items-center justify-center w-28 h-28 rounded-full bg-gray-100 mb-6">
                     <div className="text-gray-600">{s.icon}</div>
-                    <div className="absolute -top-2 -right-2 w-9 h-9 rounded-full bg-black text-white flex items-center justify-center text-sm font-bold font-en tracking-wide font-semibold">{s.number}</div>
+                    <div className="absolute -top-2 -right-2 w-9 h-9 rounded-full bg-black text-white flex items-center justify-center text-sm font-bold font-en tracking-wide font-semibold">
+                      {s.number}
+                    </div>
                   </div>
                   <h3 className="text-base font-bold mb-2">{s.title}</h3>
                   <p className="text-gray-500 text-xs leading-relaxed">{s.description}</p>
@@ -700,7 +705,10 @@ export default function AscendAgentProductPage() {
 
           <FadeIn>
             <div className="text-center mt-16">
-              <Link href="/request-documents" className="group inline-flex items-center gap-2 px-8 py-3 border-[1.5px] border-[#333] rounded-[30px] text-sm font-semibold bg-transparent transition-all duration-300 text-[#333] tracking-wide hover:bg-[#333] hover:text-white">
+              <Link
+                href="/request-documents"
+                className="group inline-flex items-center gap-2 px-8 py-3 border-[1.5px] border-[#333] rounded-[30px] text-sm font-semibold bg-transparent transition-all duration-300 text-[#333] tracking-wide hover:bg-[#333] hover:text-white"
+              >
                 お問い合わせ <span className="inline-block text-base transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
               </Link>
             </div>
@@ -746,7 +754,10 @@ export default function AscendAgentProductPage() {
               <br />
               まずはお気軽にお問い合わせください。
             </p>
-            <Link href="/request-documents" className="group inline-flex items-center gap-2 px-8 py-3 border-[1.5px] border-[#333] rounded-[30px] text-sm font-semibold bg-transparent transition-all duration-300 text-[#333] tracking-wide hover:bg-[#333] hover:text-white !border-white/30 !text-white hover:!bg-white hover:!text-black">
+            <Link
+              href="/request-documents"
+              className="group inline-flex items-center gap-2 px-8 py-3 border-[1.5px] border-[#333] rounded-[30px] text-sm font-semibold bg-transparent transition-all duration-300 text-[#333] tracking-wide hover:bg-[#333] hover:text-white !border-white/30 !text-white hover:!bg-white hover:!text-black"
+            >
               お問い合わせ <span className="inline-block text-base transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
             </Link>
           </FadeIn>

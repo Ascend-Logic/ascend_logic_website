@@ -12,8 +12,7 @@ const navItems = [
   { jp: 'ニュース', en: 'News', href: '/news' },
 ]
 
-const btnBase =
-  'inline-flex items-center gap-2.5 px-4 py-[9px] rounded-full font-semibold text-sm tracking-wide border border-transparent whitespace-nowrap transition-all duration-200'
+const btnBase = 'inline-flex items-center gap-2.5 px-4 py-[9px] rounded-full font-semibold text-sm tracking-wide border border-transparent whitespace-nowrap transition-all duration-200'
 const btnPrimary = `${btnBase} bg-primary text-primary-foreground hover:bg-primary-deep hover:-translate-y-px`
 const btnGhost = `${btnBase} bg-transparent text-foreground border-border-strong hover:border-foreground`
 
@@ -78,12 +77,7 @@ export default function Header() {
         <div className="w-full max-w-[1280px] mx-auto px-8 max-[720px]:px-5">
           <div className="pt-4 pb-6 border-t border-border">
             {navItems.map((it) => (
-              <Link
-                key={it.href}
-                href={it.href}
-                className="py-3.5 px-1 text-base font-medium text-foreground border-b border-border flex items-center justify-between"
-                onClick={close}
-              >
+              <Link key={it.href} href={it.href} className="py-3.5 px-1 text-base font-medium text-foreground border-b border-border flex items-center justify-between" onClick={close}>
                 <span>{it.jp}</span>
                 <span className="font-mono tracking-wide text-sm text-muted-foreground">{it.en}</span>
               </Link>

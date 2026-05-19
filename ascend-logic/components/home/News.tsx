@@ -13,10 +13,7 @@ export default function News({ index = 5 }: { index?: number }) {
             </span>
             <h2 className="font-bold text-section leading-[1.25] tracking-tight m-0 mt-4">ニュース / ブログ</h2>
           </div>
-          <Link
-            href="/news"
-            className="group inline-flex items-center gap-1.5 font-medium text-sm text-primary justify-self-end max-[880px]:justify-self-start"
-          >
+          <Link href="/news" className="group inline-flex items-center gap-1.5 font-medium text-sm text-primary justify-self-end max-[880px]:justify-self-start">
             <span>すべて見る</span>
             <span className="inline-block transition-transform duration-200 group-hover:translate-x-[3px]">→</span>
           </Link>

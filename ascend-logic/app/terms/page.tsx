@@ -348,7 +348,10 @@ export default function TermsPage() {
         <div className="relative z-10 text-center px-6">
           <FadeIn>
             <p className="text-white/60 text-sm mb-6">ご不明な点がございましたら、お気軽にお問い合わせください。</p>
-            <Link href="/request-documents" className="group inline-flex items-center gap-2 px-8 py-3 border-[1.5px] border-[#333] rounded-[30px] text-sm font-semibold bg-transparent transition-all duration-300 text-[#333] tracking-wide hover:bg-[#333] hover:text-white !border-white/30 !text-white hover:!bg-white/10">
+            <Link
+              href="/request-documents"
+              className="group inline-flex items-center gap-2 px-8 py-3 border-[1.5px] border-[#333] rounded-[30px] text-sm font-semibold bg-transparent transition-all duration-300 text-[#333] tracking-wide hover:bg-[#333] hover:text-white !border-white/30 !text-white hover:!bg-white/10"
+            >
               お問い合わせ
             </Link>
           </FadeIn>

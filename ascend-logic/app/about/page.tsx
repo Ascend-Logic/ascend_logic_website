@@ -104,7 +104,10 @@ export default function About() {
           <FadeIn>
             <h2 className="font-en tracking-wide font-semibold text-2xl md:text-3xl text-white mb-4">Contact Us</h2>
             <p className="text-white/60 text-sm md:text-base max-w-2xl mx-auto mb-10 leading-relaxed">AIの導入やビジネスの課題解決について、お気軽にご相談ください。</p>
-            <Link href="/request-documents" className="group inline-flex items-center gap-2 px-8 py-3 border-[1.5px] border-[#333] rounded-[30px] text-sm font-semibold bg-transparent transition-all duration-300 text-[#333] tracking-wide hover:bg-[#333] hover:text-white !border-white/30 !text-white hover:!bg-white/10">
+            <Link
+              href="/request-documents"
+              className="group inline-flex items-center gap-2 px-8 py-3 border-[1.5px] border-[#333] rounded-[30px] text-sm font-semibold bg-transparent transition-all duration-300 text-[#333] tracking-wide hover:bg-[#333] hover:text-white !border-white/30 !text-white hover:!bg-white/10"
+            >
               お問い合わせ
             </Link>
           </FadeIn>

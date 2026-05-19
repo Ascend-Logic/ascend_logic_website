@@ -9,10 +9,7 @@ export default function Hero() {
           <span className="block">企業と個人の</span>
           <span className="block">
             可能性を
-            <em className="not-italic relative bg-[linear-gradient(120deg,var(--primary-deep)_0%,var(--primary-soft)_100%)] bg-clip-text text-transparent">
-              解き放つ
-            </em>
-            。
+            <em className="not-italic relative bg-[linear-gradient(120deg,var(--primary-deep)_0%,var(--primary-soft)_100%)] bg-clip-text text-transparent">解き放つ</em>。
           </span>
         </h1>
 

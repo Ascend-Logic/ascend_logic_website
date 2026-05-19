@@ -198,7 +198,11 @@ export default function RequestDocuments() {
                   </div>
 
                   <div className="text-center pt-4">
-                    <button type="submit" disabled={submitting} className="group inline-flex items-center gap-2 px-8 py-3 border-[1.5px] border-[#333] rounded-[30px] text-sm font-semibold bg-transparent transition-all duration-300 text-[#333] tracking-wide hover:bg-[#333] hover:text-white disabled:opacity-50 disabled:cursor-not-allowed">
+                    <button
+                      type="submit"
+                      disabled={submitting}
+                      className="group inline-flex items-center gap-2 px-8 py-3 border-[1.5px] border-[#333] rounded-[30px] text-sm font-semibold bg-transparent transition-all duration-300 text-[#333] tracking-wide hover:bg-[#333] hover:text-white disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
                       {submitting ? '送信中...' : '送信する'}
                     </button>
                   </div>
@@ -216,7 +220,10 @@ export default function RequestDocuments() {
                 <h2 className="text-2xl font-bold mb-4">お問い合わせありがとうございます</h2>
                 <p className="text-gray-500 mb-2">お問い合わせ内容を承りました。</p>
                 <p className="text-gray-500 mb-10">担当者より2営業日以内にご連絡させていただきます。</p>
-                <Link href="/" className="group inline-flex items-center gap-2 px-8 py-3 border-[1.5px] border-[#333] rounded-[30px] text-sm font-semibold bg-transparent transition-all duration-300 text-[#333] tracking-wide hover:bg-[#333] hover:text-white">
+                <Link
+                  href="/"
+                  className="group inline-flex items-center gap-2 px-8 py-3 border-[1.5px] border-[#333] rounded-[30px] text-sm font-semibold bg-transparent transition-all duration-300 text-[#333] tracking-wide hover:bg-[#333] hover:text-white"
+                >
                   トップページに戻る
                 </Link>
               </div>

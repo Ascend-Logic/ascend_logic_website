@@ -116,35 +116,35 @@ export default function RequestDocuments() {
                     <label className="block text-sm text-gray-600 mb-2" htmlFor="company">
                       会社名 <span className="text-red-500">*</span>
                     </label>
-                    <input type="text" id="company" name="company" className={inputClass} value={formState.company} onChange={handleChange} required />
+                    <input type="text" id="company" name="company" aria-label="会社名" className={inputClass} value={formState.company} onChange={handleChange} required />
                   </div>
 
                   <div>
                     <label className="block text-sm text-gray-600 mb-2" htmlFor="name">
                       お名前 <span className="text-red-500">*</span>
                     </label>
-                    <input type="text" id="name" name="name" className={inputClass} value={formState.name} onChange={handleChange} required />
+                    <input type="text" id="name" name="name" aria-label="お名前" className={inputClass} value={formState.name} onChange={handleChange} required />
                   </div>
 
                   <div>
                     <label className="block text-sm text-gray-600 mb-2" htmlFor="email">
                       メールアドレス <span className="text-red-500">*</span>
                     </label>
-                    <input type="email" id="email" name="email" className={inputClass} value={formState.email} onChange={handleChange} required />
+                    <input type="email" id="email" name="email" aria-label="メールアドレス" className={inputClass} value={formState.email} onChange={handleChange} required />
                   </div>
 
                   <div>
                     <label className="block text-sm text-gray-600 mb-2" htmlFor="phone">
                       電話番号
                     </label>
-                    <input type="tel" id="phone" name="phone" className={inputClass} value={formState.phone} onChange={handleChange} />
+                    <input type="tel" id="phone" name="phone" aria-label="電話番号" className={inputClass} value={formState.phone} onChange={handleChange} />
                   </div>
 
                   <div>
                     <label className="block text-sm text-gray-600 mb-2" htmlFor="position">
                       役職
                     </label>
-                    <input type="text" id="position" name="position" className={inputClass} value={formState.position} onChange={handleChange} />
+                    <input type="text" id="position" name="position" aria-label="役職" className={inputClass} value={formState.position} onChange={handleChange} />
                   </div>
 
                   <div>
@@ -158,6 +158,7 @@ export default function RequestDocuments() {
                               id={service.id}
                               name="interests"
                               value={service.id}
+                              aria-label={service.label}
                               checked={formState.interests.includes(service.id)}
                               onChange={handleChange}
                               className="mr-3 accent-gray-800"
@@ -178,6 +179,7 @@ export default function RequestDocuments() {
                     <textarea
                       id="message"
                       name="message"
+                      aria-label="メッセージ"
                       rows={4}
                       className={inputClass}
                       value={formState.message}
@@ -187,7 +189,16 @@ export default function RequestDocuments() {
                   </div>
 
                   <div className="flex items-start">
-                    <input type="checkbox" id="consent" name="consent" checked={formState.consent} onChange={handleChange} className="mt-1 mr-3 accent-gray-800" required />
+                    <input
+                      type="checkbox"
+                      id="consent"
+                      name="consent"
+                      aria-label="プライバシーポリシーに同意"
+                      checked={formState.consent}
+                      onChange={handleChange}
+                      className="mt-1 mr-3 accent-gray-800"
+                      required
+                    />
                     <label htmlFor="consent" className="text-sm text-gray-600">
                       <span className="text-red-500 mr-1">*</span>
                       <Link href="/privacy-policy" className="text-gray-800 underline underline-offset-2 hover:text-indigo-600 transition-colors" target="_blank" rel="noopener noreferrer">

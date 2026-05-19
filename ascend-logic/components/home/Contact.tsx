@@ -1,3 +1,4 @@
+import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 
 export default function Contact({ index = 6 }: { index?: number }) {
@@ -35,7 +36,7 @@ export default function Contact({ index = 6 }: { index?: number }) {
                   className="group inline-flex items-center gap-2.5 px-5 py-3 rounded-full font-semibold text-sm tracking-wide border border-transparent whitespace-nowrap bg-white text-foreground transition-all duration-200 hover:-translate-y-px"
                 >
                   <span>無料相談を予約</span>
-                  <span className="inline-block transition-transform duration-200 group-hover:translate-x-[3px]">→</span>
+                  <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-[3px]" />
                 </Link>
                 <Link
                   href="/request-documents"

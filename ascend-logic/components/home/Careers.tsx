@@ -1,3 +1,5 @@
+import { ArrowRight } from 'lucide-react'
+
 const careers = [
   { team: 'ENGINEERING', role: 'AIエンジニア', loc: 'Tokyo / Remote', type: 'Full-time' },
   {
@@ -42,7 +44,7 @@ export default function Careers() {
               <span className="inline-flex items-center gap-1.5 font-mono text-xs tracking-wider uppercase px-2.5 py-[5px] border border-border-strong rounded-full text-foreground-soft bg-background">
                 {c.type}
               </span>
-              <span className="text-muted-foreground transition-all duration-200 group-hover:text-primary group-hover:translate-x-1">→</span>
+              <ArrowRight className="w-4 h-4 text-muted-foreground transition-all duration-200 group-hover:text-primary group-hover:translate-x-1" />
             </li>
           ))}
         </ul>

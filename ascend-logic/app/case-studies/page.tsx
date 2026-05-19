@@ -1,6 +1,8 @@
 import { Metadata } from 'next'
+import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
+import CtaLink from '../../components/ui/CtaLink'
 import PageHero from '../../components/ui/PageHero'
 import FadeIn from '../../components/ui/FadeIn'
 import { CaseStudy } from '../../types'
@@ -128,7 +130,9 @@ export default function CaseStudies() {
                   <div className="p-5">
                     <h2 className="text-base font-bold mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">{study.title}</h2>
                     <p className="text-gray-500 text-xs leading-relaxed line-clamp-3">{study.description}</p>
-                    <span className="inline-block mt-3 text-xs text-gray-400 group-hover:text-indigo-600 transition-colors">詳細を見る →</span>
+                    <span className="inline-flex items-center gap-1 mt-3 text-xs text-gray-400 group-hover:text-indigo-600 transition-colors">
+                      詳細を見る <ArrowRight className="w-3 h-3" />
+                    </span>
                   </div>
                 </Link>
               </FadeIn>
@@ -146,12 +150,9 @@ export default function CaseStudies() {
             <p className="text-white/60 text-sm md:text-base max-w-2xl mx-auto mb-10 leading-relaxed">
               事例に関する詳細や、お客様のビジネス課題に対する具体的なソリューション案をご希望の方は、 お気軽にお問い合わせください。
             </p>
-            <Link
-              href="/request-documents"
-              className="group inline-flex items-center gap-2 px-8 py-3 border-[1.5px] border-[#333] rounded-[30px] text-sm font-semibold bg-transparent transition-all duration-300 text-[#333] tracking-wide hover:bg-[#333] hover:text-white !border-white/30 !text-white hover:!bg-white/10"
-            >
+            <CtaLink href="/request-documents" variant="outline-light">
               お問い合わせ
-            </Link>
+            </CtaLink>
           </FadeIn>
         </div>
       </section>

@@ -1,3 +1,4 @@
+import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import CaseVisual from './CaseVisual'
 
@@ -105,7 +106,7 @@ export default function Cases() {
               </p>
               <Link href="/request-documents" className="group inline-flex items-center gap-1.5 font-medium text-sm text-primary">
                 <span>相談する</span>
-                <span className="inline-block transition-transform duration-200 group-hover:translate-x-[3px]">→</span>
+                <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-[3px]" />
               </Link>
             </div>
           </div>

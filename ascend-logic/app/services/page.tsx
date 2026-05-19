@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
+import CtaLink from '../../components/ui/CtaLink'
 import PageHero from '../../components/ui/PageHero'
 import FadeIn from '../../components/ui/FadeIn'
 
@@ -152,7 +152,7 @@ export default function Services() {
                 {service.features.map((feature, fIndex) => (
                   <FadeIn key={feature.id} delay={fIndex * 100}>
                     <div className="text-center">
-                      <span className="font-en tracking-wide font-semibold text-3xl font-bold text-gray-200 block mb-4">{feature.id}</span>
+                      <span className="font-en tracking-wide text-3xl font-bold text-gray-200 block mb-4">{feature.id}</span>
                       <h4 className="text-lg font-bold mb-4">{feature.title}</h4>
                       <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
                     </div>
@@ -173,12 +173,9 @@ export default function Services() {
             <p className="text-white/60 text-sm md:text-base max-w-2xl mx-auto mb-10 leading-relaxed">
               どのようなビジネス課題でも、まずはお気軽にご相談ください。 専門のコンサルタントが貴社の状況をヒアリングし、最適なソリューションをご提案いたします。
             </p>
-            <Link
-              href="/request-documents"
-              className="group inline-flex items-center gap-2 px-8 py-3 border-[1.5px] border-[#333] rounded-[30px] text-sm font-semibold bg-transparent transition-all duration-300 text-[#333] tracking-wide hover:bg-[#333] hover:text-white !border-white/30 !text-white hover:!bg-white/10"
-            >
+            <CtaLink href="/request-documents" variant="outline-light">
               お問い合わせ
-            </Link>
+            </CtaLink>
           </FadeIn>
         </div>
       </section>

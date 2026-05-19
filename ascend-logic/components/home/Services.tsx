@@ -1,3 +1,4 @@
+import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 
 type VizKind = 'viz-custom' | 'viz-rpa' | 'viz-data' | 'viz-consult'
@@ -78,11 +79,11 @@ function ServiceViz({ kind }: { kind: VizKind }) {
       <div className={wrap}>
         <div className="flex items-center gap-2 flex-wrap justify-center">
           <div className={`${nodeBase} bg-background border-border text-foreground-soft`}>CSV</div>
-          <div className="text-muted-foreground font-mono tracking-wide">→</div>
+          <ArrowRight className="w-4 h-4 text-muted-foreground" />
           <div className={`${nodeBase} bg-primary border-primary text-white`}>AI抽出</div>
-          <div className="text-muted-foreground font-mono tracking-wide">→</div>
+          <ArrowRight className="w-4 h-4 text-muted-foreground" />
           <div className={`${nodeBase} bg-background border-border text-foreground-soft`}>RPA</div>
-          <div className="text-muted-foreground font-mono tracking-wide">→</div>
+          <ArrowRight className="w-4 h-4 text-muted-foreground" />
           <div className={`${nodeBase} bg-background border-border text-foreground-soft`}>ERP</div>
         </div>
       </div>
@@ -192,7 +193,7 @@ export default function Services({ index = 2 }: { index?: number }) {
                 </ul>
                 <Link href="/services" className="group inline-flex items-center gap-1.5 font-medium text-sm text-primary">
                   <span>サービス詳細</span>
-                  <span className="inline-block transition-transform duration-200 group-hover:translate-x-[3px]">→</span>
+                  <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-[3px]" />
                 </Link>
               </div>
               <div className="h-[240px] bg-surface border border-border rounded-[18px] p-6 flex items-center justify-center relative overflow-hidden max-[880px]:h-[200px]">

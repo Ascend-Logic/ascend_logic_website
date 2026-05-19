@@ -1,3 +1,4 @@
+import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 
 const features = [
@@ -86,7 +87,7 @@ export default function Agent({ index = 3 }: { index?: number }) {
               className="group inline-flex items-center gap-2.5 px-5 py-3 rounded-full font-semibold text-sm tracking-wide border border-transparent whitespace-nowrap bg-white text-[#0a1628] transition-all duration-200 hover:-translate-y-px"
             >
               <span>詳しく見る</span>
-              <span className="inline-block transition-transform duration-200 group-hover:translate-x-[3px]">→</span>
+              <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-[3px]" />
             </Link>
           </div>
         </div>

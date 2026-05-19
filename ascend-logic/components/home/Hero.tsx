@@ -1,3 +1,4 @@
+import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 
 export default function Hero() {
@@ -23,7 +24,7 @@ export default function Hero() {
               className="group inline-flex items-center gap-2.5 px-5 py-3 rounded-full font-semibold text-sm tracking-wide border border-transparent whitespace-nowrap bg-primary text-primary-foreground transition-all duration-200 hover:bg-primary-deep hover:-translate-y-px"
             >
               <span>サービスを見る</span>
-              <span className="inline-block transition-transform duration-200 group-hover:translate-x-[3px]">→</span>
+              <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-[3px]" />
             </Link>
             <Link
               href="/request-documents"

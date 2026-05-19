@@ -1,3 +1,4 @@
+import { ArrowRight, ArrowUpRight } from 'lucide-react'
 import Link from 'next/link'
 import { newsItems } from '@/lib/news'
 
@@ -15,7 +16,7 @@ export default function News({ index = 5 }: { index?: number }) {
           </div>
           <Link href="/news" className="group inline-flex items-center gap-1.5 font-medium text-sm text-primary justify-self-end max-[880px]:justify-self-start">
             <span>すべて見る</span>
-            <span className="inline-block transition-transform duration-200 group-hover:translate-x-[3px]">→</span>
+            <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-[3px]" />
           </Link>
         </div>
         <ul className="list-none p-0 m-0 border-t border-border">
@@ -30,7 +31,9 @@ export default function News({ index = 5 }: { index?: number }) {
                   {n.category}
                 </span>
                 <span className="text-base text-foreground font-medium">{n.title}</span>
-                <span className="text-muted-foreground transition-all duration-200 group-hover:text-primary group-hover:translate-x-1">{isExternal ? '↗' : '→'}</span>
+                <span className="text-muted-foreground transition-all duration-200 group-hover:text-primary group-hover:translate-x-1 inline-flex">
+                  {isExternal ? <ArrowUpRight className="w-4 h-4" /> : <ArrowRight className="w-4 h-4" />}
+                </span>
               </>
             )
             return (

@@ -1,5 +1,6 @@
 'use client'
 
+import { ArrowRight } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Logo } from '@/components/ui/Logo'
@@ -57,7 +58,7 @@ export default function Header() {
           </Link>
           <Link href="/products/ascendai" className={`${btnPrimary} group max-[560px]:hidden`}>
             <span>Ascend Agent</span>
-            <span className="inline-block transition-transform duration-200 group-hover:translate-x-[3px]">→</span>
+            <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-[3px]" />
           </Link>
           <button
             type="button"
@@ -88,7 +89,7 @@ export default function Header() {
               </Link>
               <Link href="/products/ascendai" className={`${btnPrimary} group`} onClick={close}>
                 <span>Ascend Agent</span>
-                <span className="inline-block transition-transform duration-200 group-hover:translate-x-[3px]">→</span>
+                <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-[3px]" />
               </Link>
             </div>
           </div>

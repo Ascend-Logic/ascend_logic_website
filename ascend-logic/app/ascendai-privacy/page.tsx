@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { ArrowUpRight } from 'lucide-react'
 import Link from 'next/link'
 import Section from '../../components/ui/Section'
 
@@ -239,8 +240,13 @@ export default function AscendAgentPrivacyPolicy() {
                   本サービスは、<strong>Google API Services のユーザーデータポリシー</strong>
                   （限定的な使用要件を含む）を完全に遵守しています。
                 </p>
-                <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer" className="text-gray-900 hover:underline font-semibold">
-                  Google API Services User Data Policy を確認する →
+                <a
+                  href="https://developers.google.com/terms/api-services-user-data-policy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-gray-900 hover:underline font-semibold"
+                >
+                  Google API Services User Data Policy を確認する <ArrowUpRight className="w-4 h-4" />
                 </a>
               </div>
 

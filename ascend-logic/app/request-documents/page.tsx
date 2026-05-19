@@ -3,6 +3,7 @@
 import { Check } from 'lucide-react'
 import { useState } from 'react'
 import Link from 'next/link'
+import CtaLink from '../../components/ui/CtaLink'
 import PageHero from '../../components/ui/PageHero'
 import FadeIn from '../../components/ui/FadeIn'
 
@@ -230,12 +231,9 @@ export default function RequestDocuments() {
                 <h2 className="text-2xl font-bold mb-4">お問い合わせありがとうございます</h2>
                 <p className="text-gray-500 mb-2">お問い合わせ内容を承りました。</p>
                 <p className="text-gray-500 mb-10">担当者より2営業日以内にご連絡させていただきます。</p>
-                <Link
-                  href="/"
-                  className="group inline-flex items-center gap-2 px-8 py-3 border-[1.5px] border-[#333] rounded-[30px] text-sm font-semibold bg-transparent transition-all duration-300 text-[#333] tracking-wide hover:bg-[#333] hover:text-white"
-                >
+                <CtaLink href="/" variant="outline-dark">
                   トップページに戻る
-                </Link>
+                </CtaLink>
               </div>
             </FadeIn>
           )}

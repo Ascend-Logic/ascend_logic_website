@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -38,7 +38,9 @@ export default function Hero() {
         </div>
 
         <div className="hero-type__big en" aria-hidden="true">
-          ASCEND<br />LOGIC
+          ASCEND
+          <br />
+          LOGIC
         </div>
 
         {/* <div className="hero-type__footnote">

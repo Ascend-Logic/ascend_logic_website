@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, ReactNode } from 'react';
+import { useEffect, useRef, ReactNode } from "react";
 
 export default function Reveal({ children }: { children: ReactNode }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -12,12 +12,12 @@ export default function Reveal({ children }: { children: ReactNode }) {
       (entries) => {
         entries.forEach((e) => {
           if (e.isIntersecting) {
-            e.target.classList.add('in');
+            e.target.classList.add("in");
             io.unobserve(e.target);
           }
         });
       },
-      { threshold: 0.12, rootMargin: '0px 0px -10% 0px' }
+      { threshold: 0.12, rootMargin: "0px 0px -10% 0px" },
     );
     io.observe(el);
     return () => io.disconnect();

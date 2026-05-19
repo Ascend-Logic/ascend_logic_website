@@ -1,16 +1,16 @@
-import { Metadata } from 'next';
-import PageHero from '../../components/ui/PageHero';
-import FadeIn from '../../components/ui/FadeIn';
+import { Metadata } from "next";
+import PageHero from "../../components/ui/PageHero";
+import FadeIn from "../../components/ui/FadeIn";
 
 export const metadata: Metadata = {
-  title: 'プライバシーポリシー',
-  description: 'Ascend Logicのプライバシーポリシー。個人情報の取り扱いについてご説明します。',
+  title: "プライバシーポリシー",
+  description: "Ascend Logicのプライバシーポリシー。個人情報の取り扱いについてご説明します。",
 };
 
 export default function PrivacyPolicy() {
   const sections = [
     {
-      title: '第1条（個人情報の定義）',
+      title: "第1条（個人情報の定義）",
       content: (
         <p className="text-gray-600 leading-relaxed">
           本ポリシーにおいて「個人情報」とは、個人情報保護法第2条第1項に定義される、
@@ -22,7 +22,7 @@ export default function PrivacyPolicy() {
       ),
     },
     {
-      title: '第2条（個人情報の収集方法）',
+      title: "第2条（個人情報の収集方法）",
       content: (
         <>
           <p className="text-gray-600 leading-relaxed mb-4">
@@ -38,7 +38,7 @@ export default function PrivacyPolicy() {
       ),
     },
     {
-      title: '第3条（個人情報の利用目的）',
+      title: "第3条（個人情報の利用目的）",
       content: (
         <>
           <p className="text-gray-600 leading-relaxed mb-4">
@@ -59,7 +59,7 @@ export default function PrivacyPolicy() {
       ),
     },
     {
-      title: '第4条（個人情報の第三者提供）',
+      title: "第4条（個人情報の第三者提供）",
       content: (
         <>
           <p className="text-gray-600 leading-relaxed mb-4">
@@ -67,16 +67,22 @@ export default function PrivacyPolicy() {
           </p>
           <ul className="list-disc list-inside space-y-2 text-gray-600 ml-4">
             <li>法令に基づく場合</li>
-            <li>人の生命、身体または財産の保護のために必要がある場合であって、本人の同意を得ることが困難であるとき</li>
-            <li>公衆衛生の向上または児童の健全な育成の推進のために特に必要がある場合であって、本人の同意を得ることが困難であるとき</li>
-            <li>国の機関もしくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合であって、本人の同意を得ることにより当該事務の遂行に支障を及ぼすおそれがあるとき</li>
+            <li>
+              人の生命、身体または財産の保護のために必要がある場合であって、本人の同意を得ることが困難であるとき
+            </li>
+            <li>
+              公衆衛生の向上または児童の健全な育成の推進のために特に必要がある場合であって、本人の同意を得ることが困難であるとき
+            </li>
+            <li>
+              国の機関もしくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合であって、本人の同意を得ることにより当該事務の遂行に支障を及ぼすおそれがあるとき
+            </li>
             <li>あらかじめお客様の同意を得た場合</li>
           </ul>
         </>
       ),
     },
     {
-      title: '第5条（個人情報の開示・訂正・削除）',
+      title: "第5条（個人情報の開示・訂正・削除）",
       content: (
         <>
           <p className="text-gray-600 leading-relaxed mb-4">
@@ -96,7 +102,7 @@ export default function PrivacyPolicy() {
       ),
     },
     {
-      title: '第6条（個人情報の安全管理）',
+      title: "第6条（個人情報の安全管理）",
       content: (
         <>
           <p className="text-gray-600 leading-relaxed mb-4">
@@ -112,12 +118,12 @@ export default function PrivacyPolicy() {
       ),
     },
     {
-      title: '第7条（Cookieおよびアクセス解析ツール）',
+      title: "第7条（Cookieおよびアクセス解析ツール）",
       content: (
         <>
           <p className="text-gray-600 leading-relaxed mb-4">
-            当社ウェブサイトでは、サービスの品質向上、利用状況の分析のために、
-            CookieおよびGoogle Analytics等のアクセス解析ツールを使用しています。
+            当社ウェブサイトでは、サービスの品質向上、利用状況の分析のために、 CookieおよびGoogle
+            Analytics等のアクセス解析ツールを使用しています。
           </p>
           <p className="text-gray-600 leading-relaxed mb-4">
             Cookieとは、ウェブサイトを訪問した際にブラウザに保存される小さなテキストファイルです。
@@ -131,7 +137,7 @@ export default function PrivacyPolicy() {
       ),
     },
     {
-      title: '第8条（本ポリシーの変更）',
+      title: "第8条（本ポリシーの変更）",
       content: (
         <p className="text-gray-600 leading-relaxed">
           当社は、法令の改正、社会情勢の変化、事業内容の変更等に応じて、
@@ -141,7 +147,7 @@ export default function PrivacyPolicy() {
       ),
     },
     {
-      title: '第9条（お問い合わせ窓口）',
+      title: "第9条（お問い合わせ窓口）",
       content: (
         <>
           <p className="text-gray-600 leading-relaxed mb-4">
@@ -149,7 +155,9 @@ export default function PrivacyPolicy() {
           </p>
           <div className="bg-gray-50 p-6 rounded-lg">
             <p className="text-gray-800 font-medium mb-2">株式会社Ascend Logic</p>
-            <p className="text-gray-600 text-sm mb-1">所在地: 〒198-0031 東京都青梅市師岡町1-125-14</p>
+            <p className="text-gray-600 text-sm mb-1">
+              所在地: 〒198-0031 東京都青梅市師岡町1-125-14
+            </p>
             <p className="text-gray-600 text-sm">メールアドレス: rsaotome@ascendlogicai.com</p>
           </div>
         </>

@@ -1,9 +1,14 @@
 const careers = [
-  { team: 'ENGINEERING', role: 'AIエンジニア', loc: 'Tokyo / Remote', type: 'Full-time' },
-  { team: 'ENGINEERING', role: 'ソフトウェアエンジニア (Backend)', loc: 'Tokyo / Remote', type: 'Full-time' },
-  { team: 'PRODUCT', role: 'プロダクトマネージャー', loc: 'Tokyo', type: 'Full-time' },
-  { team: 'CONSULTING', role: 'AIコンサルタント', loc: 'Tokyo / Hybrid', type: 'Full-time' },
-  { team: 'DESIGN', role: 'プロダクトデザイナー', loc: 'Tokyo / Remote', type: 'Full-time' },
+  { team: "ENGINEERING", role: "AIエンジニア", loc: "Tokyo / Remote", type: "Full-time" },
+  {
+    team: "ENGINEERING",
+    role: "ソフトウェアエンジニア (Backend)",
+    loc: "Tokyo / Remote",
+    type: "Full-time",
+  },
+  { team: "PRODUCT", role: "プロダクトマネージャー", loc: "Tokyo", type: "Full-time" },
+  { team: "CONSULTING", role: "AIコンサルタント", loc: "Tokyo / Hybrid", type: "Full-time" },
+  { team: "DESIGN", role: "プロダクトデザイナー", loc: "Tokyo / Remote", type: "Full-time" },
 ];
 
 export default function Careers() {
@@ -14,9 +19,11 @@ export default function Careers() {
           <div>
             <span className="eyebrow">CAREERS &nbsp;/&nbsp; 08</span>
             <h2 className="h-section" style={{ marginTop: 16 }}>
-              一緒にAIで、<br />社会の可能性を解き放つ。
+              一緒にAIで、
+              <br />
+              社会の可能性を解き放つ。
             </h2>
-            <p className="lede" style={{ marginTop: 16, maxWidth: '44ch' }}>
+            <p className="lede" style={{ marginTop: 16, maxWidth: "44ch" }}>
               創業期のAscend Logicでは、AIの民主化を共に推進する仲間を募集しています。
             </p>
           </div>

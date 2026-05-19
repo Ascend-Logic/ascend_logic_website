@@ -1,12 +1,28 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 const features = [
-  { ic: '01', t: '自動参加 & 録音', d: 'Zoom / Google Meet / Teams / Webex にAIボットが自動参加し、録音・文字起こしまで完了。' },
-  { ic: '02', t: '議事録 & アクション抽出', d: '発言ベースの議事録と、決定事項・宿題タスクを自動で構造化。' },
-  { ic: '03', t: 'カレンダー連携で完全自動', d: 'Google Calendar から会議を検出し、人手を介さずナレッジ蓄積まで。' },
-  { ic: '04', t: 'ナレッジ検索 AIチャット', d: '蓄積された議事録やドキュメントに、自然言語で問い合わせ。' },
-  { ic: '05', t: '完全データ隔離', d: '組織ごとに完全分離。Google OAuth と暗号化保存。' },
-  { ic: '06', t: 'エンタープライズ品質', d: '監査ログ、SSO 対応、権限管理を備えた本番運用。' },
+  {
+    ic: "01",
+    t: "自動参加 & 録音",
+    d: "Zoom / Google Meet / Teams / Webex にAIボットが自動参加し、録音・文字起こしまで完了。",
+  },
+  {
+    ic: "02",
+    t: "議事録 & アクション抽出",
+    d: "発言ベースの議事録と、決定事項・宿題タスクを自動で構造化。",
+  },
+  {
+    ic: "03",
+    t: "カレンダー連携で完全自動",
+    d: "Google Calendar から会議を検出し、人手を介さずナレッジ蓄積まで。",
+  },
+  {
+    ic: "04",
+    t: "ナレッジ検索 AIチャット",
+    d: "蓄積された議事録やドキュメントに、自然言語で問い合わせ。",
+  },
+  { ic: "05", t: "完全データ隔離", d: "組織ごとに完全分離。Google OAuth と暗号化保存。" },
+  { ic: "06", t: "エンタープライズ品質", d: "監査ログ、SSO 対応、権限管理を備えた本番運用。" },
 ];
 
 export default function Agent() {
@@ -18,8 +34,10 @@ export default function Agent() {
           <div>
             <span className="eyebrow agent-eyebrow">PRODUCT &nbsp;/&nbsp; 04</span>
             <h2 className="h-section agent-h" style={{ marginTop: 16 }}>
-              <span className="en agent-h__en">Ascend Agent</span><br />
-              すべての社員に、<br />
+              <span className="en agent-h__en">Ascend Agent</span>
+              <br />
+              すべての社員に、
+              <br />
               もう一人のAIアシスタントを。
             </h2>
           </div>

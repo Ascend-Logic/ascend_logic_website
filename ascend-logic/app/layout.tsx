@@ -1,55 +1,51 @@
-import { Noto_Sans_JP, Zen_Kaku_Gothic_New, Manrope, JetBrains_Mono } from 'next/font/google';
-import './globals.css';
-import Header from '../components/layout/Header';
-import Footer from '../components/layout/Footer';
-import { CodeInspector } from '../components/dev/CodeInspector';
-import { Metadata } from 'next';
+import { Noto_Sans_JP, Zen_Kaku_Gothic_New, Manrope, JetBrains_Mono } from "next/font/google";
+import "./globals.css";
+import Header from "../components/layout/Header";
+import Footer from "../components/layout/Footer";
+import { CodeInspector } from "../components/dev/CodeInspector";
+import { Metadata } from "next";
 
 // Zen Kaku Gothic New - 日本語ディスプレイ（メイン）
 const zenKaku = Zen_Kaku_Gothic_New({
-  subsets: ['latin'],
-  weight: ['400', '500', '700', '900'],
-  display: 'swap',
-  variable: '--font-zen-kaku',
+  subsets: ["latin"],
+  weight: ["400", "500", "700", "900"],
+  display: "swap",
+  variable: "--font-zen-kaku",
 });
 
 // Noto Sans JP - 日本語フォールバック
 const notoSansJP = Noto_Sans_JP({
-  subsets: ['latin'],
-  weight: ['400', '500', '700', '900'],
-  display: 'swap',
-  variable: '--font-noto-sans-jp',
+  subsets: ["latin"],
+  weight: ["400", "500", "700", "900"],
+  display: "swap",
+  variable: "--font-noto-sans-jp",
 });
 
 // Manrope - 英文ディスプレイ
 const manrope = Manrope({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
-  display: 'swap',
-  variable: '--font-manrope',
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+  variable: "--font-manrope",
 });
 
 // JetBrains Mono - モノスペース（タグ・メタ情報）
 const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  weight: ['400', '500', '600'],
-  display: 'swap',
-  variable: '--font-jetbrains-mono',
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  display: "swap",
+  variable: "--font-jetbrains-mono",
 });
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Ascend Logic',
-    default: 'Ascend Logic — AIの力で、すべての企業と個人の可能性を解き放つ。',
+    template: "%s | Ascend Logic",
+    default: "Ascend Logic — AIの力で、すべての企業と個人の可能性を解き放つ。",
   },
-  description: 'Ascend Logic - 最先端のAIソリューションで企業の業務効率化・自動化を実現します',
+  description: "Ascend Logic - 最先端のAIソリューションで企業の業務効率化・自動化を実現します",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="ja"

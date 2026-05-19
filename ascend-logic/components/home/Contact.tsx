@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function Contact() {
   return (
@@ -10,10 +10,13 @@ export default function Contact() {
             <div>
               <span className="eyebrow">CONTACT &nbsp;/&nbsp; 09</span>
               <h2 className="h-display contact-h">
-                AI活用のご相談、<br />承ります。
+                AI活用のご相談、
+                <br />
+                承ります。
               </h2>
               <p className="lede contact-lede">
-                業種・課題は問いません。まずは無料の60分相談で、<br />
+                業種・課題は問いません。まずは無料の60分相談で、
+                <br />
                 貴社の業務にAIをどう活かせるか、一緒に整理します。
               </p>
               <div className="contact-cta">
@@ -30,7 +33,9 @@ export default function Contact() {
               <div className="contact-info">
                 <div>
                   <div className="mono tiny muted">EMAIL</div>
-                  <a href="mailto:rsaotome@ascendlogicai.com" className="contact-info__v">rsaotome@ascendlogicai.com</a>
+                  <a href="mailto:rsaotome@ascendlogicai.com" className="contact-info__v">
+                    rsaotome@ascendlogicai.com
+                  </a>
                 </div>
                 <div>
                   <div className="mono tiny muted">OFFICE</div>

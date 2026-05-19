@@ -1,7 +1,7 @@
-import Image from 'next/image';
+import Image from "next/image";
 
-type Variant = 'lockup' | 'mark' | 'wordmark';
-type Theme = 'light' | 'dark';
+type Variant = "lockup" | "mark" | "wordmark";
+type Theme = "light" | "dark";
 
 interface LogoProps {
   variant?: Variant;
@@ -19,12 +19,12 @@ const intrinsicSize: Record<Variant, { width: number; height: number }> = {
 };
 
 export function Logo({
-  variant = 'lockup',
-  theme = 'light',
+  variant = "lockup",
+  theme = "light",
   height = 32,
   className,
   priority = false,
-  alt = 'Ascend Logic',
+  alt = "Ascend Logic",
 }: LogoProps) {
   const { width: iw, height: ih } = intrinsicSize[variant];
   const width = Math.round((iw / ih) * height);

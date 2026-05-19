@@ -11,8 +11,10 @@ export default function Vision() {
           </div>
           <div className="vision-main">
             <h2 className="h-section">
-              <span className="muted">AIの力で、</span><br />
-              すべての企業と個人の<br />
+              <span className="muted">AIの力で、</span>
+              <br />
+              すべての企業と個人の
+              <br />
               可能性を解き放つ。
             </h2>
             <p className="lede">
@@ -23,7 +25,9 @@ export default function Vision() {
             <div className="vision-pair">
               <div className="vision-pair__item">
                 <div className="mono tiny muted">VISION</div>
-                <div className="vision-pair__title">AIの力で、すべての企業と個人の可能性を解き放つ。</div>
+                <div className="vision-pair__title">
+                  AIの力で、すべての企業と個人の可能性を解き放つ。
+                </div>
               </div>
               <div className="vision-pair__item">
                 <div className="mono tiny muted">MISSION</div>

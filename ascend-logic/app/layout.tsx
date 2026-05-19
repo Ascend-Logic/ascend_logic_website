@@ -41,7 +41,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ja" className={`${notoSansJP.variable} ${manrope.variable} ${jetbrainsMono.variable}`}>
       <head>
-        {/* LINE Seed JP は next/font/google の型定義に未登録のため <link> で直接ロード */}
+        {/* LINE Seed JP は next/font/google の型定義に未登録のため Google Fonts CDN から直接ロード */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />

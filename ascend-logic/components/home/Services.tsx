@@ -146,7 +146,7 @@ function ServiceViz({ kind }: { kind: VizKind }) {
 export default function Services({ index = 2 }: { index?: number }) {
   const no = String(index).padStart(2, '0')
   const eyebrow =
-    "font-mono text-xs font-medium tracking-eyebrow uppercase text-primary inline-flex items-center gap-2 before:content-[''] before:w-[18px] before:h-px before:bg-current before:inline-block"
+    "font-mono text-xs font-medium tracking-widest uppercase text-primary inline-flex items-center gap-2 before:content-[''] before:w-[18px] before:h-px before:bg-current before:inline-block"
 
   return (
     <section id="services" className="relative py-[120px] max-[720px]:py-[72px]">
@@ -154,13 +154,13 @@ export default function Services({ index = 2 }: { index?: number }) {
         <div className="grid grid-cols-[1.2fr_1fr] gap-[60px] items-end mb-16 max-[880px]:grid-cols-1 max-[880px]:gap-6">
           <div>
             <span className={eyebrow}>SERVICES &nbsp;/&nbsp; {no}</span>
-            <h2 className="font-bold text-section leading-[1.25] tracking-tight m-0 mt-4">
+            <h2 className="font-bold text-2xl md:text-4xl lg:text-5xl leading-[1.25] tracking-tight m-0 mt-4">
               4つの軸で、
               <br />
               AIを現場に届ける。
             </h2>
           </div>
-          <p className="m-0 text-lede leading-[1.85] text-foreground-soft max-w-[44ch]">
+          <p className="m-0 text-lg leading-[1.85] text-foreground-soft max-w-[44ch]">
             汎用AIで終わらせない。設計から定着まで、
             <br />
             専業チームが一貫して伴走します。
@@ -174,12 +174,12 @@ export default function Services({ index = 2 }: { index?: number }) {
               className={`grid grid-cols-[80px_1.2fr_1fr] gap-12 py-14 border-t border-border items-start max-[880px]:grid-cols-1 max-[880px]:gap-6 ${idx === services.length - 1 ? 'border-b' : ''}`}
             >
               <div>
-                <span className="font-mono text-sm text-muted-foreground tracking-uppercase-wide">{s.no}</span>
+                <span className="font-mono text-sm text-muted-foreground tracking-widest">{s.no}</span>
               </div>
               <div>
                 <div className="flex flex-col gap-1.5 mb-4">
                   <div className="font-en [font-feature-settings:'ss01'_1,'cv11'_1] text-xs tracking-widest text-primary font-medium uppercase">{s.en}</div>
-                  <h3 className="font-semibold text-card leading-[1.4] tracking-tight m-0">{s.jp}</h3>
+                  <h3 className="font-semibold text-xl leading-[1.4] tracking-tight m-0">{s.jp}</h3>
                 </div>
                 <p className="text-foreground-soft m-0 mb-6 leading-[1.8] max-w-[48ch]">{s.desc}</p>
                 <ul className="list-none p-0 m-0 mb-6 flex flex-col gap-2">

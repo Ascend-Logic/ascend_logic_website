@@ -17,15 +17,15 @@ export default function Careers() {
       <div className="relative w-full max-w-[1280px] mx-auto px-8 max-[720px]:px-5">
         <div className="grid grid-cols-[1.1fr_1fr] gap-[60px] mb-12 max-[880px]:grid-cols-1 max-[880px]:gap-6">
           <div>
-            <span className="font-mono text-xs font-medium tracking-eyebrow uppercase text-primary inline-flex items-center gap-2 before:content-[''] before:w-[18px] before:h-px before:bg-current before:inline-block">
+            <span className="font-mono text-xs font-medium tracking-widest uppercase text-primary inline-flex items-center gap-2 before:content-[''] before:w-[18px] before:h-px before:bg-current before:inline-block">
               CAREERS &nbsp;/&nbsp; 08
             </span>
-            <h2 className="font-bold text-section leading-[1.25] tracking-tight m-0 mt-4">
+            <h2 className="font-bold text-2xl md:text-4xl lg:text-5xl leading-[1.25] tracking-tight m-0 mt-4">
               一緒にAIで、
               <br />
               社会の可能性を解き放つ。
             </h2>
-            <p className="m-0 text-lede leading-[1.85] text-foreground-soft max-w-[44ch] mt-4">創業期のAscend Logicでは、AIの民主化を共に推進する仲間を募集しています。</p>
+            <p className="m-0 text-lg leading-[1.85] text-foreground-soft max-w-[44ch] mt-4">創業期のAscend Logicでは、AIの民主化を共に推進する仲間を募集しています。</p>
           </div>
           <div></div>
         </div>
@@ -36,7 +36,7 @@ export default function Careers() {
               key={c.role}
               className="grid grid-cols-[140px_1fr_200px_100px_24px] gap-6 items-center py-[22px] border-b border-border cursor-pointer transition-all duration-200 hover:bg-muted hover:px-3 group max-[880px]:grid-cols-1 max-[880px]:gap-1.5 max-[880px]:py-4"
             >
-              <span className="font-mono text-xs tracking-uppercase-wide text-primary">{c.team}</span>
+              <span className="font-mono text-xs tracking-widest text-primary">{c.team}</span>
               <span className="text-lg font-semibold">{c.role}</span>
               <span className="text-muted-foreground text-sm">{c.loc}</span>
               <span className="inline-flex items-center gap-1.5 font-mono text-xs tracking-wider uppercase px-2.5 py-[5px] border border-border-strong rounded-full text-foreground-soft bg-background">

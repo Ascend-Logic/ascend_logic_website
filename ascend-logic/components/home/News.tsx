@@ -8,10 +8,10 @@ export default function News({ index = 5 }: { index?: number }) {
       <div className="relative w-full max-w-[1280px] mx-auto px-8 max-[720px]:px-5">
         <div className="grid grid-cols-[1.2fr_1fr] gap-[60px] items-end mb-16 max-[880px]:grid-cols-1 max-[880px]:gap-6">
           <div>
-            <span className="font-mono text-xs font-medium tracking-eyebrow uppercase text-primary inline-flex items-center gap-2 before:content-[''] before:w-[18px] before:h-px before:bg-current before:inline-block">
+            <span className="font-mono text-xs font-medium tracking-widest uppercase text-primary inline-flex items-center gap-2 before:content-[''] before:w-[18px] before:h-px before:bg-current before:inline-block">
               NEWS &nbsp;/&nbsp; {no}
             </span>
-            <h2 className="font-bold text-section leading-[1.25] tracking-tight m-0 mt-4">ニュース / ブログ</h2>
+            <h2 className="font-bold text-2xl md:text-4xl lg:text-5xl leading-[1.25] tracking-tight m-0 mt-4">ニュース / ブログ</h2>
           </div>
           <Link href="/news" className="group inline-flex items-center gap-1.5 font-medium text-sm text-primary justify-self-end max-[880px]:justify-self-start">
             <span>すべて見る</span>

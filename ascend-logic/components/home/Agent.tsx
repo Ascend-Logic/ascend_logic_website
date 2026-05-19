@@ -34,10 +34,10 @@ export default function Agent({ index = 3 }: { index?: number }) {
       <div className="relative w-full max-w-[1280px] mx-auto px-8 max-[720px]:px-5">
         <div className="grid grid-cols-[1.3fr_1fr] gap-[60px] items-end mb-14 max-[880px]:grid-cols-1 max-[880px]:gap-5">
           <div>
-            <span className="font-mono text-xs font-medium tracking-eyebrow uppercase text-white inline-flex items-center gap-2 before:content-[''] before:w-[18px] before:h-px before:bg-current before:inline-block">
+            <span className="font-mono text-xs font-medium tracking-widest uppercase text-white inline-flex items-center gap-2 before:content-[''] before:w-[18px] before:h-px before:bg-current before:inline-block">
               PRODUCT &nbsp;/&nbsp; {no}
             </span>
-            <h2 className="font-bold text-section leading-[1.25] tracking-tight m-0 mt-4 text-white">
+            <h2 className="font-bold text-2xl md:text-4xl lg:text-5xl leading-[1.25] tracking-tight m-0 mt-4 text-white">
               <span className="font-en [font-feature-settings:'ss01'_1,'cv11'_1] text-sm tracking-widest text-primary uppercase font-semibold mb-[18px] inline-block">Ascend Agent</span>
               <br />
               すべての社員に、
@@ -45,7 +45,7 @@ export default function Agent({ index = 3 }: { index?: number }) {
               もう一人のAIアシスタントを。
             </h2>
           </div>
-          <p className="m-0 text-lede leading-[1.85] text-white/[0.78] max-w-[44ch]">
+          <p className="m-0 text-lg leading-[1.85] text-white/[0.78] max-w-[44ch]">
             オンライン会議に自動参加し、議事録・アクション抽出・ナレッジ化まで全自動。 蓄積されたデータには、AIチャットで自然言語検索。
           </p>
         </div>
@@ -58,7 +58,7 @@ export default function Agent({ index = 3 }: { index?: number }) {
                 i % 3 === 0 ? 'border-l-0 pl-0' : ''
               } ${i % 3 === 2 ? 'pr-0' : ''} ${i >= features.length - 3 ? 'max-[881px]:border-b-0' : ''} max-[880px]:last:border-b-0`}
             >
-              <span className="font-mono tracking-uppercase-wide text-xs text-primary pt-1 flex-shrink-0">{f.ic}</span>
+              <span className="font-mono tracking-widest text-xs text-primary pt-1 flex-shrink-0">{f.ic}</span>
               <div>
                 <div className="font-semibold text-base mb-1.5 text-white">{f.t}</div>
                 <div className="text-sm text-white/[0.62] leading-[1.7]">{f.d}</div>

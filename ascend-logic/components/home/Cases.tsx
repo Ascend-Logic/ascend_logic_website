@@ -60,16 +60,16 @@ export default function Cases() {
       <div className="relative w-full max-w-[1280px] mx-auto px-8 max-[720px]:px-5">
         <div className="grid grid-cols-[1.2fr_1fr] gap-[60px] items-end mb-16 max-[880px]:grid-cols-1 max-[880px]:gap-6">
           <div>
-            <span className="font-mono text-xs font-medium tracking-eyebrow uppercase text-primary inline-flex items-center gap-2 before:content-[''] before:w-[18px] before:h-px before:bg-current before:inline-block">
+            <span className="font-mono text-xs font-medium tracking-widest uppercase text-primary inline-flex items-center gap-2 before:content-[''] before:w-[18px] before:h-px before:bg-current before:inline-block">
               CASE STUDIES &nbsp;/&nbsp; 05
             </span>
-            <h2 className="font-bold text-section leading-[1.25] tracking-tight m-0 mt-4">
+            <h2 className="font-bold text-2xl md:text-4xl lg:text-5xl leading-[1.25] tracking-tight m-0 mt-4">
               業種を問わず、
               <br />
               現場に届くAIを。
             </h2>
           </div>
-          <p className="m-0 text-lede leading-[1.85] text-foreground-soft max-w-[44ch]">技術の専門性と、現場定着への伴走支援が私たちの強みです。</p>
+          <p className="m-0 text-lg leading-[1.85] text-foreground-soft max-w-[44ch]">技術の専門性と、現場定着への伴走支援が私たちの強みです。</p>
         </div>
 
         <div className="grid grid-cols-4 gap-px bg-border border border-border rounded-[18px] overflow-hidden max-[980px]:grid-cols-2 max-[560px]:grid-cols-1">

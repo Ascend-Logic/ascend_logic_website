@@ -14,7 +14,7 @@ export default function Hero() {
         </h1>
 
         <div className="col-start-1 col-end-2 flex flex-col gap-7 max-w-[480px]">
-          <p className="m-0 text-lede leading-[1.85] text-foreground-soft max-w-[60ch]">
+          <p className="m-0 text-lg leading-[1.85] text-foreground-soft max-w-[60ch]">
             オーダーメイドAI開発から自動化、データ分析、コンサルティングまで。 最先端のAI技術を、誰もが活用できるものに。
           </p>
           <div className="flex gap-3 flex-wrap">

@@ -40,14 +40,6 @@
   --radius-lg: var(--radius-lg);
   --radius-xl: var(--radius-xl);
 
-  /* デザインシステム固有のタイポトークン (Tailwind 標準と重複するものは除外) */
-  --tracking-eyebrow: 0.18em;
-  --tracking-uppercase-wide: 0.15em;
-
-  --text-display: clamp(36px, 5.4vw, 76px);
-  --text-section: clamp(28px, 3.6vw, 48px);
-  --text-card: 22px;
-  --text-lede: 18px;
 }
 
 /* ===== Ascend Logic — Design System =====

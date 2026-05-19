@@ -8,8 +8,8 @@
     "start": "next start",
     "lint": "oxlint .",
     "lint:fix": "oxlint . --fix",
-    "format": "oxfmt .",
-    "format:check": "oxfmt --check .",
+    "format": "oxfmt . && oxlint . --fix",
+    "format:check": "oxfmt --check . && oxlint .",
     "tailwind:init": "tailwindcss init -p"
   },
   "dependencies": {

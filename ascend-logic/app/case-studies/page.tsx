@@ -114,7 +114,7 @@ export default function CaseStudies() {
               <FadeIn key={study.id} delay={index * 80}>
                 <Link href={`/case-studies/${study.id}`} className="block border-r border-b border-gray-200 group">
                   <div className="relative h-48 overflow-hidden">
-                    <Image src={getImagePath(study)} alt={study.title} fill className="object-cover img-zoom" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
+                    <Image src={getImagePath(study)} alt={study.title} fill className="object-cover transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                     <div className="absolute top-3 left-3">
                       <span className="bg-white/90 text-gray-800 px-3 py-1 text-xs font-medium rounded">{study.industry}</span>
                     </div>
@@ -140,7 +140,7 @@ export default function CaseStudies() {
             <p className="text-white/60 text-sm md:text-base max-w-2xl mx-auto mb-10 leading-relaxed">
               事例に関する詳細や、お客様のビジネス課題に対する具体的なソリューション案をご希望の方は、 お気軽にお問い合わせください。
             </p>
-            <Link href="/request-documents" className="pill-btn !border-white/30 !text-white hover:!bg-white/10">
+            <Link href="/request-documents" className="group inline-flex items-center gap-2 px-8 py-3 border-[1.5px] border-[#333] rounded-[30px] text-sm font-semibold bg-transparent transition-all duration-300 text-[#333] tracking-wide hover:bg-[#333] hover:text-white !border-white/30 !text-white hover:!bg-white/10">
               お問い合わせ
             </Link>
           </FadeIn>

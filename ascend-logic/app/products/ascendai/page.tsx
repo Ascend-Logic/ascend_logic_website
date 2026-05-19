@@ -274,8 +274,8 @@ export default function AscendAgentProductPage() {
               <br className="hidden md:block" />
               あなたの業務を誰よりも深く理解するAIが、チームの一員になります。
             </p>
-            <Link href="/request-documents" className="pill-btn !border-white/30 !text-white hover:!bg-white hover:!text-black">
-              お問い合わせ <span className="arrow">&rarr;</span>
+            <Link href="/request-documents" className="group inline-flex items-center gap-2 px-8 py-3 border-[1.5px] border-[#333] rounded-[30px] text-sm font-semibold bg-transparent transition-all duration-300 text-[#333] tracking-wide hover:bg-[#333] hover:text-white !border-white/30 !text-white hover:!bg-white hover:!text-black">
+              お問い合わせ <span className="inline-block text-base transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
             </Link>
           </FadeIn>
         </div>
@@ -700,8 +700,8 @@ export default function AscendAgentProductPage() {
 
           <FadeIn>
             <div className="text-center mt-16">
-              <Link href="/request-documents" className="pill-btn">
-                お問い合わせ <span className="arrow">&rarr;</span>
+              <Link href="/request-documents" className="group inline-flex items-center gap-2 px-8 py-3 border-[1.5px] border-[#333] rounded-[30px] text-sm font-semibold bg-transparent transition-all duration-300 text-[#333] tracking-wide hover:bg-[#333] hover:text-white">
+                お問い合わせ <span className="inline-block text-base transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
               </Link>
             </div>
           </FadeIn>
@@ -746,8 +746,8 @@ export default function AscendAgentProductPage() {
               <br />
               まずはお気軽にお問い合わせください。
             </p>
-            <Link href="/request-documents" className="pill-btn !border-white/30 !text-white hover:!bg-white hover:!text-black">
-              お問い合わせ <span className="arrow">&rarr;</span>
+            <Link href="/request-documents" className="group inline-flex items-center gap-2 px-8 py-3 border-[1.5px] border-[#333] rounded-[30px] text-sm font-semibold bg-transparent transition-all duration-300 text-[#333] tracking-wide hover:bg-[#333] hover:text-white !border-white/30 !text-white hover:!bg-white hover:!text-black">
+              お問い合わせ <span className="inline-block text-base transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
             </Link>
           </FadeIn>
         </div>

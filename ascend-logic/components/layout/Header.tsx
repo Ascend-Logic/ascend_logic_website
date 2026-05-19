@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { Logo } from '@/components/ui/Logo';
 
 const navItems = [
   { jp: 'サービス', en: 'Services', href: '/services' },
@@ -26,9 +27,8 @@ export default function Header() {
   return (
     <header className={`al-nav ${scrolled ? 'is-scrolled' : ''}`}>
       <div className="al-container al-nav__inner">
-        <Link href="/" className="logo" onClick={close}>
-          <span className="logo-mark" aria-hidden="true"></span>
-          <span>Ascend&nbsp;Logic</span>
+        <Link href="/" className="logo" onClick={close} aria-label="Ascend Logic">
+          <Logo variant="lockup" theme="light" height={32} priority />
         </Link>
 
         <nav className="al-nav__links">

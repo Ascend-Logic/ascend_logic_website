@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { Logo } from '@/components/ui/Logo';
 
 export default function Footer() {
   const pathname = usePathname();
@@ -13,9 +14,8 @@ export default function Footer() {
       <div className="al-container">
         <div className="al-footer__top">
           <div className="al-footer__brand">
-            <Link href="/" className="logo">
-              <span className="logo-mark" aria-hidden="true"></span>
-              <span>Ascend&nbsp;Logic</span>
+            <Link href="/" className="logo" aria-label="Ascend Logic">
+              <Logo variant="lockup" theme="light" height={32} />
             </Link>
             <p className="muted tiny" style={{ marginTop: 16, maxWidth: '32ch' }}>
               AIの力で、すべての企業と個人の可能性を解き放つ。

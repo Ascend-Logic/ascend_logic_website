@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
@@ -181,9 +182,7 @@ export default async function CaseStudyDetail({ params }: CaseStudyDetailProps) 
         <div className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-10">
           <FadeIn>
             <Link href="/case-studies" className="inline-flex items-center text-white/50 hover:text-white text-sm mb-6 transition-colors">
-              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-              </svg>
+              <ArrowLeft className="w-4 h-4 mr-2" strokeWidth={2} />
               導入事例一覧に戻る
             </Link>
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">

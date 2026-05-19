@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { ExternalLink } from 'lucide-react'
 import PageHero from '../../components/ui/PageHero'
 import FadeIn from '../../components/ui/FadeIn'
 import { newsItems } from '../../lib/news'
@@ -28,9 +29,7 @@ export default function News() {
                     <h2 className="text-lg font-bold mb-2 flex items-start gap-2">
                       <span className="group-hover:text-indigo-600 transition-colors">{item.title}</span>
                       {isExternal && (
-                        <svg className="w-4 h-4 mt-1 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
+                        <ExternalLink className="w-4 h-4 mt-1 text-gray-400 flex-shrink-0" strokeWidth={2} aria-hidden />
                       )}
                     </h2>
                     <p className="text-gray-500 text-sm leading-relaxed">{item.excerpt}</p>

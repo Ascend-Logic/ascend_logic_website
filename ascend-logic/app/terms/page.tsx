@@ -1,21 +1,17 @@
-import { Metadata } from "next";
-import Link from "next/link";
-import PageHero from "../../components/ui/PageHero";
-import FadeIn from "../../components/ui/FadeIn";
+import { Metadata } from 'next'
+import Link from 'next/link'
+import PageHero from '../../components/ui/PageHero'
+import FadeIn from '../../components/ui/FadeIn'
 
 export const metadata: Metadata = {
-  title: "Ascend Agent 利用規約",
-  description: "Ascend Agentの利用規約とプライバシーポリシーをご確認いただけます。",
-};
+  title: 'Ascend Agent 利用規約',
+  description: 'Ascend Agentの利用規約とプライバシーポリシーをご確認いただけます。',
+}
 
 export default function TermsPage() {
   return (
     <>
-      <PageHero
-        titleEn="Terms of Service"
-        titleJa="Ascend Agent 利用規約"
-        description="最終更新日: 2026年2月15日"
-      />
+      <PageHero titleEn="Terms of Service" titleJa="Ascend Agent 利用規約" description="最終更新日: 2026年2月15日" />
 
       {/* 利用規約本文 */}
       <section className="py-20">
@@ -23,48 +19,30 @@ export default function TermsPage() {
           <div className="space-y-12">
             <FadeIn>
               <div>
-                <h2 className="text-lg font-bold mb-4 pb-3 border-b border-gray-200">
-                  第1条（適用）
-                </h2>
+                <h2 className="text-lg font-bold mb-4 pb-3 border-b border-gray-200">第1条（適用）</h2>
                 <div className="space-y-4 text-gray-600 leading-relaxed">
-                  <p>
-                    本利用規約（以下「本規約」といいます）は、Ascend
-                    Logic株式会社（以下「当社」といいます）が提供する「Ascend
-                    Agent」（以下「本サービス」といいます）の利用条件を定めるものです。
-                  </p>
-                  <p>
-                    本規約は、本サービスの利用に関する当社と登録ユーザーとの間の権利義務関係を定めることを目的とし、登録ユーザーと当社との間の本サービスの利用に関わる一切の関係に適用されます。
-                  </p>
+                  <p>本利用規約（以下「本規約」といいます）は、Ascend Logic株式会社（以下「当社」といいます）が提供する「Ascend Agent」（以下「本サービス」といいます）の利用条件を定めるものです。</p>
+                  <p>本規約は、本サービスの利用に関する当社と登録ユーザーとの間の権利義務関係を定めることを目的とし、登録ユーザーと当社との間の本サービスの利用に関わる一切の関係に適用されます。</p>
                 </div>
               </div>
             </FadeIn>
 
             <FadeIn>
               <div>
-                <h2 className="text-lg font-bold mb-4 pb-3 border-b border-gray-200">
-                  第2条（定義）
-                </h2>
-                <p className="text-gray-600 leading-relaxed mb-4">
-                  本規約において使用する以下の用語は、各々以下に定める意味を有するものとします。
-                </p>
+                <h2 className="text-lg font-bold mb-4 pb-3 border-b border-gray-200">第2条（定義）</h2>
+                <p className="text-gray-600 leading-relaxed mb-4">本規約において使用する以下の用語は、各々以下に定める意味を有するものとします。</p>
                 <div className="bg-gray-50 p-6 rounded-lg space-y-3 text-sm">
                   <div>
                     <span className="font-medium text-gray-800">本サービス:</span>
-                    <span className="text-gray-600 ml-2">
-                      当社が提供する「Ascend Agent」という名称のオンライン会議自動議事録作成サービス
-                    </span>
+                    <span className="text-gray-600 ml-2">当社が提供する「Ascend Agent」という名称のオンライン会議自動議事録作成サービス</span>
                   </div>
                   <div>
                     <span className="font-medium text-gray-800">登録ユーザー:</span>
-                    <span className="text-gray-600 ml-2">
-                      本規約に同意の上、本サービスの利用登録を完了した個人又は法人
-                    </span>
+                    <span className="text-gray-600 ml-2">本規約に同意の上、本サービスの利用登録を完了した個人又は法人</span>
                   </div>
                   <div>
                     <span className="font-medium text-gray-800">ユーザーコンテンツ:</span>
-                    <span className="text-gray-600 ml-2">
-                      登録ユーザーが本サービスに投稿、アップロード、送信その他の方法により掲載したコンテンツ
-                    </span>
+                    <span className="text-gray-600 ml-2">登録ユーザーが本サービスに投稿、アップロード、送信その他の方法により掲載したコンテンツ</span>
                   </div>
                 </div>
               </div>
@@ -72,13 +50,9 @@ export default function TermsPage() {
 
             <FadeIn>
               <div>
-                <h2 className="text-lg font-bold mb-4 pb-3 border-b border-gray-200">
-                  第3条（登録）
-                </h2>
+                <h2 className="text-lg font-bold mb-4 pb-3 border-b border-gray-200">第3条（登録）</h2>
                 <div className="space-y-4 text-gray-600 leading-relaxed">
-                  <p>
-                    本サービスの利用を希望する者は、本規約を遵守することに同意し、当社の定める方法で利用登録を申請することができます。
-                  </p>
+                  <p>本サービスの利用を希望する者は、本規約を遵守することに同意し、当社の定める方法で利用登録を申請することができます。</p>
                   <p>当社は、登録希望者が以下に該当する場合、登録を拒否することがあります：</p>
                   <ul className="list-disc list-inside space-y-2 ml-4">
                     <li>提供した登録情報に虚偽がある場合</li>
@@ -91,12 +65,8 @@ export default function TermsPage() {
 
             <FadeIn>
               <div>
-                <h2 className="text-lg font-bold mb-4 pb-3 border-b border-gray-200">
-                  第4条（禁止事項）
-                </h2>
-                <p className="text-gray-600 leading-relaxed mb-4">
-                  登録ユーザーは、以下の行為を行ってはなりません：
-                </p>
+                <h2 className="text-lg font-bold mb-4 pb-3 border-b border-gray-200">第4条（禁止事項）</h2>
+                <p className="text-gray-600 leading-relaxed mb-4">登録ユーザーは、以下の行為を行ってはなりません：</p>
                 <ul className="list-disc list-inside space-y-2 ml-4 text-gray-600">
                   <li>法令に違反する行為</li>
                   <li>第三者の知的財産権、プライバシー、名誉を侵害する行為</li>
@@ -109,12 +79,8 @@ export default function TermsPage() {
 
             <FadeIn>
               <div>
-                <h2 className="text-lg font-bold mb-4 pb-3 border-b border-gray-200">
-                  第5条（サービスの停止）
-                </h2>
-                <p className="text-gray-600 leading-relaxed mb-4">
-                  当社は、以下の場合、事前通知なく本サービスを停止できます：
-                </p>
+                <h2 className="text-lg font-bold mb-4 pb-3 border-b border-gray-200">第5条（サービスの停止）</h2>
+                <p className="text-gray-600 leading-relaxed mb-4">当社は、以下の場合、事前通知なく本サービスを停止できます：</p>
                 <ul className="list-disc list-inside space-y-2 ml-4 text-gray-600">
                   <li>システムの緊急メンテナンスが必要な場合</li>
                   <li>天災地変などの不可抗力により運営できない場合</li>
@@ -125,35 +91,23 @@ export default function TermsPage() {
 
             <FadeIn>
               <div>
-                <h2 className="text-lg font-bold mb-4 pb-3 border-b border-gray-200">
-                  第6条（知的財産権）
-                </h2>
+                <h2 className="text-lg font-bold mb-4 pb-3 border-b border-gray-200">第6条（知的財産権）</h2>
                 <div className="space-y-4 text-gray-600 leading-relaxed">
                   <p>本サービスに関する知的財産権は全て当社に帰属します。</p>
-                  <p>
-                    ユーザーコンテンツの知的財産権は登録ユーザーに留保されますが、登録ユーザーは、本サービスの提供・改善に必要な範囲で、当社がユーザーコンテンツを利用することを許諾します。
-                  </p>
+                  <p>ユーザーコンテンツの知的財産権は登録ユーザーに留保されますが、登録ユーザーは、本サービスの提供・改善に必要な範囲で、当社がユーザーコンテンツを利用することを許諾します。</p>
                 </div>
               </div>
             </FadeIn>
 
             <FadeIn>
               <div>
-                <h2 className="text-lg font-bold mb-4 pb-3 border-b border-gray-200">
-                  第7条（データの取り扱い）
-                </h2>
+                <h2 className="text-lg font-bold mb-4 pb-3 border-b border-gray-200">第7条（データの取り扱い）</h2>
                 <div className="space-y-4 text-gray-600 leading-relaxed">
-                  <p>
-                    当社は、登録ユーザーの会議録画・文字起こしデータをGoogle Cloud
-                    Storageに安全に保存します。
-                  </p>
+                  <p>当社は、登録ユーザーの会議録画・文字起こしデータをGoogle Cloud Storageに安全に保存します。</p>
                   <p>ユーザーの明示的な許可なく、第三者にデータを共有することはありません。</p>
                   <p>
                     データの取り扱いの詳細は、別途
-                    <Link
-                      href="#privacy-policy"
-                      className="text-gray-800 underline underline-offset-2 hover:text-indigo-600 transition-colors"
-                    >
+                    <Link href="#privacy-policy" className="text-gray-800 underline underline-offset-2 hover:text-indigo-600 transition-colors">
                       プライバシーポリシー
                     </Link>
                     に定めます。
@@ -164,41 +118,27 @@ export default function TermsPage() {
 
             <FadeIn>
               <div>
-                <h2 className="text-lg font-bold mb-4 pb-3 border-b border-gray-200">
-                  第8条（登録抹消）
-                </h2>
-                <p className="text-gray-600 leading-relaxed">
-                  当社は、登録ユーザーが本規約に違反した場合、事前通知なく登録を抹消できます。
-                </p>
+                <h2 className="text-lg font-bold mb-4 pb-3 border-b border-gray-200">第8条（登録抹消）</h2>
+                <p className="text-gray-600 leading-relaxed">当社は、登録ユーザーが本規約に違反した場合、事前通知なく登録を抹消できます。</p>
               </div>
             </FadeIn>
 
             <FadeIn>
               <div>
-                <h2 className="text-lg font-bold mb-4 pb-3 border-b border-gray-200">
-                  第9条（免責）
-                </h2>
+                <h2 className="text-lg font-bold mb-4 pb-3 border-b border-gray-200">第9条（免責）</h2>
                 <div className="space-y-4 text-gray-600 leading-relaxed">
-                  <p>
-                    当社は、本サービスが特定の目的に適合すること、不具合が生じないことを保証しません。
-                  </p>
-                  <p>
-                    当社は、本サービスに起因する損害について、当該損害が発生した月の利用料金を超えて賠償する責任を負いません。
-                  </p>
+                  <p>当社は、本サービスが特定の目的に適合すること、不具合が生じないことを保証しません。</p>
+                  <p>当社は、本サービスに起因する損害について、当該損害が発生した月の利用料金を超えて賠償する責任を負いません。</p>
                 </div>
               </div>
             </FadeIn>
 
             <FadeIn>
               <div>
-                <h2 className="text-lg font-bold mb-4 pb-3 border-b border-gray-200">
-                  第10条（準拠法・管轄裁判所）
-                </h2>
+                <h2 className="text-lg font-bold mb-4 pb-3 border-b border-gray-200">第10条（準拠法・管轄裁判所）</h2>
                 <div className="space-y-4 text-gray-600 leading-relaxed">
                   <p>本規約の準拠法は日本法とします。</p>
-                  <p>
-                    本規約に関する紛争は、東京地方裁判所を第一審の専属的合意管轄裁判所とします。
-                  </p>
+                  <p>本規約に関する紛争は、東京地方裁判所を第一審の専属的合意管轄裁判所とします。</p>
                 </div>
               </div>
             </FadeIn>
@@ -210,9 +150,7 @@ export default function TermsPage() {
       <section id="privacy-policy" className="py-20 bg-gray-50 border-t border-gray-200">
         <div className="max-w-[900px] mx-auto px-6 md:px-10">
           <FadeIn>
-            <h2 className="section-title-en text-sm text-gray-400 tracking-widest mb-2">
-              Privacy Policy
-            </h2>
+            <h2 className="section-title-en text-sm text-gray-400 tracking-widest mb-2">Privacy Policy</h2>
             <p className="text-2xl font-bold mb-2">Ascend Agent プライバシーポリシー</p>
             <p className="text-sm text-gray-400 mb-12">最終更新日: 2026年2月15日</p>
           </FadeIn>
@@ -220,12 +158,10 @@ export default function TermsPage() {
           <div className="space-y-12">
             {[
               {
-                title: "1. 個人情報の収集",
+                title: '1. 個人情報の収集',
                 content: (
                   <>
-                    <p className="text-gray-600 leading-relaxed mb-4">
-                      当社は、本サービスの提供にあたり、以下の個人情報を収集します：
-                    </p>
+                    <p className="text-gray-600 leading-relaxed mb-4">当社は、本サービスの提供にあたり、以下の個人情報を収集します：</p>
                     <div className="bg-white p-6 rounded-lg space-y-3 border border-gray-200 text-sm">
                       <div>
                         <span className="font-medium text-gray-800">登録情報:</span>
@@ -244,12 +180,10 @@ export default function TermsPage() {
                 ),
               },
               {
-                title: "2. 個人情報の利用目的",
+                title: '2. 個人情報の利用目的',
                 content: (
                   <>
-                    <p className="text-gray-600 leading-relaxed mb-4">
-                      収集した個人情報は、以下の目的で利用します：
-                    </p>
+                    <p className="text-gray-600 leading-relaxed mb-4">収集した個人情報は、以下の目的で利用します：</p>
                     <ul className="list-disc list-inside space-y-2 ml-4 text-gray-600">
                       <li>本サービスの提供、維持、改善</li>
                       <li>ユーザーサポート、問い合わせ対応</li>
@@ -260,18 +194,14 @@ export default function TermsPage() {
                 ),
               },
               {
-                title: "3. 第三者サービスの利用",
+                title: '3. 第三者サービスの利用',
                 content: (
                   <>
-                    <p className="text-gray-600 leading-relaxed mb-4">
-                      本サービスは、以下の第三者サービスを利用します：
-                    </p>
+                    <p className="text-gray-600 leading-relaxed mb-4">本サービスは、以下の第三者サービスを利用します：</p>
                     <div className="bg-white p-6 rounded-lg space-y-3 border border-gray-200 text-sm">
                       <div>
                         <span className="font-medium text-gray-800">Google Calendar API:</span>
-                        <span className="text-gray-600 ml-2">
-                          会議スケジュールの取得（読み取り専用）
-                        </span>
+                        <span className="text-gray-600 ml-2">会議スケジュールの取得（読み取り専用）</span>
                       </div>
                       <div>
                         <span className="font-medium text-gray-800">外部API:</span>
@@ -286,7 +216,7 @@ export default function TermsPage() {
                 ),
               },
               {
-                title: "4. Google Calendar API の使用について",
+                title: '4. Google Calendar API の使用について',
                 content: (
                   <>
                     <h3 className="text-base font-medium mb-3 mt-4">使用目的</h3>
@@ -314,14 +244,12 @@ export default function TermsPage() {
                 ),
               },
               {
-                title: "5. データの保存と管理",
+                title: '5. データの保存と管理',
                 content: (
                   <div className="bg-white p-6 rounded-lg space-y-3 border border-gray-200 text-sm">
                     <div>
                       <span className="font-medium text-gray-800">保存場所:</span>
-                      <span className="text-gray-600 ml-2">
-                        Google Cloud Storage（日本リージョン）
-                      </span>
+                      <span className="text-gray-600 ml-2">Google Cloud Storage（日本リージョン）</span>
                     </div>
                     <div>
                       <span className="font-medium text-gray-800">保存期間:</span>
@@ -333,20 +261,16 @@ export default function TermsPage() {
                     </div>
                     <div>
                       <span className="font-medium text-gray-800">アクセス制御:</span>
-                      <span className="text-gray-600 ml-2">
-                        ユーザー本人と当社の限定された担当者のみがアクセス可能
-                      </span>
+                      <span className="text-gray-600 ml-2">ユーザー本人と当社の限定された担当者のみがアクセス可能</span>
                     </div>
                   </div>
                 ),
               },
               {
-                title: "6. データの共有",
+                title: '6. データの共有',
                 content: (
                   <>
-                    <p className="text-gray-600 leading-relaxed mb-4">
-                      当社は、以下の場合を除き、個人情報を第三者に提供しません：
-                    </p>
+                    <p className="text-gray-600 leading-relaxed mb-4">当社は、以下の場合を除き、個人情報を第三者に提供しません：</p>
                     <ul className="list-disc list-inside space-y-2 ml-4 text-gray-600">
                       <li>ユーザーの同意がある場合</li>
                       <li>法令に基づく場合</li>
@@ -356,7 +280,7 @@ export default function TermsPage() {
                 ),
               },
               {
-                title: "7. Cookie の使用",
+                title: '7. Cookie の使用',
                 content: (
                   <p className="text-gray-600 leading-relaxed">
                     本サービスは、ユーザーの利便性向上のためCookieを使用します。ブラウザの設定でCookieを無効化できますが、一部機能が制限される場合があります。
@@ -364,12 +288,10 @@ export default function TermsPage() {
                 ),
               },
               {
-                title: "8. ユーザーの権利",
+                title: '8. ユーザーの権利',
                 content: (
                   <>
-                    <p className="text-gray-600 leading-relaxed mb-4">
-                      ユーザーは、以下の権利を有します：
-                    </p>
+                    <p className="text-gray-600 leading-relaxed mb-4">ユーザーは、以下の権利を有します：</p>
                     <ul className="list-disc list-inside space-y-2 ml-4 text-gray-600">
                       <li>個人情報の開示請求</li>
                       <li>個人情報の訂正・削除請求</li>
@@ -380,15 +302,11 @@ export default function TermsPage() {
                 ),
               },
               {
-                title: "9. セキュリティ",
-                content: (
-                  <p className="text-gray-600 leading-relaxed">
-                    当社は、個人情報の漏洩、滅失、毀損を防止するため、適切な安全管理措置を講じます。
-                  </p>
-                ),
+                title: '9. セキュリティ',
+                content: <p className="text-gray-600 leading-relaxed">当社は、個人情報の漏洩、滅失、毀損を防止するため、適切な安全管理措置を講じます。</p>,
               },
               {
-                title: "10. プライバシーポリシーの変更",
+                title: '10. プライバシーポリシーの変更',
                 content: (
                   <p className="text-gray-600 leading-relaxed">
                     当社は、必要に応じて本プライバシーポリシーを変更できます。変更後のプライバシーポリシーは、本サービス上に掲示した時点で効力を生じます。
@@ -396,20 +314,15 @@ export default function TermsPage() {
                 ),
               },
               {
-                title: "11. お問い合わせ",
+                title: '11. お問い合わせ',
                 content: (
                   <>
-                    <p className="text-gray-600 leading-relaxed mb-4">
-                      個人情報の取り扱いに関するお問い合わせは、以下までご連絡ください：
-                    </p>
+                    <p className="text-gray-600 leading-relaxed mb-4">個人情報の取り扱いに関するお問い合わせは、以下までご連絡ください：</p>
                     <div className="bg-white p-6 rounded-lg border border-gray-200">
                       <p className="font-medium text-gray-800 mb-2">Ascend Logic株式会社</p>
                       <p className="text-gray-600 text-sm">
-                        Email:{" "}
-                        <a
-                          href="mailto:rsaotome@ascendlogicai.com"
-                          className="text-gray-800 underline underline-offset-2 hover:text-indigo-600 transition-colors"
-                        >
+                        Email:{' '}
+                        <a href="mailto:rsaotome@ascendlogicai.com" className="text-gray-800 underline underline-offset-2 hover:text-indigo-600 transition-colors">
                           rsaotome@ascendlogicai.com
                         </a>
                       </p>
@@ -420,9 +333,7 @@ export default function TermsPage() {
             ].map((section, index) => (
               <FadeIn key={index}>
                 <div>
-                  <h2 className="text-lg font-bold mb-4 pb-3 border-b border-gray-200">
-                    {section.title}
-                  </h2>
+                  <h2 className="text-lg font-bold mb-4 pb-3 border-b border-gray-200">{section.title}</h2>
                   {section.content}
                 </div>
               </FadeIn>
@@ -436,18 +347,13 @@ export default function TermsPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460]" />
         <div className="relative z-10 text-center px-6">
           <FadeIn>
-            <p className="text-white/60 text-sm mb-6">
-              ご不明な点がございましたら、お気軽にお問い合わせください。
-            </p>
-            <Link
-              href="/request-documents"
-              className="pill-btn !border-white/30 !text-white hover:!bg-white/10"
-            >
+            <p className="text-white/60 text-sm mb-6">ご不明な点がございましたら、お気軽にお問い合わせください。</p>
+            <Link href="/request-documents" className="pill-btn !border-white/30 !text-white hover:!bg-white/10">
               お問い合わせ
             </Link>
           </FadeIn>
         </div>
       </section>
     </>
-  );
+  )
 }

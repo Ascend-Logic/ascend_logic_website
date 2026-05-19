@@ -1,34 +1,32 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse } from 'next/server'
 
 export async function POST(req: NextRequest) {
   try {
     // nodemailerを動的にインポート
-    const nodemailer = await import("nodemailer");
+    const nodemailer = await import('nodemailer')
 
-    const body = await req.json();
-    const { company, name, email, phone, position, interests, message } = body;
+    const body = await req.json()
+    const { company, name, email, phone, position, interests, message } = body
 
     // 興味のある分野のラベルマッピング
     const interestLabels: { [key: string]: string } = {
-      "ai-solutions": "AIソリューション開発",
-      "process-automation": "プロセス自動化",
-      "data-analysis": "データ分析・予測",
-      "ai-consulting": "AI導入コンサルティング",
-    };
+      'ai-solutions': 'AIソリューション開発',
+      'process-automation': 'プロセス自動化',
+      'data-analysis': 'データ分析・予測',
+      'ai-consulting': 'AI導入コンサルティング',
+    }
 
     // 興味のある分野を日本語のラベルに変換
-    const interestsList = interests
-      .map((interest: string) => interestLabels[interest] || interest)
-      .join("、");
+    const interestsList = interests.map((interest: string) => interestLabels[interest] || interest).join('、')
 
     // メール送信の設定
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      service: 'gmail',
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_APP_PASSWORD,
       },
-    });
+    })
 
     // メール本文の作成
     const mailContent = `
@@ -38,27 +36,27 @@ export async function POST(req: NextRequest) {
 会社名: ${company}
 お名前: ${name}
 メールアドレス: ${email}
-電話番号: ${phone || "未入力"}
-役職: ${position || "未入力"}
+電話番号: ${phone || '未入力'}
+役職: ${position || '未入力'}
 
 【ご興味のある分野】
-${interestsList || "なし"}
+${interestsList || 'なし'}
 
 【メッセージ】
-${message || "なし"}
+${message || 'なし'}
 
 ---
 このメールは自動送信されています。
-送信日時: ${new Date().toLocaleString("ja-JP", { timeZone: "Asia/Tokyo" })}
-    `.trim();
+送信日時: ${new Date().toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo' })}
+    `.trim()
 
     // 管理者への通知メール
     const adminMailOptions = {
       from: process.env.EMAIL_USER,
-      to: "rsaotome@ascendlogicai.com",
+      to: 'rsaotome@ascendlogicai.com',
       subject: `[お問い合わせ] ${company} - ${name}様からの問い合わせ`,
       text: mailContent,
-    };
+    }
 
     // お客様への自動返信メール
     const customerMailContent = `
@@ -72,7 +70,7 @@ ${name} 様
 【お問い合わせ内容】
 会社名: ${company}
 お名前: ${name}
-ご興味のある分野: ${interestsList || "なし"}
+ご興味のある分野: ${interestsList || 'なし'}
 
 ご不明な点やご質問がございましたら、お気軽にお問い合わせください。
 
@@ -84,25 +82,25 @@ Email: rsaotome@ascendlogicai.com
 Website: https://ascendlogicai.com
 
 ※このメールは自動送信されています。
-    `.trim();
+    `.trim()
 
     const customerMailOptions = {
       from: process.env.EMAIL_USER,
       to: email,
-      subject: "【Ascend Logic】お問い合わせを承りました",
+      subject: '【Ascend Logic】お問い合わせを承りました',
       text: customerMailContent,
-    };
+    }
 
     // メール送信
-    await transporter.sendMail(adminMailOptions);
-    await transporter.sendMail(customerMailOptions);
+    await transporter.sendMail(adminMailOptions)
+    await transporter.sendMail(customerMailOptions)
 
-    return NextResponse.json({ message: "お問い合わせを受け付けました" }, { status: 200 });
+    return NextResponse.json({ message: 'お問い合わせを受け付けました' }, { status: 200 })
   } catch (error) {
-    console.error("メール送信エラー:", error);
+    console.error('メール送信エラー:', error)
 
     // エラーでも成功レスポンスを返す（ユーザーには正常に見せる）
     // 実際のエラーはサーバーログで確認
-    return NextResponse.json({ message: "お問い合わせを受け付けました" }, { status: 200 });
+    return NextResponse.json({ message: 'お問い合わせを受け付けました' }, { status: 200 })
   }
 }

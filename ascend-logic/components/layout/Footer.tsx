@@ -1,13 +1,13 @@
-"use client";
+'use client'
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { Logo } from "@/components/ui/Logo";
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { Logo } from '@/components/ui/Logo'
 
 export default function Footer() {
-  const pathname = usePathname();
-  const isAscendAiProduct = pathname?.startsWith("/products/ascendai") ?? false;
-  const privacyPolicyHref = isAscendAiProduct ? "/ascendai-privacy" : "/privacy-policy";
+  const pathname = usePathname()
+  const isAscendAiProduct = pathname?.startsWith('/products/ascendai') ?? false
+  const privacyPolicyHref = isAscendAiProduct ? '/ascendai-privacy' : '/privacy-policy'
 
   return (
     <footer className="al-footer">
@@ -17,7 +17,7 @@ export default function Footer() {
             <Link href="/" className="logo" aria-label="Ascend Logic">
               <Logo variant="lockup" theme="light" height={32} />
             </Link>
-            <p className="muted tiny" style={{ marginTop: 16, maxWidth: "32ch" }}>
+            <p className="muted tiny" style={{ marginTop: 16, maxWidth: '32ch' }}>
               AIの力で、すべての企業と個人の可能性を解き放つ。
             </p>
           </div>
@@ -80,7 +80,7 @@ export default function Footer() {
             ASCEND LOGIC
           </div>
           {isAscendAiProduct && (
-            <div style={{ paddingTop: 8, paddingBottom: 8, borderTop: "1px solid var(--border)" }}>
+            <div style={{ paddingTop: 8, paddingBottom: 8, borderTop: '1px solid var(--border)' }}>
               <div className="mono tiny muted" style={{ marginBottom: 8 }}>
                 USING AI SERVICES
               </div>
@@ -93,7 +93,7 @@ export default function Footer() {
           )}
           <div className="al-footer__legal">
             <span className="mono tiny muted">© 2026 Ascend Logic, Inc. All rights reserved.</span>
-            <span className="mono tiny" style={{ display: "flex", gap: 16 }}>
+            <span className="mono tiny" style={{ display: 'flex', gap: 16 }}>
               <Link href={privacyPolicyHref}>プライバシーポリシー</Link>
               <Link href="/terms">利用規約</Link>
             </span>
@@ -101,5 +101,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

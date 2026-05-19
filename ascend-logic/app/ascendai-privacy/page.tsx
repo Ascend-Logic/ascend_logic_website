@@ -1,22 +1,20 @@
-import { Metadata } from "next";
-import Link from "next/link";
-import Section from "../../components/ui/Section";
+import { Metadata } from 'next'
+import Link from 'next/link'
+import Section from '../../components/ui/Section'
 
 export const metadata: Metadata = {
-  title: "Ascend Agent プライバシーポリシー",
-  description:
-    "Ascend Agentのプライバシーポリシー。Google Workspace連携、データ収集・保管、セキュリティ対策について詳しくご説明します。",
-  keywords:
-    "Ascend Agent, プライバシーポリシー, Google Workspace, Calendar API, 個人情報保護, GDPR, データセキュリティ",
+  title: 'Ascend Agent プライバシーポリシー',
+  description: 'Ascend Agentのプライバシーポリシー。Google Workspace連携、データ収集・保管、セキュリティ対策について詳しくご説明します。',
+  keywords: 'Ascend Agent, プライバシーポリシー, Google Workspace, Calendar API, 個人情報保護, GDPR, データセキュリティ',
   openGraph: {
-    title: "Ascend Agent プライバシーポリシー",
-    description: "Ascend Agentにおける個人情報の取り扱いとデータ保護について",
-    type: "website",
+    title: 'Ascend Agent プライバシーポリシー',
+    description: 'Ascend Agentにおける個人情報の取り扱いとデータ保護について',
+    type: 'website',
   },
-};
+}
 
 export default function AscendAgentPrivacyPolicy() {
-  const lastUpdated = "2025年12月23日";
+  const lastUpdated = '2025年12月23日'
 
   return (
     <>
@@ -36,8 +34,7 @@ export default function AscendAgentPrivacyPolicy() {
             {/* 前文 */}
             <div className="mb-12 pb-8 border-b">
               <p className="text-lg leading-relaxed text-gray-700">
-                株式会社Ascend Logic（以下「当社」）は、Ascend
-                Agentサービス（以下「本サービス」）をご利用いただくお客様の個人情報保護を最優先事項として位置づけています。
+                株式会社Ascend Logic（以下「当社」）は、Ascend Agentサービス（以下「本サービス」）をご利用いただくお客様の個人情報保護を最優先事項として位置づけています。
                 本プライバシーポリシーでは、本サービスにおける個人情報の収集、使用、保管、保護について詳細にご説明します。
               </p>
             </div>
@@ -101,12 +98,9 @@ export default function AscendAgentPrivacyPolicy() {
 
             {/* 第1条 */}
             <section id="section-1" className="mb-12 scroll-mt-20">
-              <h2 className="text-2xl font-bold mb-4 pb-2 border-b-2 border-gray-900">
-                1. 本サービスについて
-              </h2>
+              <h2 className="text-2xl font-bold mb-4 pb-2 border-b-2 border-gray-900">1. 本サービスについて</h2>
               <p className="mb-4">
-                <strong>Ascend Agent</strong>は、 議事録管理とRAG（Retrieval-Augmented
-                Generation）ベースのチャット機能を提供するクラウドサービスです。
+                <strong>Ascend Agent</strong>は、 議事録管理とRAG（Retrieval-Augmented Generation）ベースのチャット機能を提供するクラウドサービスです。
               </p>
 
               <h3 className="text-lg font-bold mt-6 mb-3">主な機能</h3>
@@ -131,16 +125,10 @@ export default function AscendAgentPrivacyPolicy() {
 
             {/* 第2条 */}
             <section id="section-2" className="mb-12 scroll-mt-20">
-              <h2 className="text-2xl font-bold mb-4 pb-2 border-b-2 border-gray-900">
-                2. 収集する情報
-              </h2>
+              <h2 className="text-2xl font-bold mb-4 pb-2 border-b-2 border-gray-900">2. 収集する情報</h2>
 
-              <h3 className="text-lg font-bold mt-6 mb-3">
-                2.1 Google Calendar API から収集する情報
-              </h3>
-              <p className="mb-3">
-                本サービスは、Google Calendar API を使用して以下の情報を収集します：
-              </p>
+              <h3 className="text-lg font-bold mt-6 mb-3">2.1 Google Calendar API から収集する情報</h3>
+              <p className="mb-3">本サービスは、Google Calendar API を使用して以下の情報を収集します：</p>
               <ul className="list-disc pl-6 space-y-2 mb-4">
                 <li>
                   カレンダーイベント情報
@@ -160,13 +148,8 @@ export default function AscendAgentPrivacyPolicy() {
 
               <div className="bg-gray-50 p-4 rounded mb-6">
                 <p className="text-sm font-semibold mb-2">使用する API スコープ:</p>
-                <code className="text-sm bg-white px-2 py-1 rounded block mb-2">
-                  https://www.googleapis.com/auth/calendar.readonly
-                </code>
-                <p className="text-sm text-gray-600">
-                  このスコープにより、カレンダーイベントの読み取り専用アクセスが可能になります。
-                  カレンダーへの書き込みや変更は一切行いません。
-                </p>
+                <code className="text-sm bg-white px-2 py-1 rounded block mb-2">https://www.googleapis.com/auth/calendar.readonly</code>
+                <p className="text-sm text-gray-600">このスコープにより、カレンダーイベントの読み取り専用アクセスが可能になります。 カレンダーへの書き込みや変更は一切行いません。</p>
               </div>
 
               <h3 className="text-lg font-bold mt-6 mb-3">2.2 ユーザー認証情報</h3>
@@ -174,19 +157,13 @@ export default function AscendAgentPrivacyPolicy() {
                 <li>メールアドレス - アカウント識別とログインに使用</li>
                 <li>基本プロフィール情報 - 氏名、プロフィール画像URL</li>
                 <li>Firebase Authentication UID - 内部的なユーザー識別子</li>
-                <li>
-                  OAuth トークン - Google API アクセス用のアクセストークンとリフレッシュトークン
-                </li>
+                <li>OAuth トークン - Google API アクセス用のアクセストークンとリフレッシュトークン</li>
               </ul>
 
               <div className="bg-gray-50 p-4 rounded mb-6">
                 <p className="text-sm font-semibold mb-2">使用する API スコープ:</p>
-                <code className="text-sm bg-white px-2 py-1 rounded block mb-1">
-                  https://www.googleapis.com/auth/userinfo.email
-                </code>
-                <code className="text-sm bg-white px-2 py-1 rounded block">
-                  https://www.googleapis.com/auth/userinfo.profile
-                </code>
+                <code className="text-sm bg-white px-2 py-1 rounded block mb-1">https://www.googleapis.com/auth/userinfo.email</code>
+                <code className="text-sm bg-white px-2 py-1 rounded block">https://www.googleapis.com/auth/userinfo.profile</code>
               </div>
 
               <h3 className="text-lg font-bold mt-6 mb-3">2.3 アプリケーション利用データ</h3>
@@ -211,9 +188,7 @@ export default function AscendAgentPrivacyPolicy() {
 
             {/* 第3条 */}
             <section id="section-3" className="mb-12 scroll-mt-20">
-              <h2 className="text-2xl font-bold mb-4 pb-2 border-b-2 border-gray-900">
-                3. 情報の利用目的
-              </h2>
+              <h2 className="text-2xl font-bold mb-4 pb-2 border-b-2 border-gray-900">3. 情報の利用目的</h2>
               <p className="mb-4">当社は、収集した情報を以下の目的で利用します：</p>
 
               <h3 className="text-lg font-bold mt-6 mb-3">サービスの提供</h3>
@@ -256,48 +231,33 @@ export default function AscendAgentPrivacyPolicy() {
 
             {/* 第4条 */}
             <section id="section-4" className="mb-12 scroll-mt-20">
-              <h2 className="text-2xl font-bold mb-4 pb-2 border-b-2 border-gray-900">
-                4. Google API Services の使用
-              </h2>
+              <h2 className="text-2xl font-bold mb-4 pb-2 border-b-2 border-gray-900">4. Google API Services の使用</h2>
 
               <div className="bg-gray-50 border-l-4 border-gray-900 p-6 mb-6">
-                <h3 className="font-bold text-lg mb-3">
-                  重要: Google API Services ユーザーデータポリシー遵守
-                </h3>
+                <h3 className="font-bold text-lg mb-3">重要: Google API Services ユーザーデータポリシー遵守</h3>
                 <p className="mb-3">
                   本サービスは、<strong>Google API Services のユーザーデータポリシー</strong>
                   （限定的な使用要件を含む）を完全に遵守しています。
                 </p>
-                <a
-                  href="https://developers.google.com/terms/api-services-user-data-policy"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-900 hover:underline font-semibold"
-                >
+                <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer" className="text-gray-900 hover:underline font-semibold">
                   Google API Services User Data Policy を確認する →
                 </a>
               </div>
 
               <h3 className="text-lg font-bold mt-6 mb-3">限定的な使用の原則</h3>
-              <p className="mb-3">
-                Google API から取得したデータは、以下の原則に従って限定的に使用されます：
-              </p>
+              <p className="mb-3">Google API から取得したデータは、以下の原則に従って限定的に使用されます：</p>
               <ul className="list-disc pl-6 space-y-2 mb-6">
                 <li>
-                  <strong>目的の限定</strong>: Google API
-                  から取得したデータは、ユーザーに明示された機能の提供のためにのみ使用されます
+                  <strong>目的の限定</strong>: Google API から取得したデータは、ユーザーに明示された機能の提供のためにのみ使用されます
                 </li>
                 <li>
-                  <strong>第三者への共有禁止</strong>: Google API
-                  データを第三者と共有、販売、またはレンタルすることはありません
+                  <strong>第三者への共有禁止</strong>: Google API データを第三者と共有、販売、またはレンタルすることはありません
                 </li>
                 <li>
-                  <strong>広告目的での使用禁止</strong>: Google API
-                  データを広告配信やターゲティングの目的で使用することはありません
+                  <strong>広告目的での使用禁止</strong>: Google API データを広告配信やターゲティングの目的で使用することはありません
                 </li>
                 <li>
-                  <strong>人間による閲覧の制限</strong>: 人間による Google API
-                  データの閲覧は、セキュリティ、法令遵守、サービス提供に必要な場合に限定されます
+                  <strong>人間による閲覧の制限</strong>: 人間による Google API データの閲覧は、セキュリティ、法令遵守、サービス提供に必要な場合に限定されます
                 </li>
               </ul>
 
@@ -314,9 +274,7 @@ export default function AscendAgentPrivacyPolicy() {
                   <tbody>
                     <tr>
                       <td className="border border-gray-300 px-4 py-2">カレンダーイベント情報</td>
-                      <td className="border border-gray-300 px-4 py-2">
-                        イベント表示、会議との紐付け
-                      </td>
+                      <td className="border border-gray-300 px-4 py-2">イベント表示、会議との紐付け</td>
                       <td className="border border-gray-300 px-4 py-2">Google Cloud SQL</td>
                     </tr>
                     <tr>
@@ -327,36 +285,25 @@ export default function AscendAgentPrivacyPolicy() {
                     <tr>
                       <td className="border border-gray-300 px-4 py-2">メールアドレス</td>
                       <td className="border border-gray-300 px-4 py-2">アカウント識別、認証</td>
-                      <td className="border border-gray-300 px-4 py-2">
-                        Firebase Auth / Cloud SQL
-                      </td>
+                      <td className="border border-gray-300 px-4 py-2">Firebase Auth / Cloud SQL</td>
                     </tr>
                     <tr>
                       <td className="border border-gray-300 px-4 py-2">基本プロフィール</td>
                       <td className="border border-gray-300 px-4 py-2">ユーザー表示名の提供</td>
-                      <td className="border border-gray-300 px-4 py-2">
-                        Firebase Auth / Cloud SQL
-                      </td>
+                      <td className="border border-gray-300 px-4 py-2">Firebase Auth / Cloud SQL</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
 
               <h3 className="text-lg font-bold mt-6 mb-3">OAuth 連携の解除</h3>
-              <p className="mb-3">
-                ユーザーは、いつでも以下の方法で Google Workspace 連携を解除できます：
-              </p>
+              <p className="mb-3">ユーザーは、いつでも以下の方法で Google Workspace 連携を解除できます：</p>
 
               <h4 className="font-semibold mt-4 mb-2">方法1: Google アカウント設定から解除</h4>
               <ol className="list-decimal pl-6 space-y-1 mb-4">
                 <li>
                   Google アカウント（
-                  <a
-                    href="https://myaccount.google.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-900 underline"
-                  >
+                  <a href="https://myaccount.google.com/" target="_blank" rel="noopener noreferrer" className="text-gray-900 underline">
                     myaccount.google.com
                   </a>
                   ）にアクセス
@@ -366,13 +313,10 @@ export default function AscendAgentPrivacyPolicy() {
               </ol>
 
               <h4 className="font-semibold mt-4 mb-2">方法2: 本サービス内から解除</h4>
-              <p className="mb-4">
-                Ascend Agent の設定画面から「Google Workspace 連携を解除」ボタンをクリック
-              </p>
+              <p className="mb-4">Ascend Agent の設定画面から「Google Workspace 連携を解除」ボタンをクリック</p>
 
               <p className="text-sm text-gray-600">
-                連携を解除すると、カレンダーイベントの同期が停止しますが、既に収集されたデータは削除されません。
-                データの削除を希望される場合は、
+                連携を解除すると、カレンダーイベントの同期が停止しますが、既に収集されたデータは削除されません。 データの削除を希望される場合は、
                 <a href="#section-7" className="underline">
                   「7. ユーザーの権利」
                 </a>
@@ -382,22 +326,15 @@ export default function AscendAgentPrivacyPolicy() {
 
             {/* 第5条 */}
             <section id="section-5" className="mb-12 scroll-mt-20">
-              <h2 className="text-2xl font-bold mb-4 pb-2 border-b-2 border-gray-900">
-                5. データの保管とセキュリティ
-              </h2>
+              <h2 className="text-2xl font-bold mb-4 pb-2 border-b-2 border-gray-900">5. データの保管とセキュリティ</h2>
 
               <h3 className="text-lg font-bold mt-6 mb-3">5.1 データ保管場所</h3>
               <ul className="list-disc pl-6 space-y-2 mb-4">
-                <li>
-                  データベース: Google Cloud SQL（PostgreSQL） -
-                  日本国内リージョン（asia-northeast1）
-                </li>
+                <li>データベース: Google Cloud SQL（PostgreSQL） - 日本国内リージョン（asia-northeast1）</li>
                 <li>ファイルストレージ: Google Cloud Storage - 日本国内バケット</li>
                 <li>認証情報: Firebase Authentication - Google管理の安全な環境</li>
               </ul>
-              <p className="text-sm text-gray-600 mb-6">
-                すべてのデータは日本国内のデータセンターに保管され、データ主権とGDPR要件に準拠しています。
-              </p>
+              <p className="text-sm text-gray-600 mb-6">すべてのデータは日本国内のデータセンターに保管され、データ主権とGDPR要件に準拠しています。</p>
 
               <h3 className="text-lg font-bold mt-6 mb-3">5.2 セキュリティ対策</h3>
 
@@ -448,9 +385,7 @@ export default function AscendAgentPrivacyPolicy() {
 
             {/* 第6条 */}
             <section id="section-6" className="mb-12 scroll-mt-20">
-              <h2 className="text-2xl font-bold mb-4 pb-2 border-b-2 border-gray-900">
-                6. データの第三者提供
-              </h2>
+              <h2 className="text-2xl font-bold mb-4 pb-2 border-b-2 border-gray-900">6. データの第三者提供</h2>
 
               <div className="bg-gray-50 border-l-4 border-gray-900 p-6 mb-6">
                 <h3 className="font-bold text-lg mb-3">基本方針: 第三者への提供は行いません</h3>
@@ -466,23 +401,17 @@ export default function AscendAgentPrivacyPolicy() {
                 <li>
                   <strong>法令に基づく場合</strong>
                   <br />
-                  <span className="text-sm text-gray-600">
-                    裁判所、警察、税務署などの公的機関から法令に基づく開示要請があった場合
-                  </span>
+                  <span className="text-sm text-gray-600">裁判所、警察、税務署などの公的機関から法令に基づく開示要請があった場合</span>
                 </li>
                 <li>
                   <strong>生命・身体・財産の保護のため</strong>
                   <br />
-                  <span className="text-sm text-gray-600">
-                    人の生命、身体または財産の保護のために必要があり、本人の同意を得ることが困難な場合
-                  </span>
+                  <span className="text-sm text-gray-600">人の生命、身体または財産の保護のために必要があり、本人の同意を得ることが困難な場合</span>
                 </li>
                 <li>
                   <strong>国の機関等への協力</strong>
                   <br />
-                  <span className="text-sm text-gray-600">
-                    国の機関や地方公共団体が法令の定める事務を遂行する際に協力する必要がある場合
-                  </span>
+                  <span className="text-sm text-gray-600">国の機関や地方公共団体が法令の定める事務を遂行する際に協力する必要がある場合</span>
                 </li>
                 <li>
                   <strong>お客様の同意がある場合</strong>
@@ -492,16 +421,12 @@ export default function AscendAgentPrivacyPolicy() {
               </ul>
 
               <h3 className="text-lg font-bold mt-6 mb-3">業務委託先について</h3>
-              <p className="mb-3">
-                サービス提供のため、以下の業務委託先にデータ処理を委託していますが、これらは「第三者提供」には該当しません：
-              </p>
+              <p className="mb-3">サービス提供のため、以下の業務委託先にデータ処理を委託していますが、これらは「第三者提供」には該当しません：</p>
               <ul className="list-disc pl-6 space-y-2 mb-4">
                 <li>
                   <strong>Google Cloud Platform</strong> - インフラストラクチャ提供
                   <br />
-                  <span className="text-sm text-gray-600">
-                    データベース、ストレージ、コンピューティングリソースの提供
-                  </span>
+                  <span className="text-sm text-gray-600">データベース、ストレージ、コンピューティングリソースの提供</span>
                 </li>
                 <li>
                   <strong>Firebase</strong> - 認証サービス提供
@@ -509,16 +434,12 @@ export default function AscendAgentPrivacyPolicy() {
                   <span className="text-sm text-gray-600">ユーザー認証とトークン管理</span>
                 </li>
               </ul>
-              <p className="text-sm text-gray-600">
-                これらの委託先とは適切な秘密保持契約を締結し、個人情報の安全管理について定期的な監督を行っています。
-              </p>
+              <p className="text-sm text-gray-600">これらの委託先とは適切な秘密保持契約を締結し、個人情報の安全管理について定期的な監督を行っています。</p>
             </section>
 
             {/* 第7条 */}
             <section id="section-7" className="mb-12 scroll-mt-20">
-              <h2 className="text-2xl font-bold mb-4 pb-2 border-b-2 border-gray-900">
-                7. ユーザーの権利
-              </h2>
+              <h2 className="text-2xl font-bold mb-4 pb-2 border-b-2 border-gray-900">7. ユーザーの権利</h2>
               <p className="mb-4">お客様は、ご自身の個人情報について以下の権利を有します：</p>
 
               <h3 className="text-lg font-bold mt-6 mb-3">アクセス権</h3>
@@ -534,23 +455,16 @@ export default function AscendAgentPrivacyPolicy() {
               <p className="mb-4">個人情報の処理を制限するよう要求する権利</p>
 
               <h3 className="text-lg font-bold mt-6 mb-3">データポータビリティ権</h3>
-              <p className="mb-4">
-                構造化された一般的な形式で個人情報を受け取り、他のサービスに移管する権利
-              </p>
+              <p className="mb-4">構造化された一般的な形式で個人情報を受け取り、他のサービスに移管する権利</p>
 
               <h3 className="text-lg font-bold mt-6 mb-3">異議申立権</h3>
               <p className="mb-6">個人情報の処理に異議を申し立てる権利</p>
 
               <div className="bg-gray-50 p-6 rounded mb-6">
                 <h3 className="font-bold text-lg mb-3">権利の行使方法</h3>
-                <p className="mb-3">
-                  上記の権利を行使される場合は、以下のお問い合わせ窓口までご連絡ください：
-                </p>
+                <p className="mb-3">上記の権利を行使される場合は、以下のお問い合わせ窓口までご連絡ください：</p>
                 <p className="font-semibold">メール:</p>
-                <a
-                  href="mailto:rsaotome@ascendlogicai.com"
-                  className="text-gray-900 underline mb-2 block"
-                >
+                <a href="mailto:rsaotome@ascendlogicai.com" className="text-gray-900 underline mb-2 block">
                   rsaotome@ascendlogicai.com
                 </a>
                 <p className="text-sm text-gray-600">件名: 「個人情報に関する権利行使の申請」</p>
@@ -578,9 +492,7 @@ export default function AscendAgentPrivacyPolicy() {
 
             {/* 第8条 */}
             <section id="section-8" className="mb-12 scroll-mt-20">
-              <h2 className="text-2xl font-bold mb-4 pb-2 border-b-2 border-gray-900">
-                8. GDPR 準拠
-              </h2>
+              <h2 className="text-2xl font-bold mb-4 pb-2 border-b-2 border-gray-900">8. GDPR 準拠</h2>
 
               <h3 className="text-lg font-bold mt-6 mb-3">8.1 EU居住者の皆様へ</h3>
               <p className="mb-3">
@@ -605,8 +517,7 @@ export default function AscendAgentPrivacyPolicy() {
                   <strong>同意</strong>: お客様から明示的な同意を得た処理
                 </li>
                 <li>
-                  <strong>正当な利益</strong>:
-                  サービス改善、セキュリティ対策等の正当な利益のための処理
+                  <strong>正当な利益</strong>: サービス改善、セキュリティ対策等の正当な利益のための処理
                 </li>
                 <li>
                   <strong>法的義務</strong>: 法令遵守のために必要な処理
@@ -614,9 +525,7 @@ export default function AscendAgentPrivacyPolicy() {
               </ul>
 
               <h3 className="text-lg font-bold mt-6 mb-3">8.3 国際データ転送</h3>
-              <p className="mb-3">
-                当社は日本国内でデータを保管していますが、EU圏外へのデータ転送が発生する場合は、以下の適切な保護措置を講じます：
-              </p>
+              <p className="mb-3">当社は日本国内でデータを保管していますが、EU圏外へのデータ転送が発生する場合は、以下の適切な保護措置を講じます：</p>
               <ul className="list-disc pl-6 space-y-2 mb-6">
                 <li>標準契約条項（SCC）の締結</li>
                 <li>適切性認定を受けた国へのデータ転送</li>
@@ -624,17 +533,10 @@ export default function AscendAgentPrivacyPolicy() {
               </ul>
 
               <h3 className="text-lg font-bold mt-6 mb-3">8.4 監督機関への苦情申立</h3>
-              <p className="mb-3">
-                EU居住者の方は、データ保護に関する懸念事項について、お住まいの国のデータ保護監督機関に苦情を申し立てる権利があります。
-              </p>
+              <p className="mb-3">EU居住者の方は、データ保護に関する懸念事項について、お住まいの国のデータ保護監督機関に苦情を申し立てる権利があります。</p>
               <p className="text-sm text-gray-600">
                 各国の監督機関のリストは、
-                <a
-                  href="https://edpb.europa.eu/about-edpb/board/members_en"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-900 underline"
-                >
+                <a href="https://edpb.europa.eu/about-edpb/board/members_en" target="_blank" rel="noopener noreferrer" className="text-gray-900 underline">
                   欧州データ保護会議（EDPB）のウェブサイト
                 </a>
                 でご確認いただけます。
@@ -643,9 +545,7 @@ export default function AscendAgentPrivacyPolicy() {
 
             {/* 第9条 */}
             <section id="section-9" className="mb-12 scroll-mt-20">
-              <h2 className="text-2xl font-bold mb-4 pb-2 border-b-2 border-gray-900">
-                9. データ保持期間
-              </h2>
+              <h2 className="text-2xl font-bold mb-4 pb-2 border-b-2 border-gray-900">9. データ保持期間</h2>
               <p className="mb-4">当社は、収集した個人情報を以下の期間保持します：</p>
 
               <div className="overflow-x-auto mb-6">
@@ -712,19 +612,14 @@ export default function AscendAgentPrivacyPolicy() {
               </ul>
 
               <p className="text-sm text-gray-600">
-                一部のデータは、会社法、税法、その他の法令により、一定期間の保持が義務付けられています。
-                これらのデータについては、法定保存期間が経過するまで削除できない場合があります。
+                一部のデータは、会社法、税法、その他の法令により、一定期間の保持が義務付けられています。 これらのデータについては、法定保存期間が経過するまで削除できない場合があります。
               </p>
             </section>
 
             {/* 第10条 */}
             <section id="section-10" className="mb-12 scroll-mt-20">
-              <h2 className="text-2xl font-bold mb-4 pb-2 border-b-2 border-gray-900">
-                10. お問い合わせ
-              </h2>
-              <p className="mb-6">
-                本プライバシーポリシーに関するご質問、個人情報の取り扱いに関するお問い合わせは、以下の窓口までご連絡ください。
-              </p>
+              <h2 className="text-2xl font-bold mb-4 pb-2 border-b-2 border-gray-900">10. お問い合わせ</h2>
+              <p className="mb-6">本プライバシーポリシーに関するご質問、個人情報の取り扱いに関するお問い合わせは、以下の窓口までご連絡ください。</p>
 
               <div className="bg-gray-50 p-6 rounded space-y-3">
                 <div>
@@ -747,45 +642,29 @@ export default function AscendAgentPrivacyPolicy() {
                 </div>
                 <div>
                   <p className="font-semibold text-gray-900">ウェブサイト</p>
-                  <a
-                    href="https://ascendlogicai.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-900 underline"
-                  >
+                  <a href="https://ascendlogicai.com" target="_blank" rel="noopener noreferrer" className="text-gray-900 underline">
                     https://ascendlogicai.com
                   </a>
                 </div>
                 <div>
                   <p className="font-semibold text-gray-900">対応時間</p>
                   <p className="text-gray-700">平日 10:00 - 18:00（土日祝日を除く）</p>
-                  <p className="text-sm text-gray-600">
-                    時間外のお問い合わせについては、翌営業日に対応いたします
-                  </p>
+                  <p className="text-sm text-gray-600">時間外のお問い合わせについては、翌営業日に対応いたします</p>
                 </div>
               </div>
 
               <div className="mt-6 p-4 bg-gray-50 rounded">
                 <h3 className="font-bold mb-2">個人情報保護管理者</h3>
                 <p className="text-gray-700">代表取締役 早乙女 琉真</p>
-                <p className="text-sm text-gray-600 mt-2">
-                  個人情報の適切な管理と保護について全体的な責任を負っています。
-                </p>
+                <p className="text-sm text-gray-600 mt-2">個人情報の適切な管理と保護について全体的な責任を負っています。</p>
               </div>
             </section>
 
             {/* ポリシー変更履歴 */}
             <section className="mb-12 scroll-mt-20">
-              <h2 className="text-2xl font-bold mb-4 pb-2 border-b-2 border-gray-900">
-                ポリシーの変更
-              </h2>
-              <p className="mb-3">
-                当社は、法令の改正、サービス内容の変更、社会情勢の変化等に応じて、本プライバシーポリシーを変更することがあります。
-              </p>
-              <p className="mb-6">
-                変更後のプライバシーポリシーは、本ページに掲載した時点から効力を生じます。
-                重要な変更がある場合は、サービス内での通知またはメールにてお知らせします。
-              </p>
+              <h2 className="text-2xl font-bold mb-4 pb-2 border-b-2 border-gray-900">ポリシーの変更</h2>
+              <p className="mb-3">当社は、法令の改正、サービス内容の変更、社会情勢の変化等に応じて、本プライバシーポリシーを変更することがあります。</p>
+              <p className="mb-6">変更後のプライバシーポリシーは、本ページに掲載した時点から効力を生じます。 重要な変更がある場合は、サービス内での通知またはメールにてお知らせします。</p>
 
               <div className="bg-gray-50 p-6 rounded">
                 <h3 className="font-bold mb-3">変更履歴</h3>
@@ -806,17 +685,12 @@ export default function AscendAgentPrivacyPolicy() {
       <Section className="py-12 bg-gray-900 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">ご不明な点がございますか？</h2>
-          <p className="text-lg mb-6 text-gray-300">
-            プライバシーポリシーに関するご質問は、お気軽にお問い合わせください
-          </p>
-          <Link
-            href="/request-documents"
-            className="inline-block bg-white text-gray-900 px-8 py-3 rounded font-semibold hover:bg-gray-100 transition-colors"
-          >
+          <p className="text-lg mb-6 text-gray-300">プライバシーポリシーに関するご質問は、お気軽にお問い合わせください</p>
+          <Link href="/request-documents" className="inline-block bg-white text-gray-900 px-8 py-3 rounded font-semibold hover:bg-gray-100 transition-colors">
             お問い合わせ
           </Link>
         </div>
       </Section>
     </>
-  );
+  )
 }

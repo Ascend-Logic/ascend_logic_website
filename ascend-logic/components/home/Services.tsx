@@ -1,51 +1,51 @@
-import Link from "next/link";
+import Link from 'next/link'
 
-type VizKind = "viz-custom" | "viz-rpa" | "viz-data" | "viz-consult";
+type VizKind = 'viz-custom' | 'viz-rpa' | 'viz-data' | 'viz-consult'
 
 const services: {
-  no: string;
-  en: string;
-  jp: string;
-  desc: string;
-  points: string[];
-  viz: VizKind;
+  no: string
+  en: string
+  jp: string
+  desc: string
+  points: string[]
+  viz: VizKind
 }[] = [
   {
-    no: "01",
-    en: "Custom AI Development",
-    jp: "オーダーメイドAI開発",
-    desc: "汎用AIでは解決できない高度なビジネス課題に対して、独自AIシステムを設計・開発。最適なアーキテクチャ、モデル選定・チューニング、現場定着まで一貫して対応します。",
-    points: ["アーキテクチャ設計", "モデル選定 / Fine-tuning", "現場定着サポート"],
-    viz: "viz-custom",
+    no: '01',
+    en: 'Custom AI Development',
+    jp: 'オーダーメイドAI開発',
+    desc: '汎用AIでは解決できない高度なビジネス課題に対して、独自AIシステムを設計・開発。最適なアーキテクチャ、モデル選定・チューニング、現場定着まで一貫して対応します。',
+    points: ['アーキテクチャ設計', 'モデル選定 / Fine-tuning', '現場定着サポート'],
+    viz: 'viz-custom',
   },
   {
-    no: "02",
-    en: "Process Automation",
-    jp: "プロセス自動化",
-    desc: "RPAとAIを組み合わせたハイブリッド型の自動化により、反復的な業務プロセスを効率化・コスト削減。段階的な導入と継続的な改善を重視します。",
-    points: ["RPA × AI ハイブリッド", "段階的導入", "継続的改善"],
-    viz: "viz-rpa",
+    no: '02',
+    en: 'Process Automation',
+    jp: 'プロセス自動化',
+    desc: 'RPAとAIを組み合わせたハイブリッド型の自動化により、反復的な業務プロセスを効率化・コスト削減。段階的な導入と継続的な改善を重視します。',
+    points: ['RPA × AI ハイブリッド', '段階的導入', '継続的改善'],
+    viz: 'viz-rpa',
   },
   {
-    no: "03",
-    en: "Data Analytics & Forecast",
-    jp: "データ分析・予測",
-    desc: "蓄積データから価値ある洞察を抽出し、高精度な予測モデルの構築と直感的なダッシュボード開発によって、データドリブンな経営意思決定を支援します。",
-    points: ["予測モデル構築", "ダッシュボード開発", "意思決定支援"],
-    viz: "viz-data",
+    no: '03',
+    en: 'Data Analytics & Forecast',
+    jp: 'データ分析・予測',
+    desc: '蓄積データから価値ある洞察を抽出し、高精度な予測モデルの構築と直感的なダッシュボード開発によって、データドリブンな経営意思決定を支援します。',
+    points: ['予測モデル構築', 'ダッシュボード開発', '意思決定支援'],
+    viz: 'viz-data',
   },
   {
-    no: "04",
-    en: "AI Consulting",
-    jp: "AI導入コンサルティング",
-    desc: "AI導入戦略の策定から人材育成まで、組織全体のAI活用能力向上を支援。経営戦略とAI戦略の統合、データガバナンス体制、社内AI人材育成まで。",
-    points: ["戦略策定", "データガバナンス", "社内人材育成"],
-    viz: "viz-consult",
+    no: '04',
+    en: 'AI Consulting',
+    jp: 'AI導入コンサルティング',
+    desc: 'AI導入戦略の策定から人材育成まで、組織全体のAI活用能力向上を支援。経営戦略とAI戦略の統合、データガバナンス体制、社内AI人材育成まで。',
+    points: ['戦略策定', 'データガバナンス', '社内人材育成'],
+    viz: 'viz-consult',
   },
-];
+]
 
 function ServiceViz({ kind }: { kind: VizKind }) {
-  if (kind === "viz-custom") {
+  if (kind === 'viz-custom') {
     return (
       <div className="viz">
         <div className="viz-stack">
@@ -66,9 +66,9 @@ function ServiceViz({ kind }: { kind: VizKind }) {
           </div>
         </div>
       </div>
-    );
+    )
   }
-  if (kind === "viz-rpa") {
+  if (kind === 'viz-rpa') {
     return (
       <div className="viz">
         <div className="viz-flow">
@@ -84,9 +84,9 @@ function ServiceViz({ kind }: { kind: VizKind }) {
           <span className="mono tiny muted">{'// 反復処理 → 0 hr / week'}</span>
         </div> */}
       </div>
-    );
+    )
   }
-  if (kind === "viz-data") {
+  if (kind === 'viz-data') {
     return (
       <div className="viz">
         <div className="viz-chart">
@@ -97,23 +97,9 @@ function ServiceViz({ kind }: { kind: VizKind }) {
                 <stop offset="100%" stopColor="var(--accent)" stopOpacity="0" />
               </linearGradient>
             </defs>
-            <path
-              d="M0 80 L20 70 L40 72 L60 55 L80 50 L100 38 L120 42 L140 28 L160 22 L180 18 L200 10 L200 100 L0 100 Z"
-              fill="url(#vd)"
-            />
-            <path
-              d="M0 80 L20 70 L40 72 L60 55 L80 50 L100 38 L120 42 L140 28 L160 22 L180 18 L200 10"
-              fill="none"
-              stroke="var(--accent)"
-              strokeWidth="1.5"
-            />
-            <path
-              d="M0 90 L40 85 L80 82 L120 75 L160 70 L200 62"
-              fill="none"
-              stroke="var(--fg-3)"
-              strokeWidth="1"
-              strokeDasharray="3 3"
-            />
+            <path d="M0 80 L20 70 L40 72 L60 55 L80 50 L100 38 L120 42 L140 28 L160 22 L180 18 L200 10 L200 100 L0 100 Z" fill="url(#vd)" />
+            <path d="M0 80 L20 70 L40 72 L60 55 L80 50 L100 38 L120 42 L140 28 L160 22 L180 18 L200 10" fill="none" stroke="var(--accent)" strokeWidth="1.5" />
+            <path d="M0 90 L40 85 L80 82 L120 75 L160 70 L200 62" fill="none" stroke="var(--fg-3)" strokeWidth="1" strokeDasharray="3 3" />
           </svg>
         </div>
         <div className="viz-chart-legend">
@@ -125,16 +111,13 @@ function ServiceViz({ kind }: { kind: VizKind }) {
           </span>
         </div>
       </div>
-    );
+    )
   }
   return (
     <div className="viz">
       <div className="viz-matrix">
         {Array.from({ length: 9 }).map((_, i) => (
-          <div
-            key={i}
-            className={`mx-cell ${i === 4 ? "mx-center" : ""} ${[1, 3, 5, 7].includes(i) ? "mx-near" : ""}`}
-          >
+          <div key={i} className={`mx-cell ${i === 4 ? 'mx-center' : ''} ${[1, 3, 5, 7].includes(i) ? 'mx-near' : ''}`}>
             {i === 4 && <span className="mono">AI</span>}
           </div>
         ))}
@@ -143,7 +126,7 @@ function ServiceViz({ kind }: { kind: VizKind }) {
         <span className="mono tiny muted">戦略 · 組織 · 人材 · データ</span>
       </div>
     </div>
-  );
+  )
 }
 
 export default function Services() {
@@ -199,5 +182,5 @@ export default function Services() {
         </div>
       </div>
     </section>
-  );
+  )
 }

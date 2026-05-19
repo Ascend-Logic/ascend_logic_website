@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link'
 
 export default function Hero() {
   return (
@@ -22,10 +22,7 @@ export default function Hero() {
         </h1>
 
         <div className="hero-type__sub">
-          <p className="lede">
-            オーダーメイドAI開発から自動化、データ分析、コンサルティングまで。
-            最先端のAI技術を、誰もが活用できるものに。
-          </p>
+          <p className="lede">オーダーメイドAI開発から自動化、データ分析、コンサルティングまで。 最先端のAI技術を、誰もが活用できるものに。</p>
           <div className="hero-type__cta">
             <Link href="/services" className="btn btn-primary">
               <span>サービスを見る</span>
@@ -50,5 +47,5 @@ export default function Hero() {
         </div> */}
       </div>
     </section>
-  );
+  )
 }

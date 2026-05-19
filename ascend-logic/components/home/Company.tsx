@@ -45,10 +45,7 @@ export default function Company() {
               </div>
               <div>
                 <dt>事業内容</dt>
-                <dd>
-                  オーダーメイドAI開発 / プロセス自動化 / データ分析・予測 / AI導入コンサルティング
-                  / 自社プロダクト「Ascend Agent」の開発・提供
-                </dd>
+                <dd>オーダーメイドAI開発 / プロセス自動化 / データ分析・予測 / AI導入コンサルティング / 自社プロダクト「Ascend Agent」の開発・提供</dd>
               </div>
               <div>
                 <dt>取引先業種</dt>
@@ -74,5 +71,5 @@ export default function Company() {
         </div>
       </div>
     </section>
-  );
+  )
 }

@@ -1,31 +1,31 @@
-"use client";
+'use client'
 
-import { useEffect, useRef, ReactNode } from "react";
+import { useEffect, useRef, ReactNode } from 'react'
 
 export default function Reveal({ children }: { children: ReactNode }) {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
+    const el = ref.current
+    if (!el) return
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
           if (e.isIntersecting) {
-            e.target.classList.add("in");
-            io.unobserve(e.target);
+            e.target.classList.add('in')
+            io.unobserve(e.target)
           }
-        });
+        })
       },
-      { threshold: 0.12, rootMargin: "0px 0px -10% 0px" },
-    );
-    io.observe(el);
-    return () => io.disconnect();
-  }, []);
+      { threshold: 0.12, rootMargin: '0px 0px -10% 0px' },
+    )
+    io.observe(el)
+    return () => io.disconnect()
+  }, [])
 
   return (
     <div ref={ref} className="reveal">
       {children}
     </div>
-  );
+  )
 }

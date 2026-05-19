@@ -93,13 +93,13 @@ function ServiceViz({ kind }: { kind: VizKind }) {
           <svg viewBox="0 0 200 100" preserveAspectRatio="none">
             <defs>
               <linearGradient id="vd" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="var(--accent)" stopOpacity="0.4" />
-                <stop offset="100%" stopColor="var(--accent)" stopOpacity="0" />
+                <stop offset="0%" stopColor="var(--primary)" stopOpacity="0.4" />
+                <stop offset="100%" stopColor="var(--primary)" stopOpacity="0" />
               </linearGradient>
             </defs>
             <path d="M0 80 L20 70 L40 72 L60 55 L80 50 L100 38 L120 42 L140 28 L160 22 L180 18 L200 10 L200 100 L0 100 Z" fill="url(#vd)" />
-            <path d="M0 80 L20 70 L40 72 L60 55 L80 50 L100 38 L120 42 L140 28 L160 22 L180 18 L200 10" fill="none" stroke="var(--accent)" strokeWidth="1.5" />
-            <path d="M0 90 L40 85 L80 82 L120 75 L160 70 L200 62" fill="none" stroke="var(--fg-3)" strokeWidth="1" strokeDasharray="3 3" />
+            <path d="M0 80 L20 70 L40 72 L60 55 L80 50 L100 38 L120 42 L140 28 L160 22 L180 18 L200 10" fill="none" stroke="var(--primary)" strokeWidth="1.5" />
+            <path d="M0 90 L40 85 L80 82 L120 75 L160 70 L200 62" fill="none" stroke="var(--muted-foreground)" strokeWidth="1" strokeDasharray="3 3" />
           </svg>
         </div>
         <div className="viz-chart-legend">

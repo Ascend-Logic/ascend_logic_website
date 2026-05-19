@@ -3,20 +3,40 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ===== Ascend Logic — Design System ===== */
+/* ===== Ascend Logic — Design System =====
+   shadcn 互換のセマンティックトークンをカノニカルなソースに据え、
+   shadcn にない概念 (surface, border-strong, primary-deep/soft, foreground-soft/faint,
+   accent-glow, hairline) のみブランド拡張として併走させる。 */
 :root {
-  --bg: #ffffff;
-  --bg-elev: #fafbfc;
-  --bg-tint: #f4f6f9;
-  --fg: #0a1628;
-  --fg-2: #2a3a52;
-  --fg-3: #5a6a82;
-  --fg-4: #8a98ad;
+  --background: #ffffff;
+  --foreground: #0a1628;
+  --card: #ffffff;
+  --card-foreground: #0a1628;
+  --popover: #ffffff;
+  --popover-foreground: #0a1628;
+  --primary: #5d42ff;
+  --primary-foreground: #ffffff;
+  --secondary: #f4f6f9;
+  --secondary-foreground: #0a1628;
+  --muted: #f4f6f9;
+  --muted-foreground: #5a6a82;
+  --accent: rgba(93, 66, 255, 0.1);
+  --accent-foreground: #4a30e0;
+  --destructive: oklch(0.55 0.2 25);
   --border: #e6eaf0;
+  --input: #e6eaf0;
+  --ring: #5d42ff;
+
+  /* === Ascend ブランド拡張 (shadcn にない概念) === */
+  --surface: #fafbfc;
   --border-strong: #d4dae3;
-  --accent: oklch(0.55 0.22 264);
-  --accent-2: oklch(0.55 0.22 264 / 0.08);
-  --accent-glow: oklch(0.7 0.22 264 / 0.35);
+  --primary-deep: #4a30e0;
+  --primary-soft: #7d65ff;
+  --success: oklch(0.5 0.16 162);
+  --warning: oklch(0.6 0.16 70);
+  --foreground-soft: #2a3a52;
+  --foreground-faint: #8a98ad;
+  --accent-glow: rgba(125, 101, 255, 0.35);
   --hairline: rgba(10, 22, 40, 0.08);
 
   --font-jp: var(--font-zen-kaku), var(--font-noto-sans-jp), system-ui, sans-serif;
@@ -38,8 +58,8 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: var(--bg);
-  color: var(--fg);
+  background: var(--background);
+  color: var(--foreground);
   font-family: var(--font-jp);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -117,7 +137,7 @@ section {
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--primary);
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -162,13 +182,13 @@ section {
 .lede {
   font-size: 18px;
   line-height: 1.85;
-  color: var(--fg-2);
+  color: var(--foreground-soft);
   max-width: 60ch;
   margin: 0;
 }
 
 .muted {
-  color: var(--fg-3);
+  color: var(--muted-foreground);
 }
 .tiny {
   font-size: 13px;
@@ -193,14 +213,14 @@ section {
   padding: 5px 10px;
   border: 1px solid var(--border-strong);
   border-radius: 999px;
-  color: var(--fg-2);
-  background: var(--bg);
+  color: var(--foreground-soft);
+  background: var(--background);
 }
 .tag-dot {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: var(--accent);
+  background: var(--primary);
 }
 
 .btn {
@@ -221,22 +241,22 @@ section {
   white-space: nowrap;
 }
 .btn-primary {
-  background: var(--fg);
-  color: var(--bg);
+  background: var(--foreground);
+  color: var(--background);
 }
 .btn-primary:hover {
   transform: translateY(-1px);
 }
 .btn-ghost {
   background: transparent;
-  color: var(--fg);
+  color: var(--foreground);
   border-color: var(--border-strong);
 }
 .btn-ghost:hover {
-  border-color: var(--fg);
+  border-color: var(--foreground);
 }
 .btn-accent {
-  background: var(--accent);
+  background: var(--primary);
   color: white;
 }
 .btn-link {
@@ -245,7 +265,7 @@ section {
   gap: 6px;
   font-weight: 500;
   font-size: 14px;
-  color: var(--accent);
+  color: var(--primary);
 }
 .btn-link .arr {
   transition: transform 0.2s ease;
@@ -263,7 +283,7 @@ section {
 }
 
 .card {
-  background: var(--bg-elev);
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -271,11 +291,11 @@ section {
 
 .placeholder {
   background: repeating-linear-gradient(135deg, transparent 0 8px, var(--hairline) 8px 9px);
-  background-color: var(--bg-tint);
+  background-color: var(--muted);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--fg-3);
+  color: var(--muted-foreground);
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.08em;
@@ -293,7 +313,7 @@ section {
   font-weight: 700;
   font-size: 16px;
   letter-spacing: -0.01em;
-  color: var(--fg);
+  color: var(--foreground);
 }
 .logo-mark {
   width: 22px;
@@ -309,11 +329,11 @@ section {
   border-radius: 4px;
 }
 .logo-mark::before {
-  background: var(--fg);
+  background: var(--foreground);
   clip-path: polygon(0 100%, 50% 0, 100% 100%);
 }
 .logo-mark::after {
-  background: var(--accent);
+  background: var(--primary);
   clip-path: polygon(20% 100%, 50% 35%, 80% 100%);
 }
 
@@ -389,7 +409,7 @@ section {
   right: 0;
   bottom: -3px;
   height: 1px;
-  background: var(--fg);
+  background: var(--foreground);
   transform: scaleX(0);
   transform-origin: right center;
   transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
@@ -410,7 +430,7 @@ section {
   z-index: 50;
   backdrop-filter: blur(14px) saturate(140%);
   -webkit-backdrop-filter: blur(14px) saturate(140%);
-  background: color-mix(in oklab, var(--bg) 78%, transparent);
+  background: color-mix(in oklab, var(--background) 78%, transparent);
   border-bottom: 1px solid transparent;
   transition:
     border-color 0.25s ease,
@@ -435,15 +455,15 @@ section {
   padding: 8px 14px;
   font-size: 13.5px;
   font-weight: 500;
-  color: var(--fg-2);
+  color: var(--foreground-soft);
   border-radius: 999px;
   transition:
     color 0.2s ease,
     background 0.2s ease;
 }
 .al-nav__link:hover {
-  color: var(--fg);
-  background: var(--bg-tint);
+  color: var(--foreground);
+  background: var(--muted);
 }
 .al-nav__cta {
   display: flex;
@@ -465,7 +485,7 @@ section {
   align-items: center;
   justify-content: center;
   gap: 4px;
-  color: var(--fg);
+  color: var(--foreground);
 }
 .al-nav__mobile-btn span {
   display: block;
@@ -482,7 +502,7 @@ section {
   padding: 14px 4px;
   font-size: 15px;
   font-weight: 500;
-  color: var(--fg);
+  color: var(--foreground);
   border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
@@ -535,7 +555,7 @@ section {
 }
 .hero-type__meta {
   font-size: 11px;
-  color: var(--fg-3);
+  color: var(--muted-foreground);
   letter-spacing: 0.18em;
 }
 .hero-type__title {
@@ -548,7 +568,7 @@ section {
 }
 .hero-type__hl em {
   font-style: normal;
-  background-image: linear-gradient(120deg, var(--accent) 0%, color-mix(in oklab, var(--accent) 60%, #fff) 100%);
+  background-image: linear-gradient(120deg, var(--primary-deep) 0%, var(--primary-soft) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -604,7 +624,7 @@ section {
   font-size: clamp(28px, 3vw, 40px);
   line-height: 1.05;
   letter-spacing: -0.03em;
-  color: var(--fg);
+  color: var(--foreground);
 }
 .vision-main {
   max-width: 720px;
@@ -693,7 +713,7 @@ section {
 }
 .service-no .mono {
   font-size: 13px;
-  color: var(--fg-3);
+  color: var(--muted-foreground);
   letter-spacing: 0.15em;
 }
 .service-titles {
@@ -705,12 +725,12 @@ section {
 .service-en {
   font-size: 12px;
   letter-spacing: 0.1em;
-  color: var(--accent);
+  color: var(--primary);
   font-weight: 500;
   text-transform: uppercase;
 }
 .service-desc {
-  color: var(--fg-2);
+  color: var(--foreground-soft);
   margin: 0 0 24px;
   line-height: 1.8;
   max-width: 48ch;
@@ -728,18 +748,18 @@ section {
   align-items: center;
   gap: 10px;
   font-size: 14px;
-  color: var(--fg-2);
+  color: var(--foreground-soft);
 }
 .bullet {
   width: 6px;
   height: 6px;
-  background: var(--accent);
+  background: var(--primary);
   border-radius: 50%;
   flex-shrink: 0;
 }
 .service-viz {
   height: 240px;
-  background: var(--bg-elev);
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 24px;
@@ -769,19 +789,19 @@ section {
 }
 .viz-layer {
   padding: 10px 14px;
-  background: var(--bg);
+  background: var(--background);
   border: 1px solid var(--border);
   border-radius: 8px;
   font-size: 12px;
-  color: var(--fg-2);
+  color: var(--foreground-soft);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .viz-layer.l3 {
-  background: var(--accent);
+  background: var(--primary);
   color: white;
-  border-color: var(--accent);
+  border-color: var(--primary);
 }
 .viz-layer.l3 .mono {
   color: white;
@@ -802,20 +822,20 @@ section {
 .flow-node {
   padding: 8px 14px;
   border: 1px solid var(--border);
-  background: var(--bg);
+  background: var(--background);
   border-radius: 6px;
   font-size: 12px;
   font-weight: 600;
-  color: var(--fg-2);
+  color: var(--foreground-soft);
   font-family: var(--font-mono);
 }
 .flow-node.accent {
-  background: var(--accent);
+  background: var(--primary);
   color: white;
-  border-color: var(--accent);
+  border-color: var(--primary);
 }
 .flow-arrow {
-  color: var(--fg-3);
+  color: var(--muted-foreground);
   font-family: var(--font-mono);
 }
 .viz-flow-sub {
@@ -836,7 +856,7 @@ section {
   display: flex;
   gap: 16px;
   font-size: 11px;
-  color: var(--fg-3);
+  color: var(--muted-foreground);
   margin-top: 8px;
   font-family: var(--font-mono);
 }
@@ -844,13 +864,13 @@ section {
   display: inline-block;
   width: 8px;
   height: 8px;
-  background: var(--fg-3);
+  background: var(--muted-foreground);
   border-radius: 50%;
   margin-right: 6px;
   vertical-align: middle;
 }
 .legend-dot.accent {
-  background: var(--accent);
+  background: var(--primary);
 }
 
 /* viz-consult */
@@ -863,17 +883,17 @@ section {
   width: 36px;
   height: 36px;
   border-radius: 6px;
-  background: var(--bg-tint);
+  background: var(--muted);
   border: 1px solid var(--border);
 }
 .mx-cell.mx-near {
-  background: color-mix(in oklab, var(--accent) 18%, var(--bg-tint));
-  border-color: color-mix(in oklab, var(--accent) 25%, var(--border));
+  background: color-mix(in oklab, var(--primary) 18%, var(--muted));
+  border-color: color-mix(in oklab, var(--primary) 25%, var(--border));
 }
 .mx-cell.mx-center {
-  background: var(--accent);
+  background: var(--primary);
   color: white;
-  border-color: var(--accent);
+  border-color: var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -905,8 +925,8 @@ section {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(60% 50% at 20% 0%, color-mix(in oklab, var(--accent) 30%, transparent) 0%, transparent 60%),
-    radial-gradient(50% 50% at 100% 100%, color-mix(in oklab, var(--accent) 20%, transparent) 0%, transparent 70%), #08090d;
+    radial-gradient(60% 50% at 20% 0%, color-mix(in oklab, var(--primary) 30%, transparent) 0%, transparent 60%),
+    radial-gradient(50% 50% at 100% 100%, color-mix(in oklab, var(--primary) 20%, transparent) 0%, transparent 70%), #08090d;
   z-index: -1;
 }
 .agent-sec .eyebrow,
@@ -950,7 +970,7 @@ section {
 .agent-h__en {
   font-size: 14px;
   letter-spacing: 0.12em;
-  color: var(--accent);
+  color: var(--primary);
   text-transform: uppercase;
   font-weight: 600;
   margin-bottom: 18px;
@@ -1015,7 +1035,7 @@ section {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: var(--accent);
+  background: var(--primary);
   color: white;
   font-size: 11px;
   font-weight: 700;
@@ -1058,8 +1078,8 @@ section {
   gap: 8px;
 }
 .agent-side-item.active {
-  background: var(--accent-2);
-  color: var(--accent);
+  background: var(--accent);
+  color: var(--primary);
   font-weight: 600;
 }
 .rec {
@@ -1160,8 +1180,8 @@ section {
   font-family: var(--font-mono);
 }
 .agent-chip.accent {
-  background: var(--accent-2);
-  color: var(--accent);
+  background: var(--accent);
+  color: var(--primary);
   font-weight: 700;
 }
 
@@ -1172,7 +1192,7 @@ section {
   color: #2a3a52;
 }
 .agent-card--summary mark {
-  background: color-mix(in oklab, var(--accent) 18%, transparent);
+  background: color-mix(in oklab, var(--primary) 18%, transparent);
   color: inherit;
   padding: 1px 4px;
   border-radius: 3px;
@@ -1238,8 +1258,8 @@ section {
   flex-shrink: 0;
 }
 .ck-done {
-  background: var(--accent);
-  border-color: var(--accent);
+  background: var(--primary);
+  border-color: var(--primary);
   position: relative;
 }
 .ck-done::after {
@@ -1288,9 +1308,9 @@ section {
   border-bottom-right-radius: 2px;
 }
 .bub-ai {
-  background: var(--accent-2);
+  background: var(--accent);
   color: #0a1628;
-  border: 1px solid color-mix(in oklab, var(--accent) 30%, transparent);
+  border: 1px solid color-mix(in oklab, var(--primary) 30%, transparent);
   align-self: flex-start;
   border-bottom-left-radius: 2px;
   position: relative;
@@ -1299,7 +1319,7 @@ section {
   display: block;
   font-size: 10px;
   letter-spacing: 0.1em;
-  color: var(--accent);
+  color: var(--primary);
   margin-bottom: 4px;
   font-weight: 700;
 }
@@ -1363,14 +1383,14 @@ section {
   color: #8a98ad;
 }
 .tr-active {
-  background: color-mix(in oklab, var(--accent) 7%, transparent);
+  background: color-mix(in oklab, var(--primary) 7%, transparent);
   border-radius: 6px;
   padding: 6px 8px;
   margin: 0 -8px;
 }
 .tr-cursor {
   display: inline-block;
-  color: var(--accent);
+  color: var(--primary);
   animation: blink 1s steps(1) infinite;
   font-weight: 700;
 }
@@ -1416,7 +1436,7 @@ section {
 .agent-feat__no {
   font-size: 11px;
   letter-spacing: 0.15em;
-  color: var(--accent);
+  color: var(--primary);
   padding-top: 4px;
   flex-shrink: 0;
 }
@@ -1427,7 +1447,7 @@ section {
 }
 .agent-feat__d {
   font-size: 13.5px;
-  color: var(--fg-3);
+  color: var(--muted-foreground);
   line-height: 1.7;
 }
 @media (max-width: 880px) {
@@ -1474,7 +1494,7 @@ section {
   overflow: hidden;
 }
 .case-card {
-  background: var(--bg);
+  background: var(--background);
   padding: 24px;
   display: flex;
   flex-direction: column;
@@ -1483,16 +1503,16 @@ section {
   transition: background 0.25s ease;
 }
 .case-card:hover {
-  background: var(--bg-elev);
+  background: var(--surface);
 }
 .case-card__no {
   font-size: 10px;
   letter-spacing: 0.2em;
-  color: var(--fg-3);
+  color: var(--muted-foreground);
 }
 .case-card__viz {
   height: 110px;
-  background: var(--bg-tint);
+  background: var(--muted);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   overflow: hidden;
@@ -1508,7 +1528,7 @@ section {
 .case-card__en {
   font-size: 11px;
   letter-spacing: 0.1em;
-  color: var(--accent);
+  color: var(--primary);
   font-weight: 500;
   text-transform: uppercase;
   display: block;
@@ -1522,7 +1542,7 @@ section {
   line-height: 1.4;
 }
 .case-card__note {
-  color: var(--fg-3);
+  color: var(--muted-foreground);
   font-size: 13px;
   margin: 0;
 }
@@ -1532,14 +1552,14 @@ section {
   gap: 10px;
 }
 .case-card--more {
-  background: var(--bg-tint);
+  background: var(--muted);
   justify-content: center;
   align-items: center;
   text-align: center;
   gap: 12px;
 }
 .case-card--more .bignum {
-  color: var(--accent);
+  color: var(--primary);
   font-size: 56px;
 }
 @media (max-width: 980px) {
@@ -1578,14 +1598,14 @@ section {
   font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--fg-3);
+  color: var(--muted-foreground);
   padding-top: 3px;
 }
 .company-table dd {
   margin: 0;
   font-size: 15px;
   line-height: 1.7;
-  color: var(--fg);
+  color: var(--foreground);
 }
 .company-side {
   display: flex;
@@ -1596,7 +1616,7 @@ section {
   padding: 24px;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  background: var(--bg-elev);
+  background: var(--surface);
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -1641,13 +1661,13 @@ section {
     padding 0.2s ease;
 }
 .news-row:hover {
-  background: var(--bg-tint);
+  background: var(--muted);
   padding-left: 12px;
   padding-right: 12px;
 }
 .news-date {
   font-size: 12px;
-  color: var(--fg-3);
+  color: var(--muted-foreground);
   letter-spacing: 0.06em;
 }
 .news-cat {
@@ -1656,17 +1676,17 @@ section {
 }
 .news-title {
   font-size: 15px;
-  color: var(--fg);
+  color: var(--foreground);
   font-weight: 500;
 }
 .news-arr {
-  color: var(--fg-3);
+  color: var(--muted-foreground);
   transition:
     transform 0.2s ease,
     color 0.2s ease;
 }
 .news-row:hover .news-arr {
-  color: var(--accent);
+  color: var(--primary);
   transform: translateX(4px);
 }
 @media (max-width: 720px) {
@@ -1710,27 +1730,27 @@ section {
     padding 0.2s ease;
 }
 .careers-row:hover {
-  background: var(--bg-tint);
+  background: var(--muted);
   padding-left: 12px;
   padding-right: 12px;
 }
 .careers-team {
   font-size: 11px;
   letter-spacing: 0.15em;
-  color: var(--accent);
+  color: var(--primary);
 }
 .careers-role {
   font-size: 17px;
   font-weight: 600;
 }
 .careers-arr {
-  color: var(--fg-3);
+  color: var(--muted-foreground);
   transition:
     transform 0.2s ease,
     color 0.2s ease;
 }
 .careers-row:hover .careers-arr {
-  color: var(--accent);
+  color: var(--primary);
   transform: translateX(4px);
 }
 @media (max-width: 880px) {
@@ -1762,8 +1782,8 @@ section {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(70% 80% at 0% 0%, color-mix(in oklab, var(--accent) 60%, transparent) 0%, transparent 65%),
-    radial-gradient(60% 70% at 100% 100%, color-mix(in oklab, var(--accent) 45%, #6b8cff) 0%, transparent 60%), linear-gradient(135deg, #0a0e1a 0%, #1a1f30 100%);
+    radial-gradient(70% 80% at 0% 0%, color-mix(in oklab, var(--primary) 60%, transparent) 0%, transparent 65%),
+    radial-gradient(60% 70% at 100% 100%, color-mix(in oklab, var(--primary) 45%, #6b8cff) 0%, transparent 60%), linear-gradient(135deg, #0a0e1a 0%, #1a1f30 100%);
   z-index: -1;
 }
 .contact-card__bg::before {
@@ -1797,7 +1817,7 @@ section {
 }
 .contact-btn-primary {
   background: white;
-  color: var(--fg);
+  color: var(--foreground);
 }
 .contact-btn-ghost {
   color: white;
@@ -1839,7 +1859,7 @@ section {
 .al-footer {
   padding: 80px 0 32px;
   border-top: 1px solid var(--border);
-  background: var(--bg);
+  background: var(--background);
 }
 .al-footer__top {
   display: grid;
@@ -1865,10 +1885,10 @@ section {
 }
 .al-footer__nav a {
   font-size: 14px;
-  color: var(--fg-2);
+  color: var(--foreground-soft);
 }
 .al-footer__nav a:hover {
-  color: var(--accent);
+  color: var(--primary);
 }
 .al-footer__bottom {
   padding-top: 32px;
@@ -1894,11 +1914,11 @@ section {
   gap: 12px;
 }
 .al-footer__legal a {
-  color: var(--fg-3);
+  color: var(--muted-foreground);
   transition: color 0.2s ease;
 }
 .al-footer__legal a:hover {
-  color: var(--accent);
+  color: var(--primary);
 }
 @media (max-width: 880px) {
   .al-footer__top {
@@ -2023,7 +2043,7 @@ section {
   transition: color 0.3s ease;
 }
 .grid-card:hover .grid-card-arrow {
-  color: var(--accent);
+  color: var(--primary);
 }
 
 /* legacy topic card */

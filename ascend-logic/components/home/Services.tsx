@@ -160,7 +160,7 @@ export default function Services({ index = 2 }: { index?: number }) {
               AIを現場に届ける。
             </h2>
           </div>
-          <p className="m-0 text-lg leading-[1.85] text-foreground-soft max-w-[44ch]">
+          <p className="m-0 text-lg font-medium leading-[1.85] text-foreground-soft max-w-[44ch]">
             汎用AIで終わらせない。設計から定着まで、
             <br />
             専業チームが一貫して伴走します。

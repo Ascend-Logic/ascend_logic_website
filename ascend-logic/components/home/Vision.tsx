@@ -21,7 +21,7 @@ export default function Vision({ index = 1 }: { index?: number }) {
               <br />
               可能性を解き放つ。
             </h2>
-            <p className="m-0 text-lg leading-[1.85] text-foreground-soft max-w-[60ch]">
+            <p className="m-0 text-lg font-medium leading-[1.85] text-foreground-soft max-w-[60ch]">
               AIは単なる技術革新ではなく、人間の創造性を拡張するツールです。 私たちは、最先端のAI技術を誰もが活用できるものにし、 AIの民主化を通じて社会全体のDX加速を目指します。
             </p>
             <div className="mt-4 grid grid-cols-2 border-t border-border max-[900px]:grid-cols-1">

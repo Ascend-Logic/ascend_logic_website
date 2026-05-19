@@ -45,7 +45,7 @@ export default function Agent({ index = 3 }: { index?: number }) {
               もう一人のAIアシスタントを。
             </h2>
           </div>
-          <p className="m-0 text-lg leading-[1.85] text-white/[0.78] max-w-[44ch]">
+          <p className="m-0 text-lg font-medium leading-[1.85] text-white/[0.78] max-w-[44ch]">
             オンライン会議に自動参加し、議事録・アクション抽出・ナレッジ化まで全自動。 蓄積されたデータには、AIチャットで自然言語検索。
           </p>
         </div>

@@ -69,7 +69,7 @@ export default function Cases() {
               現場に届くAIを。
             </h2>
           </div>
-          <p className="m-0 text-lg leading-[1.85] text-foreground-soft max-w-[44ch]">技術の専門性と、現場定着への伴走支援が私たちの強みです。</p>
+          <p className="m-0 text-lg font-medium leading-[1.85] text-foreground-soft max-w-[44ch]">技術の専門性と、現場定着への伴走支援が私たちの強みです。</p>
         </div>
 
         <div className="grid grid-cols-4 gap-px bg-border border border-border rounded-[18px] overflow-hidden max-[980px]:grid-cols-2 max-[560px]:grid-cols-1">

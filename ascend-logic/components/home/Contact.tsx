@@ -24,7 +24,7 @@ export default function Contact({ index = 6 }: { index?: number }) {
                 <br />
                 承ります。
               </h2>
-              <p className="text-lg leading-[1.85] text-white/[0.78] max-w-[60ch] mb-8">
+              <p className="text-lg font-medium leading-[1.85] text-white/[0.78] max-w-[60ch] mb-8">
                 業種・課題は問いません。まずは無料の60分相談で、
                 <br />
                 貴社の業務にAIをどう活かせるか、一緒に整理します。

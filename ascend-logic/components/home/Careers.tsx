@@ -25,7 +25,7 @@ export default function Careers() {
               <br />
               社会の可能性を解き放つ。
             </h2>
-            <p className="m-0 text-lg leading-[1.85] text-foreground-soft max-w-[44ch] mt-4">創業期のAscend Logicでは、AIの民主化を共に推進する仲間を募集しています。</p>
+            <p className="m-0 text-lg font-medium leading-[1.85] text-foreground-soft max-w-[44ch] mt-4">創業期のAscend Logicでは、AIの民主化を共に推進する仲間を募集しています。</p>
           </div>
           <div></div>
         </div>

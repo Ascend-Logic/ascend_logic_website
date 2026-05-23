@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 import { ExternalLink } from 'lucide-react'
-import PageHero from '../../components/ui/PageHero'
-import FadeIn from '../../components/ui/FadeIn'
-import { newsItems } from '../../lib/news'
+import PageHero from '@/components/ui/PageHero'
+import FadeIn from '@/components/ui/FadeIn'
+import { newsItems } from '@/lib/news'
 
 export const metadata: Metadata = {
   title: 'お知らせ',

@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
-import PageHero from '../../components/ui/PageHero'
-import FadeIn from '../../components/ui/FadeIn'
+import PageHero from '@/components/ui/PageHero'
+import FadeIn from '@/components/ui/FadeIn'
 
 export const metadata: Metadata = {
   title: 'プライバシーポリシー',

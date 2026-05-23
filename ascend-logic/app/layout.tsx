@@ -1,8 +1,9 @@
 import { Noto_Sans_JP, Manrope, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
-import Header from '../components/layout/Header'
-import Footer from '../components/layout/Footer'
-import { CodeInspector } from '../components/dev/CodeInspector'
+import type { ReactNode } from 'react'
+import Header from '@/components/layout/Header'
+import Footer from '@/components/layout/Footer'
+import { CodeInspector } from '@/components/dev/CodeInspector'
 import { Metadata } from 'next'
 
 // Noto Sans JP - 日本語フォールバック
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
   description: 'Ascend Logic - 最先端のAIソリューションで企業の業務効率化・自動化を実現します',
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="ja" className={`${notoSansJP.variable} ${manrope.variable} ${jetbrainsMono.variable}`}>
       <head>

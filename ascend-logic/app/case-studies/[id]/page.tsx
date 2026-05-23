@@ -3,9 +3,9 @@ import { ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
-import CtaLink from '../../../components/ui/CtaLink'
-import FadeIn from '../../../components/ui/FadeIn'
-import { CaseStudy } from '../../../types'
+import CtaLink from '@/components/ui/CtaLink'
+import FadeIn from '@/components/ui/FadeIn'
+import { CaseStudy } from '@/types'
 
 interface CaseStudyDetailProps {
   params: Promise<{ id: string }>

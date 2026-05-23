@@ -1,11 +1,12 @@
 'use client'
 
+import type { ChangeEvent, FormEvent } from 'react'
 import { Check } from 'lucide-react'
 import { useState } from 'react'
 import Link from 'next/link'
-import CtaLink from '../../components/ui/CtaLink'
-import PageHero from '../../components/ui/PageHero'
-import FadeIn from '../../components/ui/FadeIn'
+import CtaLink from '@/components/ui/CtaLink'
+import PageHero from '@/components/ui/PageHero'
+import FadeIn from '@/components/ui/FadeIn'
 
 interface FormState {
   company: string
@@ -34,7 +35,7 @@ export default function RequestDocuments() {
   const [submitted, setSubmitted] = useState<boolean>(false)
   const [error, setError] = useState<string>('')
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target
 
     if (type === 'checkbox') {
@@ -62,7 +63,7 @@ export default function RequestDocuments() {
     }
   }
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setSubmitting(true)
     setError('')

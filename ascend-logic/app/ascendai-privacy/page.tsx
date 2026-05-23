@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import { ArrowUpRight } from 'lucide-react'
 import Link from 'next/link'
-import Section from '../../components/ui/Section'
+import Section from '@/components/ui/Section'
 
 export const metadata: Metadata = {
   title: 'Ascend Agent プライバシーポリシー',

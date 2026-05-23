@@ -2,10 +2,10 @@ import { Metadata } from 'next'
 import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
-import CtaLink from '../../components/ui/CtaLink'
-import PageHero from '../../components/ui/PageHero'
-import FadeIn from '../../components/ui/FadeIn'
-import { CaseStudy } from '../../types'
+import CtaLink from '@/components/ui/CtaLink'
+import PageHero from '@/components/ui/PageHero'
+import FadeIn from '@/components/ui/FadeIn'
+import { CaseStudy } from '@/types'
 
 export const metadata: Metadata = {
   title: '導入事例',

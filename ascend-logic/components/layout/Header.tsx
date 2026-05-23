@@ -45,7 +45,7 @@ export default function Header() {
             <Link
               key={it.href}
               href={it.href}
-              className="relative px-3.5 py-2 text-sm font-medium text-foreground-soft rounded-full transition-colors duration-200 hover:text-foreground hover:bg-text-muted-foreground"
+              className="relative px-3.5 py-2 text-sm font-bold text-foreground-soft rounded-full transition-colors duration-200 hover:text-foreground hover:bg-text-muted-foreground"
             >
               {it.jp}
             </Link>

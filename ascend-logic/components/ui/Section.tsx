@@ -1,9 +1,9 @@
-import { ReactNode } from 'react';
+import { ReactNode } from 'react'
 
 interface SectionProps {
-  children: ReactNode;
-  className?: string;
-  id?: string;
+  children: ReactNode
+  className?: string
+  id?: string
 }
 
 export default function Section({ children, className = '', id }: SectionProps) {
@@ -11,5 +11,5 @@ export default function Section({ children, className = '', id }: SectionProps) 
     <section className={className} id={id}>
       {children}
     </section>
-  );
+  )
 }

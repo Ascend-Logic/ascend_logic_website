@@ -45,10 +45,10 @@
 1. 「Environment Variables」セクションを展開
 2. 以下の環境変数を追加：
 
-| 変数名 | 値 | 説明 |
-|--------|-----|------|
-| `EMAIL_USER` | your-email@gmail.com | Gmail送信元アドレス |
-| `EMAIL_APP_PASSWORD` | xxxx-xxxx-xxxx-xxxx | Gmailアプリパスワード |
+| 変数名               | 値                   | 説明                  |
+| -------------------- | -------------------- | --------------------- |
+| `EMAIL_USER`         | your-email@gmail.com | Gmail送信元アドレス   |
+| `EMAIL_APP_PASSWORD` | xxxx-xxxx-xxxx-xxxx  | Gmailアプリパスワード |
 
 #### Gmailアプリパスワードの取得方法
 
@@ -60,6 +60,7 @@
 6. このパスワードを`EMAIL_APP_PASSWORD`に設定
 
 **注意**:
+
 - 2段階認証が有効になっている必要があります
 - アプリパスワードは一度だけ表示されるため、必ず控えてください
 

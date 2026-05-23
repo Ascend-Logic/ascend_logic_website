@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
-import { ArrowDown, ArrowRight, BarChart3, Check, ClipboardList, HelpCircle, Key, Lightbulb, Lock, Mail, MessageSquare, Monitor, Shield, ShieldCheck, User, Users, X } from 'lucide-react'
+import { ArrowDown, ArrowRight, BarChart3, Check, ClipboardList, ExternalLink, HelpCircle, Key, Lightbulb, Lock, Mail, MessageSquare, Monitor, Shield, ShieldCheck, User, Users, X } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 import CtaLink from '../../../components/ui/CtaLink'
 import FadeIn from '../../../components/ui/FadeIn'
 
@@ -442,7 +443,7 @@ export default function AscendAgentProductPage() {
       <section className="py-24 bg-white">
         <div className="max-w-[1100px] mx-auto px-6 md:px-10">
           <FadeIn>
-            <p className="font-en tracking-wide font-semibold text-sm text-gray-400 tracking-[0.2em] text-center mb-2">Impact</p>
+            <p className="font-en tracking-wide font-semibold text-sm text-gray-400 text-center mb-2">Impact</p>
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-16">AIアシスタントがもたらす変化</h2>
           </FadeIn>
 
@@ -450,7 +451,7 @@ export default function AscendAgentProductPage() {
             {impacts.map((item, i) => (
               <FadeIn key={i} delay={i * 120}>
                 <div className="text-center p-8">
-                  <p className="font-en tracking-wide font-semibold text-5xl md:text-6xl font-bold text-black mb-3">{item.value}</p>
+                  <p className="font-jp tracking-wide font-semibold text-5xl md:text-6xl text-black mb-3">{item.value}</p>
                   <p className="text-base font-bold mb-2">{item.label}</p>
                   <p className="text-gray-500 text-sm leading-relaxed">{item.description}</p>
                 </div>
@@ -510,6 +511,14 @@ export default function AscendAgentProductPage() {
               </FadeIn>
             ))}
           </div>
+
+          <FadeIn>
+            <div className="text-center mt-12">
+              <Link href="/ascendai-privacy" className="inline-flex items-center gap-1.5 text-sm text-indigo-600 hover:text-indigo-800 font-semibold transition-colors">
+                プライバシーポリシーを確認 <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -579,7 +588,7 @@ export default function AscendAgentProductPage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(79,70,229,0.1),transparent_70%)]" />
         <div className="relative z-10 max-w-[1100px] mx-auto px-6 md:px-10 text-center">
           <FadeIn>
-            <p className="font-en tracking-wide font-semibold text-sm text-white/40 tracking-[0.2em] mb-4">Contact Us</p>
+            <p className="font-en tracking-wide font-semibold text-sm text-white/40 mb-4">Contact Us</p>
             <h2 className="text-2xl md:text-3xl font-bold mb-4">すべての社員に、もう一人の力を。</h2>
             <p className="text-white/50 text-sm md:text-base max-w-2xl mx-auto mb-10 leading-relaxed">
               Ascend Agent &#8212; あなた専属のAIアシスタント。
@@ -589,6 +598,15 @@ export default function AscendAgentProductPage() {
             <CtaLink href="/request-documents" variant="outline-light-invert">
               お問い合わせ <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
             </CtaLink>
+            <div className="flex items-center justify-center gap-6 mt-12 text-xs text-white/30">
+              <Link href="/terms" className="hover:text-white/60 transition-colors">
+                利用規約
+              </Link>
+              <span>|</span>
+              <Link href="/ascendai-privacy" className="hover:text-white/60 transition-colors">
+                プライバシーポリシー
+              </Link>
+            </div>
           </FadeIn>
         </div>
       </section>

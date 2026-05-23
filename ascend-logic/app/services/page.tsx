@@ -120,48 +120,38 @@ export default function Services() {
       <PageHero titleEn="Services" titleJa="サービス" description="最先端のAI技術を活用した多様なサービスを提供しています。お客様のビジネス課題に合わせたソリューションをご提案します。" />
 
       {services.map((service, index) => (
-        <div key={service.number}>
-          {/* サービス紹介セクション */}
-          <section className="border-t border-gray-200 py-20">
-            <div className="max-w-[1200px] mx-auto px-6 md:px-10">
-              <FadeIn>
-                <div className={`flex flex-col ${index % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-10 md:gap-16`}>
-                  <div className="md:w-1/2">
-                    <span className="font-en font-semibold text-sm text-gray-400 tracking-widest mb-3 block">{service.number}</span>
-                    <h2 className="text-3xl md:text-4xl font-bold mb-6 whitespace-pre-line">{service.titleBreak}</h2>
-                    <p className="text-gray-600 leading-relaxed">{service.description}</p>
-                  </div>
-                  <div className="md:w-1/2">
-                    <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden relative">
-                      <Image src={service.image} alt={service.title} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
-                    </div>
+        <section key={service.number} className={`border-t border-gray-200 py-20 ${index % 2 === 1 ? 'bg-gray-50' : ''}`}>
+          <div className="max-w-[1200px] mx-auto px-6 md:px-10">
+            <FadeIn>
+              <div className={`flex flex-col ${index % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} items-start gap-10 md:gap-16`}>
+                <div className="md:w-1/2">
+                  <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden relative">
+                    <Image src={service.image} alt={service.title} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
                   </div>
                 </div>
-              </FadeIn>
-            </div>
-          </section>
+                <div className="md:w-1/2">
+                  <span className="font-en font-semibold text-sm text-gray-400 tracking-widest mb-3 block">{service.number}</span>
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6 whitespace-pre-line">{service.titleBreak}</h2>
+                  <p className="text-gray-600 leading-relaxed mb-10">{service.description}</p>
 
-          {/* 特徴セクション */}
-          <section className="py-20 bg-gray-50 border-t border-gray-200">
-            <div className="max-w-[1200px] mx-auto px-6 md:px-10">
-              <FadeIn>
-                <h3 className="font-en font-semibold text-center text-sm text-gray-400 tracking-widest mb-2">Approach</h3>
-                <p className="text-center text-xl font-bold mb-14">独自のアプローチ</p>
-              </FadeIn>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-                {service.features.map((feature, fIndex) => (
-                  <FadeIn key={feature.id} delay={fIndex * 100}>
-                    <div className="text-center">
-                      <span className="font-en tracking-wide text-3xl font-bold text-gray-200 block mb-4">{feature.id}</span>
-                      <h4 className="text-lg font-bold mb-4">{feature.title}</h4>
-                      <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
-                    </div>
-                  </FadeIn>
-                ))}
+                  <div className="space-y-6">
+                    {service.features.map((feature, fIndex) => (
+                      <FadeIn key={feature.id} delay={fIndex * 80}>
+                        <div className="flex gap-4">
+                          <span className="font-en text-sm font-bold text-gray-300 pt-0.5 flex-shrink-0">{feature.id}</span>
+                          <div>
+                            <h4 className="text-sm font-bold mb-1">{feature.title}</h4>
+                            <p className="text-gray-500 text-xs leading-relaxed">{feature.description}</p>
+                          </div>
+                        </div>
+                      </FadeIn>
+                    ))}
+                  </div>
+                </div>
               </div>
-            </div>
-          </section>
-        </div>
+            </FadeIn>
+          </div>
+        </section>
       ))}
 
       {/* CTA */}

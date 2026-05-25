@@ -1,0 +1,45 @@
+name: CI
+
+# Next.js アプリ (ascend-logic/) の品質ゲート。
+# 本番デプロイは Vercel の Git 連携が担当するため、このワークフローはデプロイしない。
+# PR がマージされ main へ入る前に lint / build の破壊を検知し、
+# Vercel の本番自動デプロイ失敗を未然に防ぐ。
+
+on:
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    working-directory: ascend-logic
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          # setup-node は defaults.run.working-directory の影響を受けないため、
+          # node-version-file / cache-dependency-path はリポジトリルート基準の
+          # ascend-logic/ プレフィックス付きフルパスで指定する。
+          node-version-file: ascend-logic/.nvmrc
+          cache: npm
+          cache-dependency-path: ascend-logic/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint (oxlint, type-aware)
+        run: npm run lint
+
+      - name: Build (next build)
+        run: npm run build

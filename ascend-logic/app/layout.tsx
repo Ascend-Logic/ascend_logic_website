@@ -3,7 +3,6 @@ import './globals.css'
 import type { ReactNode } from 'react'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
-import { CodeInspector } from '@/components/dev/CodeInspector'
 import { Metadata } from 'next'
 
 // Noto Sans JP - 日本語フォールバック
@@ -53,7 +52,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <main className="flex-grow">{children}</main>
           <Footer />
         </div>
-        <CodeInspector />
       </body>
     </html>
   )

@@ -39,7 +39,7 @@ export default function Agent({ index = 3 }: { index?: number }) {
               PRODUCT &nbsp;/&nbsp; {no}
             </span>
             <h2 className="font-bold text-2xl md:text-4xl lg:text-5xl leading-[1.25] tracking-tight m-0 mt-4 text-white">
-              <span className="font-en [font-feature-settings:'ss01'_1,'cv11'_1] text-sm tracking-widest text-primary uppercase font-semibold mb-[18px] inline-block">Ascend Agent</span>
+              <span className="font-en [font-feature-settings:'ss01'_1,'cv11'_1] text-sm tracking-widest text-primary uppercase font-semibold mb-[18px] inline-block">Ascend Agent<span className="font-jp normal-case tracking-normal text-white/45">（アセンドエージェント）</span></span>
               <br />
               すべての社員に、
               <br />

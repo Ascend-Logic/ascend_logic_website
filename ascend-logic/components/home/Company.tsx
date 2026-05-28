@@ -21,6 +21,7 @@ export default function Company({ index = 4 }: { index?: number }) {
                   v: (
                     <>
                       株式会社 Ascend Logic
+                      <span className="text-sm text-muted-foreground ml-2">（アセンドロジック）</span>
                       <br />
                       <span className="font-mono tracking-wide text-sm text-muted-foreground">Ascend Logic, Inc.</span>
                     </>

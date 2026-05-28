@@ -6,12 +6,16 @@ import CtaLink from '@/components/ui/CtaLink'
 import FadeIn from '@/components/ui/FadeIn'
 
 export const metadata: Metadata = {
-  title: 'Ascend Agent',
-  description: 'すべての社員に、もう一人のAIアシスタントを。会議に同席し、記録し、学習し、いつでも答える。あなたの業務を誰よりも深く理解するAIが、チームの一員になります。',
-  keywords: 'AIアシスタント, AI議事録, 自動議事録作成, RAGチャットボット, Google Calendar連携, ビデオ会議文字起こし, 会議自動録画, ナレッジ検索, 議事録自動化',
+  title: 'Ascend Agent（アセンドエージェント）',
+  description: 'Ascend Agent（アセンドエージェント）は、すべての社員に、もう一人のAIアシスタントを提供します。会議に同席し、記録し、学習し、いつでも答える。あなたの業務を誰よりも深く理解するAIが、チームの一員になります。',
+  keywords: 'アセンドエージェント, アセンド・エージェント, Ascend Agent, AIアシスタント, AI議事録, 自動議事録作成, RAGチャットボット, Google Calendar連携, ビデオ会議文字起こし, 会議自動録画, ナレッジ検索, 議事録自動化',
+  alternates: {
+    canonical: '/products/ascendai',
+  },
   openGraph: {
-    title: 'Ascend Agent - あなた専属のAIアシスタント',
-    description: 'すべての社員に、もう一人のAIアシスタントを。会議に同席し、記録し、学習し、いつでも答える。',
+    title: 'Ascend Agent（アセンドエージェント） - あなた専属のAIアシスタント',
+    description: 'Ascend Agent（アセンドエージェント）は、会議に同席し、記録し、学習し、いつでも答えるAIアシスタント。すべての社員に、もう一人のAIアシスタントを。',
+    url: '/products/ascendai',
     type: 'website',
   },
 }
@@ -167,15 +171,42 @@ const faqs = [
   },
 ]
 
+// 検索エンジンに製品名と読み（カタカナ別名）を伝える構造化データ
+const productJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Ascend Agent',
+  alternateName: ['アセンドエージェント', 'アセンド・エージェント'],
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web, Windows, macOS',
+  url: 'https://ascendlogicai.com/products/ascendai',
+  description:
+    'Ascend Agent（アセンドエージェント）は、会議に同席し、記録・要約・ナレッジ化まで全自動で行うAIアシスタント。蓄積したデータにはAIチャットで自然言語検索できます。',
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://ascendlogicai.com/#organization',
+    name: 'Ascend Logic',
+    alternateName: ['アセンドロジック', '株式会社Ascend Logic'],
+    url: 'https://ascendlogicai.com',
+  },
+}
+
 export default function AscendAgentProductPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+      />
       {/* ===== Hero — Black BG ===== */}
       <section className="relative bg-black text-white overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(79,70,229,0.15),transparent_70%)]" />
         <div className="relative z-10 max-w-[1100px] mx-auto px-6 md:px-10 pt-32 pb-24 md:pt-40 md:pb-32 text-center">
           <FadeIn>
             <p className="font-en font-semibold text-sm text-white/40 tracking-[0.2em] mb-6">YOUR AI ASSISTANT</p>
+            <p className="font-en font-semibold text-base md:text-lg text-white/90 tracking-wide mb-4">
+              Ascend Agent<span className="font-jp text-white/50">（アセンドエージェント）</span>
+            </p>
             <h1 className="font-jp font-bold tracking-wide leading-tight text-3xl md:text-5xl lg:text-[3.4rem] mb-6">
               すべての社員に、
               <br className="hidden md:block" />

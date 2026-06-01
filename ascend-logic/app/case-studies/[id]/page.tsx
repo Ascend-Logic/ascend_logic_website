@@ -48,7 +48,7 @@ function getCaseStudyById(id: number): DetailedCaseStudy | undefined {
       challenge:
         '建設現場では膨大な図面、仕様書、工事記録が存在し、必要な情報を素早く見つけ出すことが困難でした。特に、過去の類似プロジェクトの知見を活用できていない状況で、同じ問題に何度も直面していました。',
       approach: '最新のRAG技術とマルチモーダルAIを組み合わせ、テキストだけでなく図面や画像も理解できる統合検索システムを構築。建築特有の専門用語や図面記号を学習させた独自モデルを開発しました。',
-      technologies: ['RAG (Retrieval-Augmented Generation)', 'Vision Transformer', 'OpenAI GPT-4', 'Pinecone Vector DB', 'LangChain'],
+      technologies: ['RAG (Retrieval-Augmented Generation)', 'Vision Transformer', 'OpenAI OpenAI API', 'Pinecone Vector DB', 'LangChain'],
       duration: '3ヶ月',
       testimonial: 'これまで資料探しに費やしていた時間が劇的に削減され、本来の設計業務に集中できるようになりました。新入社員も過去の知見にアクセスしやすくなり、教育効率が大幅に向上しています。',
       testimonialAuthor: '技術部長',
@@ -65,7 +65,7 @@ function getCaseStudyById(id: number): DetailedCaseStudy | undefined {
       challenge: '毎日多数の会議が行われる中、議事録作成に膨大な時間を費やしていました。また、会議で決定したタスクの抜け漏れや、部門間での情報共有不足が課題となっていました。',
       approach:
         '最新の音声認識技術と自然言語処理を組み合わせ、リアルタイムで議事録を生成。話者識別機能により「誰が何を発言したか」を正確に記録し、AIが重要な決定事項とアクションアイテムを自動抽出します。',
-      technologies: ['Whisper API', 'Speaker Diarization', 'GPT-4', 'Zapier Integration', 'WebRTC'],
+      technologies: ['Whisper API', 'Speaker Diarization', 'OpenAI API', 'Zapier Integration', 'WebRTC'],
       duration: '3ヶ月',
       testimonial: '会議後すぐに議事録が共有され、決定事項が明確になったことで、プロジェクトの進行速度が格段に上がりました。',
       testimonialAuthor: 'プロジェクトマネージャー',
@@ -113,7 +113,7 @@ function getCaseStudyById(id: number): DetailedCaseStudy | undefined {
       imagePath: '/images/case-study-counseling.jpg',
       challenge: 'メンタルヘルスケアの需要が急増する中、専門カウンセラーの不足により、多くの人が適切なサポートを受けられない状況でした。',
       approach: '精神科医・臨床心理士と共同で、エビデンスベースのカウンセリングプロトコルをAIに実装。音声・表情・言語の多角的分析により、人間のカウンセラーに近い共感的な対話を実現しました。',
-      technologies: ['Emotion Recognition AI', 'Voice Stress Analysis', 'GPT-4 Fine-tuning', 'WebRTC', 'Homomorphic Encryption'],
+      technologies: ['Emotion Recognition AI', 'Voice Stress Analysis', 'OpenAI API Fine-tuning', 'WebRTC', 'Homomorphic Encryption'],
       duration: '6ヶ月',
       testimonial: '24時間いつでもアクセスでき、プライバシーも守られる環境で相談できることが、多くのユーザーに支持されています。',
       testimonialAuthor: '精神科医・医療監修責任者',

@@ -1,7 +1,7 @@
 import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 
-export default function Contact({ index = 6 }: { index?: number }) {
+export default function Contact({ index = 7 }: { index?: number }) {
   const no = String(index).padStart(2, '0')
   return (
     <section id="contact" className="py-[120px] max-[720px]:py-[72px]">

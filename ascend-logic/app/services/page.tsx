@@ -1,12 +1,13 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
+import { ArrowUpRight } from 'lucide-react'
 import CtaLink from '@/components/ui/CtaLink'
 import PageHero from '@/components/ui/PageHero'
 import FadeIn from '@/components/ui/FadeIn'
 
 export const metadata: Metadata = {
   title: 'サービス',
-  description: 'Ascend Logicが提供するAIソリューション、プロセス自動化、データ分析サービスのご紹介',
+  description: 'Ascend Logicが提供するAIソリューション、プロセス自動化、データ分析、AI導入コンサルティング、フリーランスエンジニア向けエージェント Ascend Freelance（アセンドフリーランス）のご紹介',
 }
 
 export default function Services() {
@@ -115,6 +116,31 @@ export default function Services() {
     },
   ]
 
+  const freelanceChips = ['高単価', 'FDE', 'AIエージェント開発', 'フルリモート', '週3日〜']
+
+  const freelanceFeatures = [
+    {
+      id: '01',
+      title: '高単価・FDE / AI案件',
+      description: 'FDE（Forward Deployed Engineer）やAIエージェント開発など、市場に出回りにくい高単価案件を中心にご紹介します。',
+    },
+    {
+      id: '02',
+      title: 'エンジニアが専任で伴走',
+      description: '元メガベンチャーエンジニアが担当。技術スタックと志向を理解した上で、納得感のある案件をマッチングします。',
+    },
+    {
+      id: '03',
+      title: '単価交渉まで代行',
+      description: '言い出しにくい単価の話も専任担当が代行。市場相場を踏まえた適正な報酬水準を実現します。',
+    },
+    {
+      id: '04',
+      title: '働き方に合わせた案件',
+      description: 'フルリモート、週3日稼働など、ライフスタイルに合わせて選べる案件も多数掲載しています。',
+    },
+  ]
+
   return (
     <>
       <PageHero titleEn="Services" titleJa="サービス" description="最先端のAI技術を活用した多様なサービスを提供しています。お客様のビジネス課題に合わせたソリューションをご提案します。" />
@@ -153,6 +179,67 @@ export default function Services() {
           </div>
         </section>
       ))}
+
+      {/* Ascend Freelance */}
+      <section className="border-t border-gray-200 py-20">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-10">
+          <FadeIn>
+            <div className="border border-gray-200 rounded-2xl bg-gray-50 p-8 md:p-14">
+              <div className="flex flex-col md:flex-row items-start gap-10 md:gap-16">
+                <div className="md:w-1/2">
+                  <span className="font-en font-semibold text-sm text-gray-400 tracking-widest mb-3 block">05</span>
+                  <span className="font-en font-semibold text-sm tracking-widest text-indigo-600 uppercase mb-4 block">
+                    Ascend Freelance<span className="font-jp normal-case tracking-normal text-gray-400">（アセンドフリーランス）</span>
+                  </span>
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-[1.3]">
+                    フリーランスエンジニアと、
+                    <br />
+                    高単価・FDE・AI案件をつなぐ。
+                  </h2>
+                  <p className="text-gray-600 leading-relaxed mb-8">
+                    エンジニア向けのフリーランスエージェントサービスです。FDE（Forward Deployed Engineer）やAIエージェント開発といった、市場に出回りにくい高単価案件を中心にご紹介。
+                    案件探しから単価交渉まで、元メガベンチャーエンジニアが専任で伴走します。
+                  </p>
+                  <div className="flex gap-2 flex-wrap mb-10">
+                    {freelanceChips.map((chip) => (
+                      <span
+                        key={chip}
+                        className="inline-flex items-center font-mono text-xs tracking-wider uppercase whitespace-nowrap px-2.5 py-[5px] border border-gray-300 rounded-full text-gray-600 bg-white"
+                      >
+                        {chip}
+                      </span>
+                    ))}
+                  </div>
+                  <a
+                    href="https://ascend-freelance.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-2.5 px-6 py-3 rounded-full font-semibold text-sm tracking-wide whitespace-nowrap bg-[#0a1628] text-white transition-all duration-200 hover:-translate-y-px"
+                  >
+                    <span>サービスサイトを見る</span>
+                    <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-[3px] group-hover:-translate-y-[3px]" />
+                  </a>
+                </div>
+                <div className="md:w-1/2 w-full">
+                  <div className="space-y-6">
+                    {freelanceFeatures.map((feature, fIndex) => (
+                      <FadeIn key={feature.id} delay={fIndex * 80}>
+                        <div className="flex gap-4 border-b border-gray-200 pb-6 last:border-b-0 last:pb-0">
+                          <span className="font-en text-sm font-bold text-indigo-400 pt-0.5 flex-shrink-0">{feature.id}</span>
+                          <div>
+                            <h4 className="text-sm font-bold mb-1">{feature.title}</h4>
+                            <p className="text-gray-500 text-xs leading-relaxed">{feature.description}</p>
+                          </div>
+                        </div>
+                      </FadeIn>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
 
       {/* CTA */}
       <section className="relative py-24 overflow-hidden">

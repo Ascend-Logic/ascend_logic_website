@@ -22,8 +22,8 @@ export default function News() {
               const content = (
                 <div className="border-b border-gray-200 py-8 flex flex-col md:flex-row md:items-center gap-4 transition-colors group-hover:bg-gray-50 px-2 md:px-4 -mx-2 md:-mx-4">
                   <div className="md:w-1/5 flex items-center gap-4">
-                    <span className="text-sm text-gray-400">{item.date}</span>
-                    <span className="inline-block bg-gray-100 text-gray-600 px-3 py-0.5 rounded text-xs font-medium">{item.category}</span>
+                    <span className="text-sm text-gray-400 whitespace-nowrap">{item.date}</span>
+                    <span className="inline-block whitespace-nowrap bg-gray-100 text-gray-600 px-3 py-0.5 rounded text-xs font-medium">{item.category}</span>
                   </div>
                   <div className="md:w-4/5">
                     <h2 className="text-lg font-bold mb-2 flex items-start gap-2">

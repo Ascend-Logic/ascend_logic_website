@@ -90,6 +90,10 @@ export default function About() {
                       </ul>
                     </td>
                   </tr>
+                  <tr className="border-b border-gray-200">
+                    <th className="py-4 text-left text-gray-500 text-sm font-medium align-top w-1/3">適格請求書発行事業者登録番号</th>
+                    <td className="py-4 text-gray-800">T3013101009897</td>
+                  </tr>
                 </tbody>
               </table>
             </div>

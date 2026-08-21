@@ -1,4 +1,4 @@
-export default function Company({ index = 4 }: { index?: number }) {
+export default function Company({ index = 5 }: { index?: number }) {
   const no = String(index).padStart(2, '0')
   return (
     <section id="company" className="relative py-[120px] max-[720px]:py-[72px]">

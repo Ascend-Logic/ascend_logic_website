@@ -2,7 +2,7 @@ import { ArrowRight, ArrowUpRight } from 'lucide-react'
 import Link from 'next/link'
 import { newsItems } from '@/lib/news'
 
-export default function News({ index = 5 }: { index?: number }) {
+export default function News({ index = 6 }: { index?: number }) {
   const no = String(index).padStart(2, '0')
   return (
     <section id="news" className="relative py-[80px] max-[720px]:py-[48px]">
@@ -23,11 +23,11 @@ export default function News({ index = 5 }: { index?: number }) {
           {newsItems.map((n) => {
             const isExternal = n.url.startsWith('http')
             const rowClass =
-              'grid grid-cols-[110px_90px_1fr_24px] gap-6 items-center py-5 border-b border-border cursor-pointer transition-all duration-200 hover:bg-muted hover:px-3 group max-[720px]:grid-cols-[90px_1fr_16px]'
+              'grid grid-cols-[120px_auto_1fr_24px] gap-6 items-center py-5 border-b border-border cursor-pointer transition-all duration-200 hover:bg-muted hover:px-3 group max-[720px]:grid-cols-[100px_1fr_16px]'
             const Inner = (
               <>
-                <span className="font-mono text-xs text-muted-foreground tracking-wider">{n.date}</span>
-                <span className="inline-flex items-center gap-1.5 font-mono text-[10px] tracking-wider uppercase px-2.5 py-[5px] border border-border-strong rounded-full text-foreground-soft bg-background justify-self-start max-[720px]:hidden">
+                <span className="font-mono text-xs text-muted-foreground tracking-wider whitespace-nowrap">{n.date}</span>
+                <span className="inline-flex items-center gap-1.5 font-mono text-[10px] tracking-wider uppercase whitespace-nowrap px-2.5 py-[5px] border border-border-strong rounded-full text-foreground-soft bg-background justify-self-start max-[720px]:hidden">
                   {n.category}
                 </span>
                 <span className="text-base text-foreground font-medium">{n.title}</span>

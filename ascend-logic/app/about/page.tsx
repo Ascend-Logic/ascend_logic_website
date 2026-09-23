@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import CtaLink from '@/components/ui/CtaLink'
 import PageHero from '@/components/ui/PageHero'
 import FadeIn from '@/components/ui/FadeIn'
+import { TeamMember } from '@/types'
 
 export const metadata: Metadata = {
   title: '会社概要',
@@ -22,6 +23,28 @@ export default function About() {
     { label: '設立', value: company.founded },
     { label: '代表者', value: company.ceo },
     { label: '本社所在地', value: company.address },
+  ]
+
+  // profile 内の改行は段落区切りとして表示される
+  const members: TeamMember[] = [
+    {
+      id: 1,
+      name: '早乙女 琉真',
+      nameEn: 'Ryuma Saotome',
+      position: 'CEO',
+      profile:
+        'ヤフー株式会社（現LINEヤフー株式会社）に新卒入社後、大規模サービスにおける開発・データ基盤領域に従事。LINEミニアプリ、LINE公式アカウント、Yahoo!検索広告などに関連する大規模広告データ連携基盤の構築を担当。あわせて営業部門の支援にも携わり、開発と現場の双方の立場から事業に向き合う。\n' +
+        'その中で、技術の価値は現場の課題を深く理解してこそ発揮されることを実感し、現場と共に課題に向き合う「現場共創型」の技術支援を実現すべく、2025年に株式会社Ascend Logicを創業。AIを活用した業務改善・システム開発を通じて、企業や自治体の課題解決に取り組んでいる。',
+    },
+    {
+      id: 2,
+      name: '鈴木 龍太',
+      nameEn: 'Ryuta Suzuki',
+      position: 'CTO',
+      profile:
+        'アライドアーキテクツ株式会社に新卒入社し、マーケティングSaaSのフルスタック開発や業務自動化ツールの開発に従事。その後LINEヤフー株式会社にて、データパイプライン開発、美容予約プラットフォームの新規開発のフロントエンドテックリード、LINEポイントクラブのフロントエンド基盤刷新などを担当。\n' +
+        '「個人の頑張りではなく仕組みで解決する」を信条に、株式会社Ascend LogicのCTOとして技術戦略と開発を牽引している。',
+    },
   ]
 
   return (
@@ -54,6 +77,31 @@ export default function About() {
                 </p>
               </FadeIn>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Board Members */}
+      <section className="py-20 border-b border-gray-200">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-10">
+          <FadeIn>
+            <div className="text-center mb-14">
+              <h2 className="font-en font-semibold text-sm text-gray-400 tracking-widest">Board Members</h2>
+            </div>
+          </FadeIn>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {members.map((member, index) => (
+              <FadeIn key={member.id} delay={index * 100} className="h-full">
+                <div className="h-full p-8 md:p-10 rounded-2xl border border-gray-200 bg-white">
+                  <p className="font-en font-semibold text-sm text-gray-400 tracking-widest">{member.position}</p>
+                  <p className="text-2xl font-bold mt-2">
+                    {member.name}
+                    {member.nameEn && <span className="font-en font-medium text-sm text-gray-400 tracking-wide ml-3">{member.nameEn}</span>}
+                  </p>
+                  {member.profile && <p className="text-gray-600 leading-relaxed whitespace-pre-line mt-6">{member.profile}</p>}
+                </div>
+              </FadeIn>
+            ))}
           </div>
         </div>
       </section>

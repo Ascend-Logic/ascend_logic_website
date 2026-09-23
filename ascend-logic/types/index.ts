@@ -30,9 +30,10 @@ export interface NewsItem {
 export interface TeamMember {
   id: number
   name: string
+  nameEn?: string
   position: string
-  profile: string
-  imagePath: string
+  profile?: string
+  imagePath?: string
 }
 
 export interface Award {

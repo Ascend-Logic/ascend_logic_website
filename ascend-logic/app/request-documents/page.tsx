@@ -96,6 +96,7 @@ export default function RequestDocuments() {
     { id: 'process-automation', label: 'プロセス自動化' },
     { id: 'data-analysis', label: 'データ分析・予測' },
     { id: 'ai-consulting', label: 'AI導入コンサルティング' },
+    { id: 'ascend-freelance', label: 'Ascend Freelance' },
   ]
 
   const inputClass = 'w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-gray-400 transition-colors text-sm'

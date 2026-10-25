@@ -1,17 +1,18 @@
 'use client'
 
-import { ArrowRight } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Logo } from '@/components/ui/Logo'
 
 const navItems = [
   { jp: 'サービス', en: 'Services', href: '/services' },
-  { jp: 'プロダクト', en: 'Product', href: '/products/ascendai' },
   { jp: '導入事例', en: 'Cases', href: '/case-studies' },
   { jp: '会社情報', en: 'Company', href: '/about' },
   { jp: 'ニュース', en: 'News', href: '/news' },
 ]
+
+const freelanceUrl = 'https://ascend-freelance.com/'
 
 const btnBase = 'inline-flex items-center gap-2.5 px-4 py-[9px] rounded-full font-semibold text-sm tracking-wide border border-transparent whitespace-nowrap transition-all duration-200'
 const btnPrimary = `${btnBase} bg-primary text-primary-foreground hover:bg-primary-deep hover:-translate-y-px`
@@ -56,10 +57,10 @@ export default function Header() {
           <Link href="/request-documents" className={`${btnGhost} max-[980px]:hidden`}>
             <span>お問い合わせ</span>
           </Link>
-          <Link href="/products/ascendai" className={`${btnPrimary} group max-[560px]:hidden`}>
-            <span>Ascend Agent</span>
-            <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-[3px]" />
-          </Link>
+          <a href={freelanceUrl} target="_blank" rel="noopener noreferrer" className={`${btnPrimary} group max-[560px]:hidden`}>
+            <span>Ascend Freelance</span>
+            <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-[3px] group-hover:-translate-y-[3px]" />
+          </a>
           <button
             type="button"
             className="hidden size-9 rounded-full border border-border-strong bg-transparent flex-col items-center justify-center gap-1 text-foreground max-[980px]:flex"
@@ -87,10 +88,10 @@ export default function Header() {
               <Link href="/request-documents" className={btnGhost} onClick={close}>
                 <span>お問い合わせ</span>
               </Link>
-              <Link href="/products/ascendai" className={`${btnPrimary} group`} onClick={close}>
-                <span>Ascend Agent</span>
-                <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-[3px]" />
-              </Link>
+              <a href={freelanceUrl} target="_blank" rel="noopener noreferrer" className={`${btnPrimary} group`} onClick={close}>
+                <span>Ascend Freelance</span>
+                <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-[3px] group-hover:-translate-y-[3px]" />
+              </a>
             </div>
           </div>
         </div>

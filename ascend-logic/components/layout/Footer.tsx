@@ -3,16 +3,22 @@ import { Logo } from '@/components/ui/Logo'
 
 const monoTiny = 'font-mono tracking-wide text-sm'
 
-function FooterColumn({ heading, items }: { heading: string; items: { href: string; label: string }[] }) {
+function FooterColumn({ heading, items }: { heading: string; items: { href: string; label: string; external?: boolean }[] }) {
   return (
     <div>
       <div className={`${monoTiny} text-muted-foreground mb-4`}>{heading}</div>
       <ul className="list-none p-0 m-0 flex flex-col gap-2">
         {items.map((it) => (
           <li key={it.label}>
-            <Link href={it.href} className="text-sm text-foreground-soft hover:text-primary">
-              {it.label}
-            </Link>
+            {it.external ? (
+              <a href={it.href} target="_blank" rel="noopener noreferrer" className="text-sm text-foreground-soft hover:text-primary">
+                {it.label}
+              </a>
+            ) : (
+              <Link href={it.href} className="text-sm text-foreground-soft hover:text-primary">
+                {it.label}
+              </Link>
+            )}
           </li>
         ))}
       </ul>
@@ -42,12 +48,10 @@ export default function Footer() {
               ]}
             />
             <FooterColumn
-              heading="PRODUCT"
+              heading="FREELANCE"
               items={[
-                { href: '/products/ascendai', label: 'Ascend Agent' },
-                { href: '/products/ascendai', label: 'Features' },
-                { href: '/products/ascendai', label: 'Security' },
-                { href: '/request-documents', label: 'デモ依頼' },
+                { href: 'https://ascend-freelance.com/', label: 'Ascend Freelance', external: true },
+                { href: '/#freelance', label: 'サービス概要' },
               ]}
             />
             <FooterColumn

@@ -14,6 +14,7 @@ export async function POST(req: NextRequest) {
       'process-automation': 'プロセス自動化',
       'data-analysis': 'データ分析・予測',
       'ai-consulting': 'AI導入コンサルティング',
+      'ascend-freelance': 'Ascend Freelance',
     }
 
     // 興味のある分野を日本語のラベルに変換

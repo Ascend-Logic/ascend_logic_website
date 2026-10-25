@@ -2,7 +2,6 @@ import { Metadata } from 'next'
 import Hero from '../components/home/Hero'
 import Vision from '../components/home/Vision'
 import Services from '../components/home/Services'
-import Agent from '../components/home/Agent'
 import Freelance from '../components/home/Freelance'
 import Company from '../components/home/Company'
 import News from '../components/home/News'
@@ -17,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   // ナンバリングはここの順序で動的に算出される (01 始まり)。
-  const sections = [Vision, Services, Agent, Freelance, Company, News, Contact]
+  const sections = [Vision, Services, Freelance, Company, News, Contact]
 
   return (
     <>

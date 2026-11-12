@@ -2,6 +2,14 @@ import { NewsItem } from '../types'
 
 export const newsItems: NewsItem[] = [
   {
+    id: 7,
+    title: '「フリーランスエンジニア LiveTalk」に弊社代表がゲスト出演しました',
+    date: '2026年11月11日',
+    category: 'メディア掲載',
+    excerpt: 'Freelance-Engineer.netが運営する「フリーランスエンジニア LiveTalk」（2026年11月9日開催）に、弊社代表がゲストとして出演しました。「高単価案件は、どこから来る？」をテーマに、商流の見極め方や信頼関係を軸にした案件獲得、フリーランスの次の一手についてお話ししています。',
+    url: 'https://note.com/free_eng_net/n/ne89164d4ead7',
+  },
+  {
     id: 6,
     title: 'フリーランスエンジニア向けエージェント「Ascend Freelance」を正式リリース',
     date: '2026年8月21日',
